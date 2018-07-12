@@ -7,4 +7,4 @@ from ..my_models import channel
 class ChennelViewSet(viewsets.ViewSet):
     parser_classes = (permissions.IsAuthenticated,)
     
-    def list(self, request)
+    def listchannel(self, request)
