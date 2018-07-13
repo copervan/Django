@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     #'oauth2_provider',
+    "rocky",
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Django.urls'
+
+APPEND_SLASH=False
+
 
 TEMPLATES = [
     {

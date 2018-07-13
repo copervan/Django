@@ -1,41 +1,25 @@
 from rest_framework import serializers 
+from .channel import Channel , ChannelBed, ChannelDevice, ChannelUser
+
+class ChannelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Channel
+        fields = ("id", "name", "project_id", "province", "city", "created_at",  "updated_at" )
+
+class ChannelBedSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ChannelBed
+        fields = ("id", "channel_id", "project_id", "room_id", "bed_num", "device_no", 
+                  "person_id","remark", "created_at",  "updated_at"  )
 
 
-class ChannelSerializer(serializers.Serializer):
-    name = serializers.CharField()
-    project_id = serializers.IntegerField() 
-    province = serializers.CharField()
-    city = serializers.CharField() 
-    created_at = serializers.DateTimeField()
-    updated_at = serializers.DateTimeField()  
+class ChannelDeviceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ChannelDevice
+        fields = ("id", "device_no" ,"project_id", "channel_id", "user_name", "created_at",  "updated_at"  )
 
-class ChannelBedSerializer(models.Model):
-    channel_id = serializers.IntegerField() 
-    project_id = serializers.IntegerField() 
-    room_id = serializers.IntegerField() 
-    bed_num = models.CharField("床号",max_length=255)
-    device_no = serializers.IntegerField() 
-    person_id = serializers.IntegerField() 
-    remark = models.CharField("备注",max_length=255)
-    created_at = serializers.DateTimeField()  
-    updated_at = serializers.DateTimeField()  
-
-class ChannelDeviceSerializer(models.Model):
-    device_no = models.IntegerField("设备编号", max_length=20)
-    project_id = models.IntegerField("项目编号", max_length=20)
-    channel_id = models.IntegerField("渠道编号", max_length=20)
-    user_name = models.CharField("用户名",max_length=255)
-    created_at = models.DateTimeField("创建时间", default = timezone.now )
-    updated_at = models.DateTimeField("更新时间", default = timezone.now )
-
-class ChannelUserSerializer(models.Model):
-    channel_id = models.IntegerField("渠道编号", max_length=20)
-    project_id = models.IntegerField("项目编号", max_length=20)
-    email = models.EmailField("用户邮箱")
-    password = models.CharField("用户密码", max_length=255)
-    real_name = models.CharField("用户名称", max_length=255)
-    last_login_ip = models.CharField("上次登录IP", max_length=255)
-    last_login_at = models.DateTimeField("上次登录时间", default = timezone.now )
-    status = models.IntegerField("", max_length=1)
-    created_at = models.DateTimeField("创建时间", default = timezone.now )
-    updated_at = models.DateTimeField("更新时间", default = timezone.now )
+class ChannelUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = ("id", "channel_id" ,"project_id", "email", "real_name",  "last_login_ip" 
+                  , "last_login_at", "status", "created_at",  "updated_at" )
+        
