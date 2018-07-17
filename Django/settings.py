@@ -74,6 +74,11 @@ TEMPLATES = [
     },
 ]
 
+# Add for vuejs
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "frontend/dist/static"),
+]
+
 WSGI_APPLICATION = 'Django.wsgi.application'
 
 
