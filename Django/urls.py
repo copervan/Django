@@ -25,7 +25,7 @@ from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope, Token
 from rest_framework.authtoken.models import Token
 from django.conf import settings
 from rest_framework.authtoken import views
-
+from django.views.generic import TemplateView
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance=None, created=False, **kwargs):
@@ -66,7 +66,8 @@ router.register(r'groups',GroupViewSet)
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^', include(router.urls)),
+    #url(r'^', include(router.urls)),
+    url(r'^$', TemplateView.as_view(template_name="index.html")),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     #url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     url(r'^api-token-auth/', views.obtain_auth_token),
