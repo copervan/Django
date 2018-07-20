@@ -3,13 +3,39 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
+import Router from 'vue-router'
+import fullcalendar  from 'vue-fullcalendar'
+import Vuex from 'vuex'
 
+Vue.use(Vuex)
+Vue.use(fullcalendar)
 Vue.config.productionTip = true
+Vue.use(iView)
+Vue.use(Router)
+
+
+const store =  new Vuex.Store({
+	state:{
+		token: sessionStorage.getItem('token') || ''
+	},
+	mutations:{
+		set_token(state, mytoken) {
+			state.token = mytoken
+			sessionStorage.setItem('token',mytoken)
+			},
+		del_token(state) {
+			state.token = ''
+			}
+		}
+})
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
