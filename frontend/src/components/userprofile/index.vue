@@ -102,25 +102,24 @@
             	this.currentuser = {id:'', device_no: '', project_id: 1, user_name:'' , channel_id: 1}
             	this.modal6 = true
             },
-            delete_user(callback) {
+            delete_user() {
+            	var mytoken = this.$store.state.token
             	var user = this.currentuser
+            	var _this =  this 
             	$.ajax({
-					url:"/rocky/device/",
+					url:"/rocky/device/"+user.id+"/",
 					type:"DELETE",
 					contentType: 'application/json'	,
 					beforeSend: function(xhr){
 						xhr.setRequestHeader("Authorization", mytoken);
 					},
-					data: JSON.stringify(user),
-					success: function(data){
-						console.log(data)
-						// callback =  data
-					},
 					error: function(err){
 						console.log(err)
-						alert(err)
+						alert(err,"删除失败")
 					}
-
+            	}).done(function(){
+            		alert("删除成功")
+            		_this.get_device(_this.setusers)
             	})
             }
 		},
@@ -152,7 +151,7 @@
 			<br/>
 		<Button type="primary" @click="modal6 = true">编辑用户</Button>
 		<Button type="primary" @click="creat_user">创建用户</Button>
-		<Button type="primary" @click="delete_user">创建用户</Button>
+		<Button type="primary" @click="delete_user">删除用户</Button>
 		<Table highlight-row ref="currentRowTable" @on-current-change="select_current_user" 
 			@on-row-dblclick="row_dblclick" :columns="columns1" :data="data1"></Table>
 		<!-- <showuser  ></showuser> -->
