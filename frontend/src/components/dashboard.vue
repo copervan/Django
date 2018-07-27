@@ -80,6 +80,7 @@
 	import home from './userprofile/'
 	import notice from './notice/'
 	import calendar from './calendar'
+    import diary from './diary'
     import {mapState} from 'vuex'
     export default {
         name: "dashboard",
@@ -107,7 +108,7 @@
         			return home
         		}
         		else if (this.currentTab === 'type_1'){
-        			return login 
+        			return diary 
         		}
         		else if (this.currentTab === 'type_2'){
         			return notice

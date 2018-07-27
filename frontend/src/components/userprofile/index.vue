@@ -28,6 +28,7 @@
                     input3: ''
                 },
                 modal6: false,
+                edituser: false,
                 loading: true,
                 currentuser : {}
 			}
@@ -121,6 +122,28 @@
             		alert("删除成功")
             		_this.get_device(_this.setusers)
             	})
+            },
+            edit_user() {
+            	var mytoken = this.$store.state.token
+            	var user = this.currentuser
+            	var _this =  this 
+            	$.ajax({
+					url:"/rocky/device/"+user.id+"/",
+					type:"PUT",
+					contentType: 'application/json'	,
+					beforeSend: function(xhr){
+						xhr.setRequestHeader("Authorization", mytoken);
+					},
+					data: JSON.stringify(user),
+					error: function(err){
+						console.log(err)
+						alert(err,"修改失败")
+					}
+            	}).done(function(){
+            		alert("修改成功")
+            		_this.edituser = false
+            		_this.get_device(_this.setusers)
+            	})
             }
 		},
 		created: function(){
@@ -149,7 +172,7 @@
 		<div v-if="users1">
 			{{users1}}
 			<br/>
-		<Button type="primary" @click="modal6 = true">编辑用户</Button>
+		<Button type="primary" @click="edituser = true">编辑用户</Button>
 		<Button type="primary" @click="creat_user">创建用户</Button>
 		<Button type="primary" @click="delete_user">删除用户</Button>
 		<Table highlight-row ref="currentRowTable" @on-current-change="select_current_user" 
@@ -162,20 +185,34 @@
 	        :loading="loading"
 	        @on-ok="asyncOK">
 	        <p>After you click ok, the dialog box will close in 2 seconds.</p>
-	    <template>
-			<Form :model="formLeft" label-position="left" :label-width="100">
-		        <FormItem label="ID">
-		            <Input v-model="currentuser.id"></Input>
-		        </FormItem>
-		        <FormItem label="device_no">
+		    <template>
+				<Form :model="formLeft" label-position="left" :label-width="100">
+			        <FormItem label="device_no">
+			            <Input v-model="currentuser.device_no"></Input>
+			        </FormItem>
+			        <FormItem label="user_name">
+			            <Input v-model="currentuser.user_name"></Input>
+			        </FormItem>
+			    </Form>
+			</template>
+	    </Modal>
 
-		            <Input v-model="currentuser.device_no"></Input>
-		        </FormItem>
-		        <FormItem label="user_name">
-		            <Input v-model="currentuser.user_name"></Input>
-		        </FormItem>
-		    </Form>
-		</template>
+	    <Modal
+	        v-model="edituser"
+	        title="Title"
+	        :loading="loading"
+	        @on-ok="edit_user">
+	        <p>After you click ok, the dialog box will close in 2 seconds.</p>
+		    <template>
+				<Form :model="formLeft" label-position="left" :label-width="100">
+			        <FormItem label="device_no">
+			            <Input v-model="currentuser.device_no"></Input>
+			        </FormItem>
+			        <FormItem label="user_name">
+			            <Input v-model="currentuser.user_name"></Input>
+			        </FormItem>
+			    </Form>
+			</template>
 	    </Modal>
 		
 		</div>

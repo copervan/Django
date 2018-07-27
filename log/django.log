@@ -259,3 +259,297 @@
 2018-07-27 14:05:32,493 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 868
 2018-07-27 14:07:58,340 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
 2018-07-27 14:07:58,402 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-27 14:09:53,351 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "OPTIONS /rocky/device/5/ HTTP/1.1" 200 1017
+2018-07-27 14:10:01,453 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "HEAD /rocky/device/5/ HTTP/1.1" 405 41
+2018-07-27 14:10:11,627 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/5/ HTTP/1.1" 405 40
+2018-07-27 14:11:14,936 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/5/ HTTP/1.1" 200 180
+2018-07-27 14:11:22,660 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "DELETE /rocky/device/5/ HTTP/1.1" 204 0
+2018-07-27 14:14:41,911 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/device/5/
+2018-07-27 14:15:05,212 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/device/5/
+2018-07-27 14:16:23,046 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/device/5/
+2018-07-27 14:16:39,268 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/5/ HTTP/1.1" 404 23
+2018-07-27 14:16:39,271 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/5/ HTTP/1.1" 404 23
+2018-07-27 14:16:39,271 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/5/ HTTP/1.1" 404 23
+2018-07-27 14:16:39,275 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/5/ HTTP/1.1" 500 59
+2018-07-27 14:16:39,276 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/5/ HTTP/1.1" 500 59
+2018-07-27 14:16:39,278 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/5/ HTTP/1.1" 500 59
+2018-07-27 14:17:02,251 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/device/5/
+2018-07-27 14:17:02,252 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/5/ HTTP/1.1" 404 23
+2018-07-27 14:23:41,589 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 14:23:41,732 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.cefd6fa49371f1d76bc58bd4e2d73822.css HTTP/1.1" 200 227596
+2018-07-27 14:23:41,741 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 304 0
+2018-07-27 14:23:41,742 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 304 0
+2018-07-27 14:23:41,809 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.2a94f9a0faac7346b726.js HTTP/1.1" 304 0
+2018-07-27 14:23:42,709 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-27 14:23:42,717 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 304 0
+2018-07-27 14:23:42,886 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.2a94f9a0faac7346b726.js.map HTTP/1.1" 304 0
+2018-07-27 14:23:42,886 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 687
+2018-07-27 14:25:33,724 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/device/ HTTP/1.1" 201 172
+2018-07-27 14:25:35,360 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 860
+2018-07-27 14:30:20,631 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /api-token-auth/ HTTP/1.1" 405 40
+2018-07-27 14:30:25,334 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 200 52
+2018-07-27 14:32:00,066 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "PUT /rocky/device/4/ HTTP/1.1" 415 62
+2018-07-27 14:32:13,276 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "PUT /rocky/device/4/ HTTP/1.1" 200 172
+2018-07-27 14:37:15,838 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 14:37:15,917 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.cefd6fa49371f1d76bc58bd4e2d73822.css HTTP/1.1" 200 227596
+2018-07-27 14:37:15,927 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-27 14:37:15,933 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-27 14:37:15,949 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.dfe52efb9de2f5d3b6d2.js HTTP/1.1" 200 12108
+2018-07-27 14:37:17,108 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 853
+2018-07-27 14:37:25,847 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "DELETE /rocky/device/4/ HTTP/1.1" 204 0
+2018-07-27 14:37:27,197 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 680
+2018-07-27 14:39:27,469 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 14:39:27,529 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.cefd6fa49371f1d76bc58bd4e2d73822.css HTTP/1.1" 200 227596
+2018-07-27 14:39:27,535 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-27 14:39:27,566 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-27 14:39:27,569 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.9da8a1fd63e004f1ec39.js HTTP/1.1" 200 12105
+2018-07-27 14:39:28,214 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 680
+2018-07-27 14:39:39,903 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "PUT /rocky/device/6/ HTTP/1.1" 200 178
+2018-07-27 14:39:41,044 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 15:06:06,889 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 15:06:06,931 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.cefd6fa49371f1d76bc58bd4e2d73822.css HTTP/1.1" 304 0
+2018-07-27 15:06:06,943 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 304 0
+2018-07-27 15:06:06,947 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 304 0
+2018-07-27 15:06:06,951 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.9da8a1fd63e004f1ec39.js HTTP/1.1" 304 0
+2018-07-27 15:06:08,062 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 15:36:14,968 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 401 9595
+2018-07-27 15:36:15,006 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-07-27 15:36:15,010 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2018-07-27 15:36:15,019 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2018-07-27 15:36:15,023 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2018-07-27 15:36:15,031 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+2018-07-27 15:36:15,035 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2018-07-27 15:36:15,040 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2018-07-27 15:36:15,042 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2018-07-27 15:36:15,045 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2018-07-27 15:36:15,050 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2018-07-27 15:36:15,051 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2018-07-27 15:50:15,707 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 15:50:15,736 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.cefd6fa49371f1d76bc58bd4e2d73822.css HTTP/1.1" 200 227596
+2018-07-27 15:50:15,757 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 304 0
+2018-07-27 15:50:15,763 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-27 15:50:15,768 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.9da8a1fd63e004f1ec39.js HTTP/1.1" 200 12105
+2018-07-27 15:50:16,687 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 15:50:18,145 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 15:50:18,175 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.cefd6fa49371f1d76bc58bd4e2d73822.css HTTP/1.1" 304 0
+2018-07-27 15:50:18,186 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 304 0
+2018-07-27 15:50:18,191 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 304 0
+2018-07-27 15:50:18,195 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.9da8a1fd63e004f1ec39.js HTTP/1.1" 304 0
+2018-07-27 15:50:18,747 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:18:48,870 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 16:18:48,961 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-27 16:18:48,961 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.04171e45a4b7f9446799.js HTTP/1.1" 200 12552
+2018-07-27 16:18:48,964 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css HTTP/1.1" 200 227596
+2018-07-27 16:18:48,968 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-27 16:18:50,847 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:18:56,905 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.04171e45a4b7f9446799.js.map HTTP/1.1" 200 61186
+2018-07-27 16:18:56,910 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css.map HTTP/1.1" 200 308004
+2018-07-27 16:21:16,397 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 16:21:16,463 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-27 16:21:16,464 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css HTTP/1.1" 200 227596
+2018-07-27 16:21:16,470 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.9e7ef461e9a1eced2910.js HTTP/1.1" 200 12626
+2018-07-27 16:21:16,472 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-27 16:21:17,146 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:21:17,537 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css.map HTTP/1.1" 200 308004
+2018-07-27 16:21:20,443 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:21:24,592 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.9e7ef461e9a1eced2910.js.map HTTP/1.1" 200 61386
+2018-07-27 16:23:56,061 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 16:23:56,130 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-27 16:23:56,134 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css HTTP/1.1" 200 227596
+2018-07-27 16:23:56,137 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.32d01c1ad24eaff3e831.js HTTP/1.1" 200 12650
+2018-07-27 16:23:56,144 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-27 16:23:56,936 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:23:57,112 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.32d01c1ad24eaff3e831.js.map HTTP/1.1" 200 61479
+2018-07-27 16:23:57,364 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css.map HTTP/1.1" 200 308004
+2018-07-27 16:23:58,871 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:26:12,656 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 16:26:12,737 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css HTTP/1.1" 200 227596
+2018-07-27 16:26:12,740 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-27 16:26:12,797 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-27 16:26:12,828 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.f73fa91893933fff79be.js HTTP/1.1" 200 12679
+2018-07-27 16:26:13,581 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:26:14,309 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.f73fa91893933fff79be.js.map HTTP/1.1" 200 61544
+2018-07-27 16:26:14,389 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css.map HTTP/1.1" 200 308004
+2018-07-27 16:26:15,468 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:26:22,076 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-27 16:26:22,144 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-27 16:29:31,779 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 16:29:31,950 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.75b6792f16f9a4c7d5e1.js HTTP/1.1" 200 12672
+2018-07-27 16:29:31,965 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css HTTP/1.1" 200 227596
+2018-07-27 16:29:31,969 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-27 16:29:31,974 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-27 16:29:34,591 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-27 16:29:34,648 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-27 16:29:34,783 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:29:34,811 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.75b6792f16f9a4c7d5e1.js.map HTTP/1.1" 200 61531
+2018-07-27 16:29:35,594 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css.map HTTP/1.1" 200 308004
+2018-07-27 16:29:36,719 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:33:22,426 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 16:33:22,569 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css HTTP/1.1" 200 227596
+2018-07-27 16:33:22,572 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.30828942726e3b3875b5.js HTTP/1.1" 200 12672
+2018-07-27 16:33:22,573 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-27 16:33:22,578 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-27 16:33:23,583 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-27 16:33:23,634 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-27 16:33:23,774 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:33:23,799 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.30828942726e3b3875b5.js.map HTTP/1.1" 200 61531
+2018-07-27 16:33:24,501 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css.map HTTP/1.1" 200 308004
+2018-07-27 16:33:25,770 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:36:30,228 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 16:36:30,369 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.7cd07b1ba31578286d4c.js HTTP/1.1" 200 12638
+2018-07-27 16:36:30,370 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-27 16:36:30,371 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css HTTP/1.1" 200 227596
+2018-07-27 16:36:30,374 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-27 16:36:31,392 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-27 16:36:31,432 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-27 16:36:31,600 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:36:31,631 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.7cd07b1ba31578286d4c.js.map HTTP/1.1" 200 61408
+2018-07-27 16:36:32,416 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css.map HTTP/1.1" 200 308004
+2018-07-27 16:36:33,454 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:41:52,755 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 16:41:52,879 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.e2aefc0fbb6de9ab8c8d.js HTTP/1.1" 200 12656
+2018-07-27 16:41:52,894 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-27 16:41:52,894 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css HTTP/1.1" 200 227596
+2018-07-27 16:41:52,900 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-27 16:41:53,803 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-27 16:41:53,866 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-27 16:41:53,925 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 16:41:54,030 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.e2aefc0fbb6de9ab8c8d.js.map HTTP/1.1" 200 61517
+2018-07-27 16:41:54,640 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css.map HTTP/1.1" 200 308004
+2018-07-27 16:41:56,084 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 17:01:04,022 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 17:01:04,172 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-27 17:01:04,172 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.ea3b94801f7848791b1e.js HTTP/1.1" 200 12656
+2018-07-27 17:01:04,174 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css HTTP/1.1" 200 227596
+2018-07-27 17:01:04,177 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-27 17:01:05,357 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-27 17:01:05,413 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-27 17:01:05,565 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.ea3b94801f7848791b1e.js.map HTTP/1.1" 200 61527
+2018-07-27 17:01:05,574 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 17:01:06,246 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css.map HTTP/1.1" 200 308004
+2018-07-27 17:01:07,414 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 17:16:02,266 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 17:16:02,399 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.62cc89778a937eeb17fc.js HTTP/1.1" 200 12586
+2018-07-27 17:16:02,415 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-27 17:16:02,417 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css HTTP/1.1" 200 227596
+2018-07-27 17:16:02,421 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-27 17:16:03,434 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-27 17:16:03,497 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-27 17:16:03,579 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 17:16:03,648 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.62cc89778a937eeb17fc.js.map HTTP/1.1" 200 61355
+2018-07-27 17:16:04,284 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css.map HTTP/1.1" 200 308004
+2018-07-27 17:16:05,874 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 17:20:05,344 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-27 17:20:05,476 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css HTTP/1.1" 200 227596
+2018-07-27 17:20:05,479 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-27 17:20:05,484 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-27 17:20:05,485 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.c8a43ab8a3b21596c830.js HTTP/1.1" 200 12596
+2018-07-27 17:20:06,262 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-27 17:20:06,313 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-27 17:20:06,443 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 17:20:06,457 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.c8a43ab8a3b21596c830.js.map HTTP/1.1" 200 61391
+2018-07-27 17:20:07,105 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css.map HTTP/1.1" 200 308004
+2018-07-27 17:20:09,082 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-27 18:22:27,738 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 401 9535
+2018-07-27 18:22:27,776 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2018-07-27 18:22:27,777 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2018-07-27 18:22:27,780 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2018-07-27 18:22:27,788 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2018-07-27 18:22:27,793 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2018-07-27 18:22:27,797 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+2018-07-27 18:22:27,797 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2018-07-27 18:22:27,802 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2018-07-27 18:22:27,805 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2018-07-27 18:22:27,808 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2018-07-27 18:22:27,813 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2018-07-27 18:22:54,980 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /rocky/diary/
+Traceback (most recent call last):
+  File "E:\Program Files\Python36\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "E:\Program Files\Python36\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'testdb.rocky_diary' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "E:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 272, in __iter__
+    self._fetch_all()
+  File "E:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "E:\Program Files\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1068, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\Program Files\Python36\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "E:\Program Files\Python36\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "E:\Program Files\Python36\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Program Files\Python36\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "E:\Program Files\Python36\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Program Files\Python36\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "E:\Program Files\Python36\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\cursors.py", line 166, in execute
+    result = self._query(query)
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 1057, in _read_query_result
+    result.read()
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "E:\Program Files\Python36\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'testdb.rocky_diary' doesn't exist")
+2018-07-27 18:22:55,090 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 500 22085
