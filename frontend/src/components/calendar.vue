@@ -1,3 +1,6 @@
+<template>
+	<full-calendar/>
+</template>
 
 <script type="text/javascript">
 	export default {

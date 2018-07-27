@@ -102,8 +102,26 @@
             	this.currentuser = {id:'', device_no: '', project_id: 1, user_name:'' , channel_id: 1}
             	this.modal6 = true
             },
-            delete_user() {
-            	
+            delete_user(callback) {
+            	var user = this.currentuser
+            	$.ajax({
+					url:"/rocky/device/",
+					type:"DELETE",
+					contentType: 'application/json'	,
+					beforeSend: function(xhr){
+						xhr.setRequestHeader("Authorization", mytoken);
+					},
+					data: JSON.stringify(user),
+					success: function(data){
+						console.log(data)
+						// callback =  data
+					},
+					error: function(err){
+						console.log(err)
+						alert(err)
+					}
+
+            	})
             }
 		},
 		created: function(){

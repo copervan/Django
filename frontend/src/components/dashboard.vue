@@ -126,7 +126,7 @@
         methods: {
         	bind_template(name){
         		this.currentTab = 'type_'+ String(Number(name) - 1)
-        	}        
+        	}
         },
     }
 
