@@ -553,3 +553,421 @@ Traceback (most recent call last):
     raise errorclass(errno, errval)
 django.db.utils.ProgrammingError: (1146, "Table 'testdb.rocky_diary' doesn't exist")
 2018-07-27 18:22:55,090 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 500 22085
+2018-07-28 04:06:13,091 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-28 04:06:13,165 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-28 04:06:13,167 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.7cb35273110848b718c5.js HTTP/1.1" 200 12639
+2018-07-28 04:06:13,170 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-28 04:06:13,172 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-28 04:06:18,917 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/fonts/ionicons.24712f6.ttf HTTP/1.1" 200 188508
+2018-07-28 04:06:18,952 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /favicon.ico
+2018-07-28 04:06:18,953 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /favicon.ico HTTP/1.1" 404 2406
+2018-07-28 04:06:36,608 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 400 68
+2018-07-28 04:06:40,548 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 400 68
+2018-07-28 04:06:53,485 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 400 68
+2018-07-28 04:06:54,651 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 400 68
+2018-07-28 04:06:54,927 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 400 68
+2018-07-28 04:06:55,465 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 400 68
+2018-07-28 04:07:01,452 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 401 58
+2018-07-28 04:07:10,929 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 401 58
+2018-07-28 04:07:31,161 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 200 52
+2018-07-28 04:07:31,192 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 2
+2018-07-28 04:07:50,048 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/device/ HTTP/1.1" 201 171
+2018-07-28 04:07:51,904 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 173
+2018-07-28 04:08:01,287 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/device/ HTTP/1.1" 201 171
+2018-07-28 04:08:02,979 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 345
+2018-07-29 01:22:28,419 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 01:22:28,449 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.7cb35273110848b718c5.js HTTP/1.1" 200 12639
+2018-07-29 01:22:28,449 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 01:22:28,452 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 01:22:28,455 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 01:22:29,389 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/fonts/ionicons.24712f6.ttf HTTP/1.1" 200 188508
+2018-07-29 01:22:29,421 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /favicon.ico
+2018-07-29 01:22:29,422 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /favicon.ico HTTP/1.1" 404 2406
+2018-07-29 01:22:31,496 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 200 52
+2018-07-29 01:22:31,524 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 345
+2018-07-29 01:22:38,367 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 345
+2018-07-29 01:30:42,752 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /rocky/diary
+2018-07-29 01:30:42,753 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary HTTP/1.1" 404 5177
+2018-07-29 01:30:47,797 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 401 5153
+2018-07-29 01:30:47,814 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2018-07-29 01:30:47,815 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+2018-07-29 01:30:47,816 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+2018-07-29 01:30:47,816 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+2018-07-29 01:30:47,821 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+2018-07-29 01:30:47,822 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+2018-07-29 01:30:47,823 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+2018-07-29 01:30:47,823 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-07-29 01:30:47,824 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+2018-07-29 01:30:47,824 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+2018-07-29 01:30:47,831 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+2018-07-29 01:53:38,953 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 401 5153
+2018-07-29 01:53:38,971 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2018-07-29 01:53:38,971 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2018-07-29 01:53:38,971 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2018-07-29 01:53:38,976 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+2018-07-29 01:53:38,977 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2018-07-29 01:53:38,977 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2018-07-29 01:53:38,980 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2018-07-29 01:53:38,982 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2018-07-29 01:53:38,982 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2018-07-29 01:53:38,983 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2018-07-29 01:53:38,987 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2018-07-29 02:24:43,273 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 02:26:59,671 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /api-token-auth
+2018-07-29 02:26:59,671 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /api-token-auth HTTP/1.1" 404 2415
+2018-07-29 02:27:06,253 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /api-token-auth
+2018-07-29 02:27:06,253 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth HTTP/1.1" 404 2416
+2018-07-29 02:27:12,197 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 400 79
+2018-07-29 02:27:48,585 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 200 52
+2018-07-29 02:28:53,984 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 200 52
+2018-07-29 02:29:30,687 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 401 58
+2018-07-29 02:32:02,872 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 401 58
+2018-07-29 02:33:10,395 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 2
+2018-07-29 02:33:21,160 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 400 75
+2018-07-29 03:18:44,484 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 03:18:44,504 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.38c951b24f85b46a0c30.js HTTP/1.1" 200 14082
+2018-07-29 03:18:44,507 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 03:18:44,509 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 03:18:44,511 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 03:18:45,568 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 345
+2018-07-29 03:18:50,784 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 2
+2018-07-29 03:18:57,119 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 03:18:57,135 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 03:18:57,135 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.38c951b24f85b46a0c30.js.map HTTP/1.1" 200 64741
+2018-07-29 03:20:21,301 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 03:20:21,350 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.38c951b24f85b46a0c30.js HTTP/1.1" 304 0
+2018-07-29 03:20:21,350 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 304 0
+2018-07-29 03:20:21,351 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 304 0
+2018-07-29 03:20:21,354 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 03:20:22,212 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 304 0
+2018-07-29 03:20:22,213 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 304 0
+2018-07-29 03:20:22,248 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 345
+2018-07-29 03:20:22,348 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.38c951b24f85b46a0c30.js.map HTTP/1.1" 304 0
+2018-07-29 03:20:25,801 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 2
+2018-07-29 03:22:51,499 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 03:22:51,525 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 03:22:51,526 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.7ea0a1b2a26599e29328.js HTTP/1.1" 200 14079
+2018-07-29 03:22:51,527 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 03:22:51,528 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 03:22:52,435 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 03:22:52,440 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 03:22:52,478 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 345
+2018-07-29 03:22:52,577 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.7ea0a1b2a26599e29328.js.map HTTP/1.1" 200 64741
+2018-07-29 03:22:55,457 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 2
+2018-07-29 03:25:18,357 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 03:25:18,459 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 03:25:18,460 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.de1d82961591d961395f.js HTTP/1.1" 200 14079
+2018-07-29 03:25:18,461 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 03:25:18,462 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 03:25:19,051 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 03:25:19,061 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 03:25:19,224 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 345
+2018-07-29 03:25:19,331 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.de1d82961591d961395f.js.map HTTP/1.1" 200 64740
+2018-07-29 03:25:22,038 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 2
+2018-07-29 03:26:07,122 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 400 85
+2018-07-29 03:26:11,604 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 03:26:11,684 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 304 0
+2018-07-29 03:26:11,687 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 304 0
+2018-07-29 03:26:11,688 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 304 0
+2018-07-29 03:26:11,688 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.de1d82961591d961395f.js HTTP/1.1" 304 0
+2018-07-29 03:26:12,515 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 304 0
+2018-07-29 03:26:12,516 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 304 0
+2018-07-29 03:26:12,676 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 345
+2018-07-29 03:26:12,756 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.de1d82961591d961395f.js.map HTTP/1.1" 304 0
+2018-07-29 03:26:14,517 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 2
+2018-07-29 03:32:37,304 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 03:32:37,336 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 03:32:37,337 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.2014fd1cda95de7bee87.js HTTP/1.1" 200 14151
+2018-07-29 03:32:37,337 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 03:32:37,339 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 03:32:38,452 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 03:32:38,456 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 03:32:38,495 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 345
+2018-07-29 03:32:38,839 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.2014fd1cda95de7bee87.js.map HTTP/1.1" 200 64975
+2018-07-29 03:32:40,406 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 2
+2018-07-29 03:33:07,303 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 400 85
+2018-07-29 03:34:24,668 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 03:34:24,696 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 03:34:24,697 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.dfba57f5e2381500365a.js HTTP/1.1" 200 14114
+2018-07-29 03:34:24,698 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 03:34:24,699 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 03:34:25,456 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 03:34:25,462 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 03:34:25,620 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 345
+2018-07-29 03:34:25,741 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.dfba57f5e2381500365a.js.map HTTP/1.1" 200 64938
+2018-07-29 03:34:27,651 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 2
+2018-07-29 03:34:49,968 ERROR    /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/exception.py[line:118] Internal Server Error: /rocky/diary/
+Traceback (most recent call last):
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/mixins.py", line 22, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 527, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/fields.py", line 1344, in to_representation
+    'Expected a `time`, but got a `datetime`. Refusing to coerce, '
+AssertionError: Expected a `time`, but got a `datetime`. Refusing to coerce, as this may mean losing timezone information. Use a custom read-only field and deal with timezone issues explicitly.
+2018-07-29 03:34:49,985 ERROR    /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 500 19365
+2018-07-29 03:39:14,994 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/device/ HTTP/1.1" 201 179
+2018-07-29 03:39:16,437 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 525
+2018-07-29 03:39:26,353 ERROR    /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/exception.py[line:118] Internal Server Error: /rocky/diary/
+Traceback (most recent call last):
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/mixins.py", line 22, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 527, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/fields.py", line 1344, in to_representation
+    'Expected a `time`, but got a `datetime`. Refusing to coerce, '
+AssertionError: Expected a `time`, but got a `datetime`. Refusing to coerce, as this may mean losing timezone information. Use a custom read-only field and deal with timezone issues explicitly.
+2018-07-29 03:39:26,363 ERROR    /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 500 19365
+2018-07-29 03:40:56,538 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 415 62
+2018-07-29 03:41:17,261 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 400 75
+2018-07-29 03:41:59,046 ERROR    /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/exception.py[line:118] Internal Server Error: /rocky/diary/
+Traceback (most recent call last):
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/mixins.py", line 22, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 527, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/fields.py", line 1344, in to_representation
+    'Expected a `time`, but got a `datetime`. Refusing to coerce, '
+AssertionError: Expected a `time`, but got a `datetime`. Refusing to coerce, as this may mean losing timezone information. Use a custom read-only field and deal with timezone issues explicitly.
+2018-07-29 03:41:59,059 ERROR    /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 500 19034
+2018-07-29 03:46:09,966 ERROR    /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/exception.py[line:118] Internal Server Error: /rocky/diary/
+Traceback (most recent call last):
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/mixins.py", line 22, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 527, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/fields.py", line 1344, in to_representation
+    'Expected a `time`, but got a `datetime`. Refusing to coerce, '
+AssertionError: Expected a `time`, but got a `datetime`. Refusing to coerce, as this may mean losing timezone information. Use a custom read-only field and deal with timezone issues explicitly.
+2018-07-29 03:46:09,981 ERROR    /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 500 19034
+2018-07-29 03:46:27,773 ERROR    /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/exception.py[line:118] Internal Server Error: /rocky/diary/
+Traceback (most recent call last):
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/rocky/.local/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/mixins.py", line 22, in create
+    headers = self.get_success_headers(serializer.data)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/serializers.py", line 527, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/usr/local/lib/python3.5/dist-packages/rest_framework/fields.py", line 1344, in to_representation
+    'Expected a `time`, but got a `datetime`. Refusing to coerce, '
+AssertionError: Expected a `time`, but got a `datetime`. Refusing to coerce, as this may mean losing timezone information. Use a custom read-only field and deal with timezone issues explicitly.
+2018-07-29 03:46:27,786 ERROR    /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 500 19034
+2018-07-29 03:48:41,842 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 03:48:41,863 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 304 0
+2018-07-29 03:48:41,865 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 304 0
+2018-07-29 03:48:41,865 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 304 0
+2018-07-29 03:48:41,871 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.dfba57f5e2381500365a.js HTTP/1.1" 304 0
+2018-07-29 03:48:42,807 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 304 0
+2018-07-29 03:48:42,808 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 304 0
+2018-07-29 03:48:42,850 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 525
+2018-07-29 03:48:43,182 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.dfba57f5e2381500365a.js.map HTTP/1.1" 304 0
+2018-07-29 03:48:44,844 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 940
+2018-07-29 03:52:03,191 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 03:52:03,215 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 03:52:03,216 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.dfba57f5e2381500365a.js HTTP/1.1" 200 14114
+2018-07-29 03:52:03,217 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 03:52:03,218 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 03:52:09,319 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 03:52:09,324 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 03:52:09,364 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 525
+2018-07-29 03:52:09,701 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.dfba57f5e2381500365a.js.map HTTP/1.1" 200 64938
+2018-07-29 03:52:16,712 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 1000
+2018-07-29 03:54:11,665 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 03:54:11,692 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 03:54:11,692 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.6630ba2fe5790c3fafda.js HTTP/1.1" 200 14124
+2018-07-29 03:54:11,694 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 03:54:11,695 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 03:54:12,227 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 03:54:12,231 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 03:54:12,328 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 525
+2018-07-29 03:54:12,360 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.6630ba2fe5790c3fafda.js.map HTTP/1.1" 200 64986
+2018-07-29 03:54:14,086 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 1000
+2018-07-29 03:55:51,601 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 03:55:51,628 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 03:55:51,628 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.3becbe8d3fef115870a1.js HTTP/1.1" 200 14138
+2018-07-29 03:55:51,630 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 03:55:51,631 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 03:55:52,148 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 03:55:52,153 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 03:55:52,199 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 525
+2018-07-29 03:55:52,258 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.3becbe8d3fef115870a1.js.map HTTP/1.1" 200 65002
+2018-07-29 03:55:56,203 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 1000
+2018-07-29 03:57:13,309 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 03:57:13,336 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 03:57:13,337 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.e4f2af9cefc08ce963d7.js HTTP/1.1" 200 14148
+2018-07-29 03:57:13,338 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 03:57:13,339 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 03:57:14,980 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 03:57:14,984 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 03:57:15,072 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 525
+2018-07-29 03:57:15,104 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.e4f2af9cefc08ce963d7.js.map HTTP/1.1" 200 65048
+2018-07-29 03:57:16,602 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 1000
+2018-07-29 03:59:32,245 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 03:59:32,267 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 03:59:32,267 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 03:59:32,269 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.22a5621379edaaf680af.js HTTP/1.1" 200 14154
+2018-07-29 03:59:32,270 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 03:59:32,792 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 03:59:32,796 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 03:59:32,868 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 525
+2018-07-29 03:59:32,914 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.22a5621379edaaf680af.js.map HTTP/1.1" 200 65087
+2018-07-29 03:59:35,176 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 1000
+2018-07-29 04:00:52,217 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 04:00:52,277 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 04:00:52,277 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.774e7bd9309fead0afdc.js HTTP/1.1" 200 14120
+2018-07-29 04:00:52,278 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 04:00:52,280 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 04:00:52,876 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 04:00:52,880 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 04:00:52,946 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 525
+2018-07-29 04:00:52,984 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.774e7bd9309fead0afdc.js.map HTTP/1.1" 200 64975
+2018-07-29 04:00:54,236 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 1000
+2018-07-29 04:02:12,453 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 04:02:12,478 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 04:02:12,479 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.efbb261f59f55eb2cdf1.js HTTP/1.1" 200 14115
+2018-07-29 04:02:12,480 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 04:02:12,482 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 04:02:12,976 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 04:02:12,980 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 04:02:13,070 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 525
+2018-07-29 04:02:13,087 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.efbb261f59f55eb2cdf1.js.map HTTP/1.1" 200 64931
+2018-07-29 04:02:14,580 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 1000
+2018-07-29 04:13:06,562 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 04:13:06,593 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.93e2eb712c552a5d6fe6.js HTTP/1.1" 200 14153
+2018-07-29 04:13:06,596 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 04:13:06,597 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 04:13:06,598 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 04:13:07,457 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 04:13:07,461 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 04:13:07,507 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 525
+2018-07-29 04:13:07,607 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.93e2eb712c552a5d6fe6.js.map HTTP/1.1" 200 65107
+2018-07-29 04:13:10,770 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 1000
+2018-07-29 04:13:55,763 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 201 197
+2018-07-29 04:16:05,445 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 04:16:05,480 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 04:16:05,480 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.b84add7f2e2d3c07e765.js HTTP/1.1" 200 14153
+2018-07-29 04:16:05,481 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 04:16:05,482 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 04:16:06,335 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 04:16:06,339 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 04:16:06,389 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 525
+2018-07-29 04:16:06,483 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.b84add7f2e2d3c07e765.js.map HTTP/1.1" 200 65139
+2018-07-29 04:16:10,380 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 1198
+2018-07-29 04:19:10,008 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 04:19:10,031 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 04:19:10,032 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.8f57f0954d680b88302b.js HTTP/1.1" 200 14163
+2018-07-29 04:19:10,032 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 04:19:10,034 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 04:19:11,281 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 04:19:11,286 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 04:19:11,364 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 525
+2018-07-29 04:19:11,394 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.8f57f0954d680b88302b.js.map HTTP/1.1" 200 65204
+2018-07-29 04:19:14,716 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 1198
+2018-07-29 04:35:26,386 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-29 04:35:26,443 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-29 04:35:26,443 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.b1a60d7282c8e7b9b871.js HTTP/1.1" 200 14180
+2018-07-29 04:35:26,444 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.0730b143b1b8fa93944b6394b33860ed.css HTTP/1.1" 200 227596
+2018-07-29 04:35:26,445 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 200 775982
+2018-07-29 04:35:27,398 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-29 04:35:27,402 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 200 3375783
+2018-07-29 04:35:27,476 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 525
+2018-07-29 04:35:27,523 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.b1a60d7282c8e7b9b871.js.map HTTP/1.1" 200 65171
+2018-07-29 04:35:30,521 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 1198

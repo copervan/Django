@@ -30,7 +30,7 @@
                 modal6: false,
                 edituser: false,
                 loading: true,
-                currentuser : {}
+                currentuser: {}
 			}
 		},
 		methods: {
@@ -79,7 +79,7 @@
 			},
 			asyncOK () {
 				var _this = this
-				var currentuser = this.currentuser
+				var currentuser = _this.currentuser
 				currentuser.project_id = 1
 				currentuser.channel_id = 1
 				console.log(JSON.stringify(currentuser) )
