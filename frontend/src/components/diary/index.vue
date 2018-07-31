@@ -1,6 +1,7 @@
 
 <script type="text/javascript">
 	import $ from 'jquery'
+	//import { quillEditor } from 'vue-quill-editor'
 	export default {
 		name: 'diary',
 		data () {
@@ -70,19 +71,22 @@
 				}).done(callback)
 			},
 			add_diary(){
-				//var _this =  this 
+				var _this =  this 
 				//var diary_list = this.diary_list
 				//_this.currentdiary = {title:'',content:""},
 				this.create_diary(this.currentdiary, function(){
-					alert("Diary successfully created!")
-						this.get_diary(this.set_diary_list)
+						alert("Diary successfully created!")
+						_this.get_diary(_this.set_diary_list)
 					})
 				this.diary_add = false
 			},
 			select_current_diary(currentRow,oldCurrentRow){
             	console.log(currentRow,oldCurrentRow)
             	this.currentdiary = currentRow
-            }
+            },
+            onEditorChange({ editor, html, text }) {//富文本编辑器  文本改变时 设置字段值
+	        	this.currentdiary.content = html
+	    	}
 
 		},
 		created: function() {
@@ -113,16 +117,21 @@
 	        :loading="loading"
 	        @on-ok="add_diary">
 		    <template>
-				<Form :model="formTop" label-position="left" :label-width="500">
+				<Form :model="formTop" label-position="left" >
 			        <FormItem label="title">
 			            <Input v-model="currentdiary.title"></Input>
 			        </FormItem>
 			        <FormItem label="content">
 			            <Input v-model="currentdiary.content" type="textarea" :autosize="{minRows: 5,maxRows: 15}" placeholder="Enter something..."></Input>
 			        </FormItem>
+			        <quill-editor ref="myTextEditor"
+					    v-model="currentdiary.content" 
+					    :config = "editorOption">
+					</quill-editor>
 			    </Form>
 			</template>
 	    </Modal>
+
 	    <Modal
 	        v-model="diary_show"
 	        title="Show diary Detail"
@@ -132,7 +141,7 @@
 				<div style="background:#eee;padding: 20px">
 				    <Card :bordered="false">
 				        <p slot="title">{{currentdiary.title}}</p>
-				        <p>{{currentdiary.content}}</p>
+				        <p v-html="currentdiary.content"></p>
 				    </Card>
 				    <br/>
 				    <p>日期：{{currentdiary.date}}</p>

@@ -8,13 +8,18 @@ import 'iview/dist/styles/iview.css'
 import Router from 'vue-router'
 import fullcalendar  from 'vue-fullcalendar'
 import Vuex from 'vuex'
+import VueQuillEditor from 'vue-quill-editor'
+
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
 
 Vue.use(Vuex)
 Vue.use(fullcalendar)
 Vue.config.productionTip = true
 Vue.use(iView)
 Vue.use(Router)
-
+Vue.use(VueQuillEditor)
 
 const store =  new Vuex.Store({
 	state:{
