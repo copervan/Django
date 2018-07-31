@@ -1122,3 +1122,7 @@ AssertionError: Expected a `time`, but got a `datetime`. Refusing to coerce, as 
 2018-07-30 13:34:37,013 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 525
 2018-07-30 13:34:37,017 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.f0a12d9ce8c208bdabbf.js.map HTTP/1.1" 200 68240
 2018-07-30 13:34:39,810 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 2086
+2018-07-31 12:29:46,628 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 201 273
+2018-07-31 12:29:50,264 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 2360
+2018-07-31 13:37:59,347 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 201 310
+2018-07-31 13:38:01,847 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 2671

@@ -10,9 +10,14 @@ import fullcalendar  from 'vue-fullcalendar'
 import Vuex from 'vuex'
 import VueQuillEditor from 'vue-quill-editor'
 
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
 import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
+
+Vue.use(ElementUI)
 
 Vue.use(Vuex)
 Vue.use(fullcalendar)
