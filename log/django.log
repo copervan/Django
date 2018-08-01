@@ -1407,3 +1407,14 @@ AssertionError: Expected a `time`, but got a `datetime`. Refusing to coerce, as 
 2018-07-30 17:37:16,614 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.cd8871cce45f47001163.js.map HTTP/1.1" 200 68230
 2018-07-30 17:37:17,143 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css.map HTTP/1.1" 200 308004
 2018-07-30 17:37:18,700 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 191
+2018-07-31 09:14:48,255 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-07-31 09:14:48,322 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-07-31 09:14:48,324 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css HTTP/1.1" 200 227596
+2018-07-31 09:14:48,344 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.cd8871cce45f47001163.js HTTP/1.1" 200 14800
+2018-07-31 09:14:48,574 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js HTTP/1.1" 304 0
+2018-07-31 09:14:49,204 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-07-31 09:14:49,204 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.3368260521ebce99eaba.js.map HTTP/1.1" 304 0
+2018-07-31 09:14:49,414 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.cd8871cce45f47001163.js.map HTTP/1.1" 200 68230
+2018-07-31 09:14:49,436 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 691
+2018-07-31 09:14:49,799 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.c72dd40b09e1f8a9ef2a6f648746c3e0.css.map HTTP/1.1" 304 0
+2018-07-31 09:14:51,393 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 191
