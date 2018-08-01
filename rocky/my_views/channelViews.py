@@ -19,8 +19,3 @@ class ChannelDeviceViewSet(viewsets.ModelViewSet):
     
     queryset = channel.ChannelDevice.objects.all()
     serializer_class = channelserialize.ChannelDeviceSerializer
-
-device_view = ChannelDeviceViewSet.as_view(
-    {'get':'list','post':'create','delete':'destroy','put':'partial_update'})
-
-logger.info(device_view)

@@ -11,5 +11,5 @@ logger = logging.getLogger(__name__)
 
 class DiaryViewSet(viewsets.ModelViewSet):
     permission_classes  = (permissions.IsAuthenticated,)
-    queryset = diary.Diary.objects.all()
+    queryset = diary.Diary.objects.all().order_by('-id')
     serializer_class = diaryserialize.DiarySerializers

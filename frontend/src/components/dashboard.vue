@@ -99,7 +99,7 @@
                 this.$router.replace({path:"/"})
             }
             else {
-                console.log("the Token: "+ this.token)
+                // console.log("the Token: "+ this.token)
             }
         },
         computed: {
