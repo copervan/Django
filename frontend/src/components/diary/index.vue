@@ -22,12 +22,15 @@
 						key : "content"
 					}],
 				diary_show: false,
-				token: this.$store.state.token
+				token: this.$store.state.token,
+				currentPage: 1,
+				diary_count:0
 			}
 		},
 		methods: {
 			set_diary_list(data){
 				this.diary_list = data.results
+				this.diary_count = data.count
 				// console.log(this.diary_list)
 			},
 			new_diary(){
@@ -40,7 +43,7 @@
 					// console.log(_this.currentdiary)
 					Diarys.create_diary(_this.currentdiary,_this.token, function(){
 							alert("Diary successfully created!")
-							Diarys.get_diary(_this.token, _this.set_diary_list)
+							Diarys.get_diary(_this.currentPage, _this.token, _this.set_diary_list)
 					})
 				}
 				else {
@@ -56,6 +59,10 @@
 		    	this.currentdiary =  row
 		    	this.diary_show = true
 		    },
+		    handleCurrentChange() {
+				var _this = this
+				Diarys.get_diary(_this.currentPage, _this.token, _this.set_diary_list)
+			},
 		    formatDate(time){
 			    var date = new Date(time);
 
@@ -77,7 +84,7 @@
 		},
 		created: function() {
 			// console.log('this is the create' )
-			Diarys.get_diary(this.token, this.set_diary_list)
+			Diarys.get_diary(this.currentPage,this.token, this.set_diary_list)
 		},
 		computed: {
 			my_list : function() {
@@ -94,6 +101,7 @@
 	<div>
 		<Button type="primary" @click="new_diary">Create The Diary</Button>
 <template>
+<div>
   <el-table
     :data="my_list"
     highlight-current-row
@@ -132,6 +140,16 @@
       </template>
     </el-table-column>
   </el-table>
+    <div class="block">
+    <el-pagination
+      @current-change="handleCurrentChange"
+      :current-page.sync="currentPage"
+      :page-size="10"
+      layout="total, prev, pager, next"
+      :total="diary_count">
+    </el-pagination>
+  </div>
+</div>
 </template>		
 
 	    <Modal

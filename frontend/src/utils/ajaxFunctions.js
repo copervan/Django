@@ -72,9 +72,9 @@ const Users = {
 }
 
 const Diarys = {
-	get_diary(token,callback) {
+	get_diary(page,token,callback) {
 		var myusers = $.ajax({
-			url:"/rocky/diary/",
+			url:"/rocky/diary/?page="+page,
 			type:"GET",
 			contentType: 'application/json'	,
 			beforeSend: function(xhr){
