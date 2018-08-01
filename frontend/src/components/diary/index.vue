@@ -152,7 +152,7 @@
 				<div style="background:#eee;padding: 20px">
 				    <Card :bordered="false">
 				        <p slot="title">{{currentdiary.title}}</p>
-				        <p v-html="currentdiary.content"></p>
+				        <p style="text-indent:2em"  v-html="currentdiary.content"></p>
 				    </Card>
 				    <br/>
 				    <p>日期：{{formatDate(currentdiary.date) }}</p>
