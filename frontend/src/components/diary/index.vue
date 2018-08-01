@@ -36,16 +36,25 @@
 			},
 			add_diary(){
 				var _this = this
-				// console.log(_this.currentdiary)
-				Diarys.create_diary(_this.currentdiary,_this.token, function(){
-						alert("Diary successfully created!")
-						Diarys.get_diary(_this.token, _this.set_diary_list)
+				if(_this.currentdiary.content != '' && _this.currentdiary.title != ''){
+					// console.log(_this.currentdiary)
+					Diarys.create_diary(_this.currentdiary,_this.token, function(){
+							alert("Diary successfully created!")
+							Diarys.get_diary(_this.token, _this.set_diary_list)
 					})
+				}
+				else {
+					alert("标题和内容均不能为空")
+				}
 				this.diary_add = false
 			},
 	    	show_detail(index, row) {
             	this.currentdiary =  row
             	this.diary_show = true
+		    },
+		    handleDblClick(row){
+		    	this.currentdiary =  row
+		    	this.diary_show = true
 		    },
 		    formatDate(time){
 			    var date = new Date(time);
@@ -87,12 +96,14 @@
 <template>
   <el-table
     :data="my_list"
+    highlight-current-row
+    @row-dblclick="handleDblClick"
     style="width: 100%">
     <el-table-column
       label="ID"
       width="180">
       <template slot-scope="scope">
-        <i class="el-icon-time"></i>
+        <i class="el-icon-info"></i>
         <span style="margin-left: 10px">{{ scope.row.id }}</span>
       </template>
     </el-table-column>
@@ -108,11 +119,9 @@
       label="日期"
       width="180">
       <template slot-scope="scope">
-        <el-popover trigger="hover" placement="top">
           <div slot="reference" class="name-wrapper">
             <el-tag size="medium">{{ formatDate(scope.row.date) }}</el-tag>
           </div>
-        </el-popover>
       </template>
     </el-table-column>
     <el-table-column label="操作">
