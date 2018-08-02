@@ -99,7 +99,9 @@
 
 <template>
 	<div>
-		<Button type="primary" @click="new_diary">Create The Diary</Button>
+		<el-button type="success" plain
+          size="mini" icon="el-icon-circle-plus-outline"
+          @click="new_diary">Create The Diary</el-button>
 <template>
 <div>
   <el-table

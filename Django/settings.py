@@ -179,22 +179,6 @@ LOGGING = {
             'backupCount': 100,
             'formatter': 'detail',
         },
-        'app1_file': {
-            'level': 'INFO',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': './log/app1.log',
-            'maxBytes': 1024 * 1024 * 5,  # 5 MB
-            'backupCount': 100,
-            'formatter': 'detail',
-        },
-        'app2_file': {
-            'level': 'INFO',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': './log/app2.log',
-            'maxBytes': 1024 * 1024 * 5,  # 5 MB
-            'backupCount': 100,
-            'formatter': 'detail',
-        },
     },
     'loggers': {
         'django': {
@@ -216,16 +200,6 @@ LOGGING = {
         'myapp': {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
-            'propagate': True,
-        },
-        'app1': {
-            'handlers': ['console', 'app1_file'],
-            'level': 'INFO',
-            'propagate': True,
-        },
-        'pushdata': {
-            'handlers': ['console', 'app2_file'],
-            'level': 'INFO',
             'propagate': True,
         },
 

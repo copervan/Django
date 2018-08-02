@@ -1698,3 +1698,24 @@ AssertionError: Expected a `time`, but got a `datetime`. Refusing to coerce, as 
 2018-08-01 12:46:18,810 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 2557
 2018-08-01 12:47:28,400 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 201 238
 2018-08-01 12:47:30,324 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 2592
+2018-08-02 10:03:54,220 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-08-02 10:03:54,302 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.eedafc96894b981efaf1.js HTTP/1.1" 200 1624512
+2018-08-02 10:03:54,502 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.a63b64debd0d2ff9a943.js HTTP/1.1" 200 17930
+2018-08-02 10:03:54,518 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-08-02 10:03:54,538 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.38a83cc1546ed3ec97f07d80f308cf48.css HTTP/1.1" 200 451585
+2018-08-02 10:04:16,214 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /favicon.ico
+2018-08-02 10:04:16,218 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /favicon.ico
+2018-08-02 10:04:16,219 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /favicon.ico HTTP/1.1" 404 2406
+2018-08-02 10:04:16,219 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /favicon.ico HTTP/1.1" 404 2406
+2018-08-02 10:04:16,248 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /favicon.ico HTTP/1.1" 500 59
+2018-08-02 10:04:26,117 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 200 52
+2018-08-02 10:04:26,218 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/fonts/ionicons.24712f6.ttf HTTP/1.1" 200 188508
+2018-08-02 10:04:26,235 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1861
+2018-08-02 10:04:28,016 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 4790
+2018-08-02 10:10:55,892 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-08-02 10:10:55,935 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-08-02 10:10:55,951 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.38a83cc1546ed3ec97f07d80f308cf48.css HTTP/1.1" 200 451585
+2018-08-02 10:10:55,955 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.007f45bc37baee6e3eed.js HTTP/1.1" 200 17860
+2018-08-02 10:10:55,985 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.eedafc96894b981efaf1.js HTTP/1.1" 200 1624512
+2018-08-02 10:11:02,407 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1861
+2018-08-02 10:11:05,288 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 4790
