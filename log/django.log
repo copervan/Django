@@ -1719,3 +1719,23 @@ AssertionError: Expected a `time`, but got a `datetime`. Refusing to coerce, as 
 2018-08-02 10:10:55,985 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.eedafc96894b981efaf1.js HTTP/1.1" 200 1624512
 2018-08-02 10:11:02,407 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1861
 2018-08-02 10:11:05,288 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 4790
+2018-08-05 02:04:59,788 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-08-05 02:04:59,904 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-08-05 02:04:59,904 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.babf525318bfe7afe131.js HTTP/1.1" 200 17862
+2018-08-05 02:04:59,906 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.a45385df771606fbdffe43fb17ab9475.css HTTP/1.1" 200 451585
+2018-08-05 02:04:59,908 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.eedafc96894b981efaf1.js HTTP/1.1" 200 1624512
+2018-08-05 02:05:00,945 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-08-05 02:05:00,954 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.eedafc96894b981efaf1.js.map HTTP/1.1" 200 6352629
+2018-08-05 02:05:01,190 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 575
+2018-08-05 02:05:01,220 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.babf525318bfe7afe131.js.map HTTP/1.1" 200 77794
+2018-08-05 02:05:03,595 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 2592
+2018-08-05 02:06:24,012 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/?page=2 HTTP/1.1" 200 492
+2018-08-05 02:16:54,056 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-08-05 02:16:54,089 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/css/app.a45385df771606fbdffe43fb17ab9475.css HTTP/1.1" 304 0
+2018-08-05 02:16:54,090 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 304 0
+2018-08-05 02:16:54,091 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.eedafc96894b981efaf1.js HTTP/1.1" 304 0
+2018-08-05 02:16:54,091 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.babf525318bfe7afe131.js HTTP/1.1" 304 0
+2018-08-05 02:16:54,878 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js.map HTTP/1.1" 200 4972
+2018-08-05 02:16:54,885 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.eedafc96894b981efaf1.js.map HTTP/1.1" 304 0
+2018-08-05 02:16:55,059 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 575
+2018-08-05 02:16:55,130 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.babf525318bfe7afe131.js.map HTTP/1.1" 200 77794
