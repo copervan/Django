@@ -1739,3 +1739,43 @@ AssertionError: Expected a `time`, but got a `datetime`. Refusing to coerce, as 
 2018-08-05 02:16:54,885 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/vendor.eedafc96894b981efaf1.js.map HTTP/1.1" 304 0
 2018-08-05 02:16:55,059 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 575
 2018-08-05 02:16:55,130 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /static/js/app.babf525318bfe7afe131.js.map HTTP/1.1" 200 77794
+2018-08-07 09:15:10,153 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-07 09:15:16,569 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 5292
+2018-08-07 09:20:22,201 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-07 09:20:37,851 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-07 09:20:47,666 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 5292
+2018-08-07 13:49:53,517 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-07 13:49:59,669 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=2 HTTP/1.1" 200 1687
+2018-08-07 13:50:02,057 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 5292
+2018-08-07 13:50:49,303 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-07 13:50:50,760 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 5292
+2018-08-07 17:42:19,894 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-07 17:42:59,299 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-07 17:43:04,985 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-07 17:43:11,484 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 5292
+2018-08-08 08:58:41,944 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-08 08:58:43,794 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 5292
+2018-08-08 13:47:43,327 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 5292
+2018-08-08 13:56:21,558 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-08 13:56:24,952 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 5292
+2018-08-08 14:02:25,552 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-08 14:04:44,744 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-08 15:33:39,117 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 401 58
+2018-08-08 15:33:47,376 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET / HTTP/1.1" 200 993
+2018-08-08 15:33:47,474 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/app.007f45bc37baee6e3eed.js HTTP/1.1" 200 17860
+2018-08-08 15:33:47,480 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/manifest.2ae2e69a05c33dfc65f8.js HTTP/1.1" 200 857
+2018-08-08 15:33:47,560 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/css/app.38a83cc1546ed3ec97f07d80f308cf48.css HTTP/1.1" 200 451585
+2018-08-08 15:33:47,608 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/js/vendor.eedafc96894b981efaf1.js HTTP/1.1" 200 1624512
+2018-08-08 15:33:47,931 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /favicon.ico
+2018-08-08 15:33:47,934 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /favicon.ico
+2018-08-08 15:33:47,949 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /favicon.ico HTTP/1.1" 404 2406
+2018-08-08 15:33:47,950 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /favicon.ico HTTP/1.1" 404 2406
+2018-08-08 15:55:23,755 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 200 52
+2018-08-08 15:55:23,831 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-08 15:55:23,894 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /static/fonts/ionicons.24712f6.ttf HTTP/1.1" 200 188508
+2018-08-08 15:55:33,127 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-08 17:50:00,499 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-08 17:53:57,315 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 5292
+2018-08-08 17:54:08,352 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-08 18:10:16,878 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1862
+2018-08-08 18:10:33,148 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 5292

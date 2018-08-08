@@ -1,7 +1,8 @@
 <style scoped>
 .layout{
     border: 1px solid #d7dde4;
-    background: #f5f7f9;
+    /*background: #f5f7f9;*/
+    background: #C7EDCC;
     position: relative;
     border-radius: 4px;
     overflow: hidden;
@@ -51,26 +52,17 @@
                             <Icon type="ios-paper"></Icon>
                             {{type_3}}
                         </MenuItem>
-                        <!-- <input type="button" name="tijiao" v-on:click="currentTab = 'type_1'" />	 -->
                     </div>
                 </Menu>
             </Header>
             <Content :style="{padding: '0 50px'}">
-                <!-- <Breadcrumb :style="{margin: '20px 0'}">
-                    <BreadcrumbItem v-on:click="currentTabComponent = login">主页</BreadcrumbItem>
-                    <BreadcrumbItem v-on:click="currentTabComponent = HelloWorld">日历</BreadcrumbItem>
-                    <BreadcrumbItem>日志</BreadcrumbItem>
-                    <BreadcrumbItem>备忘录</BreadcrumbItem>
-                </Breadcrumb> -->
-                <Card>
-                    <div style="min-height: 800px;">
-                        <keep-alive>
-						  <component v-bind:is="currentTabComponent"></component>
-						</keep-alive>
-                    </div>
-                </Card>
+                <div style="min-height: 800px;">
+                    <keep-alive>
+					  <component v-bind:is="currentTabComponent"></component>
+					</keep-alive>
+                </div>
             </Content>
-            <Footer class="layout-footer-center">2011-2018 &copy; TalkingData</Footer>
+            <Footer class="layout-footer-center">2011-2018 &copy; Rocky</Footer>
         </Layout>
     </div>
 </template>

@@ -178,14 +178,12 @@
 	        :loading="loading"
 	        @on-ok="diary_show = false">
 		    <template>
-				<div style="background:#eee;padding: 20px">
-				    <Card :bordered="false">
+				    <Card :bordered="false" style="background:#FFFFF0">
 				        <p slot="title">{{currentdiary.title}}</p>
 				        <p style="text-indent:2em"  v-html="currentdiary.content"></p>
 				    </Card>
 				    <br/>
 				    <p>日期：{{formatDate(currentdiary.date) }}</p>
-				</div>
 			</template>
 	    </Modal> 
 	</div>
