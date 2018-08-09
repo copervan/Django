@@ -1,13 +1,16 @@
 
-
 <script type="text/javascript">
+	import {Notice} from '../../utils/ajaxFunctions'
+
 	export default {
 		name: 'notice',
 		data() {
 			return {
 				notice_list : [],
 				dialogFormVisible : false,
-				the_form: {"datetime": "" ,"notice_item":""}
+				the_form: {"datetime": "" ,"notice_item":""},
+				currentPage: 1,
+				token: this.$store.state.token
 			}
 		},
 		methods:{
@@ -28,12 +31,23 @@
 			                (sec < 10? '0' + sec : sec);
 
 			    return newTime;         
+			},
+			set_notice_list(data) {
+				this.notice_list = data.results
 			}
 
+		},
+		created: function() {
+			// console.log('this is the create' )
+			Notice.get_notice(this.currentPage,this.token, this.set_notice_list)
 		},
 		computed: {
 			current_date: function() {
 				return this.formatDate(Date())
+			},
+			my_list : function(){
+				console.log(this.notice_list)
+				return this.notice_list
 			}
 		}
 	}
@@ -45,6 +59,16 @@
 		<el-button type="success" plain
           size="mini" icon="el-icon-circle-plus-outline"
 		 @click="dialogFormVisible = true">新增Notice</el-button>
+		<!-- todolist -->
+		<div> 
+			<template>
+			  <el-carousel :interval="4000" type="card" height="200px">
+			    <el-carousel-item v-for="item in my_list" :key="item">
+			      <h3>{{ item.notice_item }}</h3>
+			    </el-carousel-item>
+			  </el-carousel>
+			</template>
+		</div>
 
 		<el-dialog title="新增Notice" :visible.sync="dialogFormVisible">
 		  <el-form :model="the_form">
@@ -69,3 +93,21 @@
 		</el-dialog>
 	</div>
 </template>
+
+<style>
+  .el-carousel__item h3 {
+    color: #475669;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 200px;
+    margin: 0;
+  }
+  
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+  
+  .el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+  }
+</style>

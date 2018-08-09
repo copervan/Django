@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import axios from 'axios'
 
 const Users = {
 	// 获取用户列表
@@ -110,4 +111,14 @@ const Diarys = {
 	}
 }
 
-export {Diarys, Users}
+const Notice = {
+	get_notice(page,token,callback){
+		axios.get('/rocky/notice/?page='+page,
+			{ headers: {"Authorization":token} }
+			).then(response=>{
+				console.log(response)
+				callback(response.data)})
+	}
+}
+
+export {Diarys, Users, Notice}

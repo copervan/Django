@@ -110,67 +110,70 @@
 		<div v-if="users1">
 		<el-button type="success" plain
           size="mini" icon="el-icon-circle-plus-outline"
-          @click="creat_user">创建用户</el-button>
+          @click="creat_user">创建用户</el-button> 
+
 <!-- 			<Button type="primary" @click="creat_user">创建用户</Button> -->
 			<!-- <Table highlight-row ref="currentRowTable" @on-current-change="select_current_user"  -->
 				<!-- @on-row-dblclick="row_dblclick" :columns="columns1" :data="data1"></Table> -->
-<template>
-<div>
-  <el-table
-    :data="data1"
-    style="width: 100%">
-    <el-table-column
-      label="ID"
-      width="180">
-      <template slot-scope="scope">
-        <i class="el-icon-time"></i>
-        <span style="margin-left: 10px">{{ scope.row.id }}</span>
-      </template>
-    </el-table-column>
-    <el-table-column
-      label="User_Name"
-      width="180">
-      <template slot-scope="scope">
-        <i class="el-icon-time"></i>
-        <span style="margin-left: 10px">{{ scope.row.user_name }}</span>
-      </template>
-    </el-table-column>
-    <el-table-column
-      label="Device_No"
-      width="180">
-      <template slot-scope="scope">
-        <el-popover trigger="hover" placement="top">
-          <p>project_id: {{ scope.row.project_id }}</p>
-          <p>channel_id: {{ scope.row.channel_id }}</p>
-          <div slot="reference" class="name-wrapper">
-            <el-tag size="medium">{{ scope.row.device_no }}</el-tag>
-          </div>
-        </el-popover>
-      </template>
-    </el-table-column>
-    <el-table-column label="操作">
-      <template slot-scope="scope">
-        <el-button
-          size="mini" icon="el-icon-edit"
-          @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-        <el-button
-          size="mini"
-          type="danger" icon="el-icon-delete"
-          @click="handleDelete(scope.$index, scope.row)">删除</el-button>
-      </template>
-    </el-table-column>
-  </el-table>
-  <div class="block">
-    <el-pagination
-      @current-change="handleCurrentChange"
-      :current-page.sync="currentPage"
-      :page-size="10"
-      layout="total, prev, pager, next"
-      :total="user_count">
-    </el-pagination>
-  </div>
-</div>
-</template>
+		<!-- 用户列表模块 -->
+		<template>
+			<div>
+				<br/>
+			<el-table
+			:data="data1"
+			style="width: 100%">
+			<el-table-column
+			  label="ID"
+			  width="180">
+			  <template slot-scope="scope">
+			    <i class="el-icon-time"></i>
+			    <span style="margin-left: 10px">{{ scope.row.id }}</span>
+			  </template>
+			</el-table-column>
+			<el-table-column
+			  label="User_Name"
+			  width="180">
+			  <template slot-scope="scope">
+			    <i class="el-icon-time"></i>
+			    <span style="margin-left: 10px">{{ scope.row.user_name }}</span>
+			  </template>
+			</el-table-column>
+			<el-table-column
+			  label="Device_No"
+			  width="180">
+			  <template slot-scope="scope">
+			    <el-popover trigger="hover" placement="top">
+			      <p>project_id: {{ scope.row.project_id }}</p>
+			      <p>channel_id: {{ scope.row.channel_id }}</p>
+			      <div slot="reference" class="name-wrapper">
+			        <el-tag size="medium">{{ scope.row.device_no }}</el-tag>
+			      </div>
+			    </el-popover>
+			  </template>
+			</el-table-column>
+			<el-table-column label="操作">
+			  <template slot-scope="scope">
+			    <el-button
+			      size="mini" icon="el-icon-edit"
+			      @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+			    <el-button
+			      size="mini"
+			      type="danger" icon="el-icon-delete"
+			      @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+			  </template>
+			</el-table-column>
+			</el-table>
+			<div class="block">
+			<el-pagination
+			  @current-change="handleCurrentChange"
+			  :current-page.sync="currentPage"
+			  :page-size="10"
+			  layout="total, prev, pager, next"
+			  :total="user_count">
+			</el-pagination>
+			</div>
+			</div>
+		</template>
 
 
 		</div>
