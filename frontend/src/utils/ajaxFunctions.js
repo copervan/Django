@@ -113,11 +113,21 @@ const Diarys = {
 
 const Notice = {
 	get_notice(page,token,callback){
-		axios.get('/rocky/notice/?page='+page,
-			{ headers: {"Authorization":token} }
+		axios.get('/rocky/notice/today_notice/',
+			{ headers: {"Authorization":token, "Content-Type":"application/json" } }
 			).then(response=>{
 				console.log(response)
-				callback(response.data)})
+				callback(response.data)} )
+	},
+	create_notice(notice,token,callback){
+		axios({
+		  method: 'post',
+		  url: '/rocky/notice/',
+		  data: JSON.stringify(notice),
+		  headers: {"Authorization":token ,"Content-Type":"application/json"} 
+		}).then(response=>{
+				console.log(response)
+				callback(response.data)} )
 	}
 }
 

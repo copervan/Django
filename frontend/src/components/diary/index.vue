@@ -80,6 +80,9 @@
 			                (sec < 10? '0' + sec : sec);
 
 			    return newTime;         
+			},
+			refresh_data(){
+				Diarys.get_diary(this.currentPage,this.token, this.set_diary_list)
 			}
 		},
 		created: function() {
@@ -98,12 +101,14 @@
 
 
 <template>
-	<div>
+	<div><br/>
 		<el-button type="success" plain
           size="mini" icon="el-icon-circle-plus-outline"
           @click="new_diary">Create The Diary</el-button>
+        <el-button style="float: right;" type="success" size="mini" @click="refresh_data" >刷新</el-button>
 <template>
 <div>
+	<br/>
   <el-table
     :data="my_list"
     highlight-current-row

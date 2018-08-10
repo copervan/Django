@@ -88,6 +88,9 @@
 			handleCurrentChange() {
 				var _this = this
 				Users.get_device(_this.currentPage, _this.token, _this.setusers)
+			},
+			refresh_data(){
+				Users.get_device(this.currentPage,this.token, this.setusers)
 			}
 		},
 		created: function(){
@@ -111,6 +114,7 @@
 		<el-button type="success" plain
           size="mini" icon="el-icon-circle-plus-outline"
           @click="creat_user">创建用户</el-button> 
+        <el-button style="float: right;" type="success" size="mini" @click="refresh_data" >刷新</el-button>
 
 <!-- 			<Button type="primary" @click="creat_user">创建用户</Button> -->
 			<!-- <Table highlight-row ref="currentRowTable" @on-current-change="select_current_user"  -->
