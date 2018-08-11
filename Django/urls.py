@@ -21,7 +21,7 @@ from django.db.models.signals import post_save
 from django.conf.urls import url, include
 from django.contrib.auth.models import User, Group
 from rest_framework import permissions, serializers, viewsets, routers
-from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope, TokenHasScope
+#from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope, TokenHasScope
 from rest_framework.authtoken.models import Token
 from django.conf import settings
 from rest_framework.authtoken import views
@@ -45,12 +45,12 @@ class GroupSerializer(serializers.ModelSerializer):
 
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
-    permission_classes = [permissions.IsAuthenticated,TokenHasReadWriteScope]
+    #permission_classes = [permissions.IsAuthenticated,TokenHasReadWriteScope]
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
 class GroupViewSet(viewsets.ModelViewSet):
-    permission_classes = [permissions.IsAuthenticated, TokenHasScope]
+    #permission_classes = [permissions.IsAuthenticated, TokenHasScope]
     required_scopes = ['groups']
     queryset = Group.objects.all()
     serializer_class = GroupSerializer

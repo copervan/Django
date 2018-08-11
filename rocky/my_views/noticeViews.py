@@ -3,7 +3,7 @@ from rest_framework import generics, mixins, viewsets
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import action
-import  django_filters  
+#import  django_filters  
 from django.utils.timezone import now , timedelta
 
 from ..my_models import notice
