@@ -10,12 +10,8 @@
 .layout-logo{
     width: 100px;
     height: 30px;
-    background: #5b6270;
-    border-radius: 3px;
     float: left;
     position: relative;
-    top: 15px;
-    left: 20px;
 }
 .layout-nav{
     width: 420px;
@@ -32,8 +28,8 @@
             <Header>
                 <Menu mode="horizontal" theme="dark" active-name="1" @on-select="bind_template">
                     <div class="layout-logo">
-                    	<!-- <img src="https://file.iviewui.com/dist/03635a3c88122ad605117128f3fda0ca.png"/> -->
-                    	<Icon type="ios-world-outline"></Icon>
+                    	<img style="max-width:117px;max-height:50px;vertical-align:middle;"  
+                            src="https://file.iviewui.com/dist/03635a3c88122ad605117128f3fda0ca.png"/>
                     </div>
                     <div class="layout-nav">
                         <MenuItem name="1" >

@@ -92,7 +92,7 @@
 				if (this.dialog_status == "addNotice"){
 					// 添加Notice
 					Notice.create_notice(this.the_form,this.token, function(data){
-						alert("创建成功")
+						this.$message({message:"创建成功",center: true,type: 'success'})
 						this.refresh_data()
 					}.bind(this))
 				}
@@ -100,7 +100,7 @@
 					// 编辑Notice
 					console.log(JSON.stringify(this.the_form) )
 					Notice.edit_notice(this.the_form,this.token,function(data){
-						alert("更新成功")
+						this.$message({message:"更新成功",center: true,type: 'success'})
 						this.refresh_data()
 					}.bind(this))
 				}
