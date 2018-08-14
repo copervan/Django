@@ -24,10 +24,8 @@ logger = logging.getLogger(__name__)
 
 class NoticeViewSet(viewsets.ModelViewSet):
     permission_classes  = (permissions.IsAuthenticated,)
-    queryset = notice.Notice.objects.all().order_by('-id')
+    queryset = notice.Notice.objects.all().order_by('-datetime')
     serializer_class = notice.NoticeSerializers
-    #filter_backends = (django_filters.rest_framework.DjangoFilterBackend)
-    #filter_class = NoticeFilter
     
     @action(detail=False)
     def today_notice(self, request):

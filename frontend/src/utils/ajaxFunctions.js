@@ -128,6 +128,26 @@ const Notice = {
 		}).then(response=>{
 				console.log(response)
 				callback(response.data)} )
+	},
+	edit_notice(notice,token,callback){
+		axios({
+		  method: 'put',
+		  url: '/rocky/notice/'+notice.id+"/",
+		  data: JSON.stringify(notice),
+		  headers: {"Authorization":token ,"Content-Type":"application/json"} 
+		}).then(response=>{
+				console.log(response)
+				callback(response.data)} )
+	},
+	all_notice(page,token,callback) {
+		axios({
+		  method: 'get',
+		  url: '/rocky/notice/?page='+page,
+		  //data: JSON.stringify(notice),
+		  headers: {"Authorization":token} 
+		}).then(response=>{
+				console.log(response)
+				callback(response.data)} )
 	}
 }
 
