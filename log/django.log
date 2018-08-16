@@ -2345,3 +2345,15 @@ AttributeError: 'datetime.datetime' object has no attribute 'datetime'
 2018-08-14 17:29:00,021 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1867
 2018-08-14 17:29:20,683 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1867
 2018-08-14 17:30:24,964 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1867
+2018-08-15 09:20:00,722 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 1867
+2018-08-15 09:20:04,606 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/today_notice/ HTTP/1.1" 200 2
+2018-08-15 09:20:04,607 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/?page=1 HTTP/1.1" 200 2055
+2018-08-15 13:36:38,367 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "PUT /rocky/notice/7/ HTTP/1.1" 200 190
+2018-08-15 13:36:38,803 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/today_notice/ HTTP/1.1" 200 2
+2018-08-15 13:36:38,863 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/?page=1 HTTP/1.1" 200 2055
+2018-08-15 13:36:43,466 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "PUT /rocky/notice/12/ HTTP/1.1" 200 205
+2018-08-15 13:36:43,547 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/today_notice/ HTTP/1.1" 200 2
+2018-08-15 13:36:43,553 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/?page=1 HTTP/1.1" 200 2055
+2018-08-15 13:37:14,793 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 5292
+2018-08-16 09:04:13,849 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/today_notice/ HTTP/1.1" 200 2
+2018-08-16 09:04:13,850 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/?page=1 HTTP/1.1" 200 2055
