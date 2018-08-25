@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import login from '@/components/login'
 import dashboard from '@/components/dashboard'
+import image from '@/components/image'
 // Vue.use(Router);
 
 export default new Router({
@@ -16,6 +17,10 @@ export default new Router({
     	path:'/dashboard',
     	component: dashboard, 
     	props: true 
+    },{
+      path:'/image',
+      component: image, 
+      props: true 
     }
   ]
 })
