@@ -1,7 +1,8 @@
 <template>
   <div>
   	<el-button  type="success" size="mini" @click="refresh_before" >BEFORE</el-button>
-    <div v-html="image" @click="refresh_after"></div>
+  	<el-input v-model="image_index"></el-input>
+    <div v-html="image" @click="refresh_image"></div>
     <el-button  type="success" size="mini" @click="refresh_after" >AFTER</el-button>
   </div>
 </template>
@@ -32,10 +33,31 @@
 					this.image_index = 1
 				}
 			},
+			refresh_image(){
+				if (this.image_index >=1) {
+					this.image_index = this.randomNum(1,1300)
+				}
+				else {
+					this.image_index = 1
+				}
+			},
 			zfill(str){
 			    str ='00000'+str;
 			    return str.substring(str.length-5);
-			}
+			},
+			randomNum(min,max){ 
+			    switch(arguments.length){ 
+			        case 1: 
+			            return Math.floor(Math.random()*minNum+1); 
+			        break; 
+			        case 2: 
+			            return Math.floor(Math.random()*(max-min+1)+min); 
+			        break; 
+			            default: 
+			                return 0; 
+			            break; 
+			    } 
+			} 
 		},
 		computed: {
 			image: function(){

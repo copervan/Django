@@ -2370,3 +2370,11 @@ AttributeError: 'datetime.datetime' object has no attribute 'datetime'
 2018-08-25 15:47:58,621 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 401 58
 2018-08-25 15:48:03,470 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 200 52
 2018-08-25 15:48:03,587 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 575
+2018-08-26 13:24:45,251 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 200 52
+2018-08-26 13:24:45,296 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 575
+2018-08-26 13:24:47,183 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/notice/?page=1 HTTP/1.1" 200 52
+2018-08-26 13:24:47,187 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/notice/today_notice/ HTTP/1.1" 200 2
+2018-08-26 13:25:32,549 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 200 52
+2018-08-26 13:25:32,663 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 575
+2018-08-26 13:31:20,787 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 200 52
+2018-08-26 13:31:20,940 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 575
