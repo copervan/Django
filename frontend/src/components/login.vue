@@ -1,19 +1,17 @@
 <template>
-    <Form ref="formInline" :model="formInline" :rules="ruleInline" inline>
-        <FormItem prop="user">
-            <Input type="text" v-model="formInline.user" placeholder="Username"/>
-                <Icon type="ios-person-outline" slot="prepend"></Icon>
-            </Input>
-        </FormItem>
-        <FormItem prop="password">
-            <Input type="password" v-model="formInline.password" placeholder="Password"/>
-                <Icon type="ios-locked-outline" slot="prepend"></Icon>
-            </Input>
-        </FormItem>
-        <FormItem>
-            <Button type="primary" @click="handleSubmit('formInline')">Sign In</Button>
-        </FormItem>
-    </Form>
+    <div style="margin-top:10%; margin:10% auto;width:20%; ">
+<el-form :inline="false" :model="formInline" :rules="rules" ref="formInline" >
+  <el-form-item prop="user">
+    <el-input v-model="formInline.user" placeholder="Username"></el-input>
+  </el-form-item>
+  <el-form-item prop="password">
+    <el-input v-model="formInline.password" placeholder="Password" type="password"></el-input>
+  </el-form-item>
+  <el-form-item>
+    <el-button style="width: 100%" type="primary" @click="handleSubmit('formInline')">登录</el-button>
+  </el-form-item>
+</el-form>
+    </div>
 </template>
 
 <script type="text/javascript">
@@ -25,6 +23,16 @@ export default {
             formInline: {
                 user: '',
                 password: ''
+            },
+            rules: {
+                user: [
+                    { required: true, message: '请输入邮箱地址', trigger: 'blur' },
+                    { min: 5, max: 16, message: '长度在 5 到 16 个字符', trigger: 'blur' }
+                ],
+                password: [
+                    { required: true, message: '请输入密码', trigger: 'blur' },
+                    { min: 5, max: 16, message: '长度在 5 到 16 个字符', trigger: 'blur' }
+                ]
             },
             ruleInline: {
                 user: [
@@ -45,7 +53,7 @@ export default {
             	password : this.formInline.password
             }
             // console.log(postuser);
-
+            var _this = this
             var myrouter = this.$router
             var mystore = this.$store
             $.ajax({
@@ -55,23 +63,21 @@ export default {
                 success: function(data) {
                     console.log('Login Success!')
                     token = data.token
-                    // console.log(token)
-                    // console.log("mystore: "+ mystore)
                     mystore.commit('set_token',"Token "+ token)
-                    // console.log("token: " + mystore.state.token)
                     myrouter.push({path :'/dashboard' })
                 },
                 error: function() {
+                    _this.$message.error('ERROR: Invalid Usermane or Password !')
                     // console.log('Login Faild!')
                 }
-            })  
+            }).bind(this)  
         },
-        handleSubmit(name) {
-            this.$refs[name].validate((valid) => {
+        handleSubmit(formName) {
+            this.$refs[formName].validate((valid) => {
                 if (valid) {
                     this.sendPost()                    
                 } else {
-                    this.$Message.error('2 Login Faild!')
+                    this.$message.error('ERROR: Invalid Usermane or Password !')
                 }
             })
         }
@@ -79,7 +85,7 @@ export default {
 }
 </script>
 
-<style type="text/css" lang="less">
+<style scoped>
 .p-color {
 	color: red;
 }
