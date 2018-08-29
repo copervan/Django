@@ -61,7 +61,7 @@
 		},
 		computed: {
 			image: function(){
-				return '<img style="width:80%;height:100%" index="'+this.image_index+'"  src="http://192.168.1.100/image/'+this.zfill(this.image_index)+'.jpg" >'
+				return '<img style="width:80%;height:100%" index="'+this.image_index+'"  src="http://192.168.31.101/image/'+this.zfill(this.image_index)+'.jpg" >'
 			}
 		}
 	}
