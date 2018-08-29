@@ -2452,3 +2452,32 @@ AttributeError: 'datetime.datetime' object has no attribute 'datetime'
 2018-08-29 09:48:48,661 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/?page=1 HTTP/1.1" 200 2139
 2018-08-29 09:48:50,270 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/today_notice/ HTTP/1.1" 200 839
 2018-08-29 09:48:50,278 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/?page=1 HTTP/1.1" 200 2139
+2018-08-29 14:28:06,266 ERROR    /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/exception.py[line:74] Invalid HTTP_HOST header: 'localhost'. You may need to add 'localhost' to ALLOWED_HOSTS.
+2018-08-29 14:28:16,771 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/css/app.a45385df771606fbdffe43fb17ab9475.css
+2018-08-29 14:28:16,874 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/manifest.2ae2e69a05c33dfc65f8.js
+2018-08-29 14:28:16,879 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/vendor.eedafc96894b981efaf1.js
+2018-08-29 14:28:16,880 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/app.babf525318bfe7afe131.js
+2018-08-29 14:28:17,342 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/css/app.a45385df771606fbdffe43fb17ab9475.css
+2018-08-29 14:28:17,342 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/manifest.2ae2e69a05c33dfc65f8.js
+2018-08-29 14:28:17,349 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/vendor.eedafc96894b981efaf1.js
+2018-08-29 14:28:17,355 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/app.babf525318bfe7afe131.js
+2018-08-29 14:28:17,368 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /favicon.ico
+2018-08-29 14:28:28,634 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/vendor.eedafc96894b981efaf1.js
+2018-08-29 14:28:28,634 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/css/app.a45385df771606fbdffe43fb17ab9475.css
+2018-08-29 14:28:28,634 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/manifest.2ae2e69a05c33dfc65f8.js
+2018-08-29 14:28:28,635 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/app.babf525318bfe7afe131.js
+2018-08-29 14:28:29,029 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/css/app.a45385df771606fbdffe43fb17ab9475.css
+2018-08-29 14:28:29,030 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/manifest.2ae2e69a05c33dfc65f8.js
+2018-08-29 14:28:29,042 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/vendor.eedafc96894b981efaf1.js
+2018-08-29 14:28:29,051 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/app.babf525318bfe7afe131.js
+2018-08-29 14:28:33,746 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/css/app.a45385df771606fbdffe43fb17ab9475.css
+2018-08-29 14:28:33,747 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/app.babf525318bfe7afe131.js
+2018-08-29 14:28:33,747 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/manifest.2ae2e69a05c33dfc65f8.js
+2018-08-29 14:28:33,747 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/vendor.eedafc96894b981efaf1.js
+2018-08-29 14:28:34,145 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/css/app.a45385df771606fbdffe43fb17ab9475.css
+2018-08-29 14:28:34,145 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/manifest.2ae2e69a05c33dfc65f8.js
+2018-08-29 14:28:34,158 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/vendor.eedafc96894b981efaf1.js
+2018-08-29 14:28:34,163 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /static/js/app.babf525318bfe7afe131.js
+2018-08-29 14:57:31,358 ERROR    /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/exception.py[line:74] Invalid HTTP_HOST header: '192.168.31.100'. You may need to add '192.168.31.100' to ALLOWED_HOSTS.
+2018-08-29 14:57:31,519 ERROR    /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/exception.py[line:74] Invalid HTTP_HOST header: '192.168.31.100'. You may need to add '192.168.31.100' to ALLOWED_HOSTS.
+2018-08-29 14:57:31,544 ERROR    /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/exception.py[line:74] Invalid HTTP_HOST header: '192.168.31.100'. You may need to add '192.168.31.100' to ALLOWED_HOSTS.

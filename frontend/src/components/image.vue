@@ -35,7 +35,7 @@
 			},
 			refresh_image(){
 				if (this.image_index >=1) {
-					this.image_index = this.randomNum(1,1300)
+					this.image_index = this.randomNum(1,1554)
 				}
 				else {
 					this.image_index = 1
