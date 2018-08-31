@@ -157,7 +157,7 @@
 			</div>
 			<template v-else>
 			  <el-carousel :interval="4000" type="card" height="300px">
-			    <el-carousel-item v-for="item in my_list" :key="item">
+			    <el-carousel-item v-for="item in my_list" :key="item.id">
 			      	<el-card class="box-card">
 					  <div slot="header" class="clearfix">
 					    <h2><span>计划内容：{{item.notice_item}}</span></h2>
@@ -167,7 +167,8 @@
 					    <p>计划开始时间：{{formatDate(item.datetime)}}</p>
 					    <p>计划时长：{{item.schedule}} h</p>
 					    <p>任务状态：<el-tag size="small" :type="notice_type(item.status)">{{notice_code(item.status)}}
-					    	</el-tag>  </p>
+					    	</el-tag>  
+					    </p>
 					  </div>
 					</el-card>
 			    </el-carousel-item>
