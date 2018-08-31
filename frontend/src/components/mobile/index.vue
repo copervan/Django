@@ -10,15 +10,15 @@
 		  </mt-tab-item>
 		  <mt-tab-item id="1">
 		    <img slot="icon" src="@/assets/logo.png">
-		    订单
+		    日志 
 		  </mt-tab-item>
 		  <mt-tab-item id="2">
 		    <img slot="icon" src="@/assets/logo.png">
-		    发现
+		    备忘录
 		  </mt-tab-item>
 		  <mt-tab-item id="3">
 		    <img slot="icon" src="@/assets/logo.png">
-		    我的
+		    日历
 		  </mt-tab-item>
 		</mt-tabbar>
 	</div>
@@ -30,6 +30,7 @@
 	import calendar from './calendar/'
     import diary from './diary/'
     import {mapState} from 'vuex'
+    import image from '@/components/image'
 	export default {
 		name : "mobile",
 		data() {
@@ -57,11 +58,22 @@
         			return notice
         		}
         		else if (this.currentTab === 'type_3'){
-        			return calendar
+        			return image
         		}
         		else {
         			return home
         		}
+            },
+            ...mapState(
+                ['token']
+            )
+        },
+        created: function() {
+            if(!this.token || typeof this.token === 'undefined' ){
+                this.$router.replace({path:"/"})
+            }
+            else {
+                // console.log("the Token: "+ this.token)
             }
         },
         watch: {

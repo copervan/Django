@@ -108,6 +108,7 @@
 
 <template>
 	<div>
+		<div> <mt-header title="Home"></mt-header> </div>
 		<h1>Hello Rocky</h1>
 		<P>这是主页</P><br/>
 		<div v-if="users1">

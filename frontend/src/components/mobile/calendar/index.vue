@@ -1,5 +1,7 @@
 <template>
-	<full-calendar/>
+	<div> <mt-header title="Calendar"></mt-header> 
+		<full-calendar/>
+	</div>
 </template>
 
 <script type="text/javascript">

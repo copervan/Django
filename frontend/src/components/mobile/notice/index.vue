@@ -144,7 +144,7 @@
 
 <template>
 	<div>
-	<mt-header fixed title="Notice"></mt-header>
+	<div> <mt-header title="Notice"></mt-header> </div>
 	<div padding="20px">
 		<br/>
 		<h1>当前时间: {{formatDate(current_date)}}</h1><br/>

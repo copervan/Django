@@ -2499,3 +2499,9 @@ AttributeError: 'datetime.datetime' object has no attribute 'datetime'
 2018-08-30 09:00:46,410 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/?page=1 HTTP/1.1" 200 2157
 2018-08-30 09:02:10,846 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/today_notice/ HTTP/1.1" 200 406
 2018-08-30 09:02:10,855 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/?page=1 HTTP/1.1" 200 2157
+2018-08-31 13:04:10,555 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /favicon.ico
+2018-08-31 13:08:56,573 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /favicon.ico
+2018-08-31 13:09:24,385 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /favicon.ico
+2018-08-31 13:23:05,667 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /updates/3/dev/updatecheck
+2018-08-31 13:23:25,526 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /check/04d5d2de5ecc8bd3d5d056ad2bd12996b899325f18416c2bc6e0b3b5f41b3bda
+2018-08-31 15:50:13,573 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /favicon.ico
