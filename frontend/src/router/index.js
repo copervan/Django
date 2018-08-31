@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import login from '@/components/login'
 import dashboard from '@/components/dashboard'
 import image from '@/components/image'
+import mobile from '@/components/mobile/'
 // Vue.use(Router);
 
 export default new Router({
@@ -21,6 +22,11 @@ export default new Router({
       path:'/image',
       component: image, 
       props: true 
+    },{
+      path:'/mobile',
+      component: mobile, 
+      props: true 
     }
+
   ]
 })

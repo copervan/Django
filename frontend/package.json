@@ -18,6 +18,7 @@
     "iview": "^2.14.3",
     "jquery": "^3.3.1",
     "less": "^3.7.1",
+    "mint-ui": "^2.2.13",
     "mqtt": "^2.18.3",
     "vue": "^2.5.2",
     "vue-calendar-component": "^2.6.1",
