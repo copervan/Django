@@ -59,15 +59,21 @@
 			  
 			  // 加载更多数据
 			  this.image_page = this.image_page + 1 
+			  if (this.image_page > 119){
+			  	this.allLoaded = true
+			  }
 			  this.$refs.loadmore.onTopLoaded();
 			},
 			loadBottom() {
 
 			  // 加载更多数据
 			  this.image_page = this.image_page + 1 
+			  if (this.image_page > 110){
+			  	this.allLoaded = true
+			  }
 			  //this.allLoaded = true;// 若数据已全部获取完毕
 			  this.$refs.loadmore.onBottomLoaded();
-			  console.log(this.image_list)
+			  //console.log(this.image_list)
 			},
 			zfill(str){
 			    str ='00000'+str;

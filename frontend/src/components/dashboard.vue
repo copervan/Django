@@ -57,7 +57,7 @@
 					  <component v-bind:is="currentTabComponent"></component>
 					</keep-alive>
                 </div>
-                <a href="/#/image">to the image</a>
+                <a href="/#/mobile">to the image</a>
             </Content>
             <Footer class="layout-footer-center">2011-2018 &copy; Rocky</Footer>
         </Layout>

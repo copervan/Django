@@ -18,7 +18,7 @@
 		  </mt-tab-item>
 		  <mt-tab-item id="3">
 		    <img slot="icon" src="@/assets/logo.png">
-		    日历
+		    Image
 		  </mt-tab-item>
 		</mt-tabbar>
 	</div>

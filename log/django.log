@@ -2505,3 +2505,9 @@ AttributeError: 'datetime.datetime' object has no attribute 'datetime'
 2018-08-31 13:23:05,667 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /updates/3/dev/updatecheck
 2018-08-31 13:23:25,526 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /check/04d5d2de5ecc8bd3d5d056ad2bd12996b899325f18416c2bc6e0b3b5f41b3bda
 2018-08-31 15:50:13,573 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /favicon.ico
+2018-09-01 04:07:45,585 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /favicon.ico
+2018-09-01 04:18:07,527 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /null
+2018-09-01 04:29:13,107 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /null
+2018-09-01 04:53:13,680 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /null
+2018-09-01 10:26:58,941 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /favicon.ico
+2018-09-01 10:27:14,549 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /null
