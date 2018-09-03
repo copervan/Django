@@ -49,7 +49,7 @@
 			},
 			refresh_image(){
 				if (this.image_index >=1) {
-					this.image_index = this.randomNum(1,1554)
+					this.image_index = this.randomNum(1,120)
 				}
 				else {
 					this.image_index = 1
@@ -58,8 +58,8 @@
 			loadTop() {
 			  
 			  // 加载更多数据
-			  this.image_page = this.image_page + 1 
-			  if (this.image_page > 119){
+			  this.image_page = this.randomNum(1,140) 
+			  if (this.image_page > 142){
 			  	this.allLoaded = true
 			  }
 			  this.$refs.loadmore.onTopLoaded();
@@ -67,8 +67,8 @@
 			loadBottom() {
 
 			  // 加载更多数据
-			  this.image_page = this.image_page + 1 
-			  if (this.image_page > 110){
+			  this.image_page = this.randomNum(1,140) 
+			  if (this.image_page > 142){
 			  	this.allLoaded = true
 			  }
 			  //this.allLoaded = true;// 若数据已全部获取完毕

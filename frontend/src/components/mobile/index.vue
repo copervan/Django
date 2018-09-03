@@ -18,7 +18,7 @@
 		  </mt-tab-item>
 		  <mt-tab-item id="3">
 		    <img slot="icon" src="@/assets/logo.png">
-		    Image
+		    Rili
 		  </mt-tab-item>
 		</mt-tabbar>
 	</div>
@@ -58,7 +58,7 @@
         			return notice
         		}
         		else if (this.currentTab === 'type_3'){
-        			return image
+        			return calendar
         		}
         		else {
         			return home
