@@ -70,7 +70,7 @@ export default {
                     _this.$message.error('ERROR: Invalid Usermane or Password !')
                     // console.log('Login Faild!')
                 }
-            }).bind(this)  
+            })  
         },
         handleSubmit(formName) {
             this.$refs[formName].validate((valid) => {

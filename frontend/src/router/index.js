@@ -5,6 +5,7 @@ import login from '@/components/login'
 import dashboard from '@/components/dashboard'
 import image from '@/components/image'
 import mobile from '@/components/mobile/'
+import editor from '@/components/editor'
 // Vue.use(Router);
 
 export default new Router({
@@ -26,7 +27,12 @@ export default new Router({
       path:'/mobile',
       component: mobile, 
       props: true 
+    },{
+      path:'/editor',
+      component: editor, 
+      props: true 
     }
+
 
   ]
 })

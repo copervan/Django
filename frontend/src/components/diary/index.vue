@@ -1,6 +1,8 @@
 
 <script type="text/javascript">
 	import {Diarys} from '../../utils/ajaxFunctions'
+	import editorelem from '../editor'
+
 	export default {
 		name: 'diary',
 		data () {
@@ -83,7 +85,10 @@
 			},
 			refresh_data(){
 				Diarys.get_diary(this.currentPage,this.token, this.set_diary_list)
-			}
+			},
+			catchData(value){
+	          this.currentdiary.content = value      //在这里接受子组件传过来的参数，赋值给data里的参数
+	        }
 		},
 		created: function() {
 			// console.log('this is the create' )
@@ -95,6 +100,9 @@
 				// console.log(this.diary_list)
 				return this.diary_list
 			}		
+		},
+		components: {
+		    editorelem
 		}
 	}
 </script>
@@ -162,17 +170,17 @@
 	    <Modal
 	        v-model="diary_add"
 	        title="Create the diary"
-	        :loading="loading"
 	        @on-ok="add_diary">
 		    <template>
-				<Form :model="formTop" label-position="left" >
+				<Form label-position="left" >
 			        <FormItem label="标题">
 			            <Input v-model="currentdiary.title"></Input>
 			        </FormItem>
-			        <quill-editor ref="myTextEditor"
+			        <editorelem :catchData="catchData" :data="currentdiary" ></editorelem>
+<!-- 			        <quill-editor ref="myTextEditor"
 					    v-model="currentdiary.content" 
 					    :config = "editorOption">
-					</quill-editor>
+					</quill-editor> -->
 			    </Form>
 			</template>
 	    </Modal>
@@ -180,12 +188,12 @@
 	    <Modal
 	        v-model="diary_show"
 	        title="Show diary Detail"
-	        :loading="loading"
 	        @on-ok="diary_show = false">
 		    <template>
 				    <Card :bordered="false" style="background:#FFFFF0">
-				        <p slot="title">{{currentdiary.title}}</p>
-				        <p style="text-indent:2em"  v-html="currentdiary.content"></p>
+				        <h2 slot="title">{{currentdiary.title}}</h2>
+				        <!-- <p style="text-indent:2em"  v-html="currentdiary.content"></p> -->
+				        <p   v-html="currentdiary.content"></p>
 				    </Card>
 				    <br/>
 				    <p>日期：{{formatDate(currentdiary.date) }}</p>

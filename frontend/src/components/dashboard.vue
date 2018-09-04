@@ -73,7 +73,6 @@
     import {mapState} from 'vuex'
     export default {
         name: "dashboard",
-        props: ['token'],
         data() {
         	return {
         		type_0 : "主页",
