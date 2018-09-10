@@ -8,7 +8,7 @@
 		data () {
 			return {
 				diary_list: [],
-				currentdiary : {title:'',content:""},
+				currentdiary : {title:'',content:"",editor:(new Date()).getTime()},
 				diary_add : false,
 				columns1: [
 					{
@@ -30,20 +30,24 @@
 			}
 		},
 		methods: {
+			// 钩子函数，用于为属性赋值
 			set_diary_list(data){
 				this.diary_list = data.results
 				this.diary_count = data.count
 				// console.log(this.diary_list)
 			},
+			// 响应点击“添加”
 			new_diary(){
-				this.currentdiary = {title:'',content:""}
+				// 设置editor 的key元素，更新key值，以达到刷新组件的目的。
+				this.currentdiary = {title:'',content:"",editor:(new Date()).getTime()}
 				this.diary_add = true
 			},
+			// 响应点击“添加”后的提交
 			add_diary(){
 				var _this = this
 				if(_this.currentdiary.content != '' && _this.currentdiary.title != ''){
 					// console.log(_this.currentdiary)
-					Diarys.create_diary(_this.currentdiary,_this.token, function(){
+					Diarys.create_diary(_this.currentdiary, _this.token, function(){
 							alert("Diary successfully created!")
 							Diarys.get_diary(_this.currentPage, _this.token, _this.set_diary_list)
 					})
@@ -53,18 +57,22 @@
 				}
 				this.diary_add = false
 			},
+			// 响应点击“查看”
 	    	show_detail(index, row) {
             	this.currentdiary =  row
             	this.diary_show = true
 		    },
+		    // 响应双击事件
 		    handleDblClick(row){
 		    	this.currentdiary =  row
 		    	this.diary_show = true
 		    },
+		    // 刷新页面 响应分页 与refresh_data 重复
 		    handleCurrentChange() {
 				var _this = this
 				Diarys.get_diary(_this.currentPage, _this.token, _this.set_diary_list)
 			},
+			// 格式化时间输出，可以写成功能函数， 有时间再弄
 		    formatDate(time){
 			    var date = new Date(time);
 
@@ -83,15 +91,18 @@
 
 			    return newTime;         
 			},
+			// 响应点击“刷新” 方法重复了
 			refresh_data(){
 				Diarys.get_diary(this.currentPage,this.token, this.set_diary_list)
 			},
+			// 该方法将传递给editor，子组件调用该方法传递子组件的参数至父组件。
 			catchData(value){
 	          this.currentdiary.content = value      //在这里接受子组件传过来的参数，赋值给data里的参数
 	        }
 		},
 		created: function() {
 			// console.log('this is the create' )
+			// 调用接口，初始化内容
 			Diarys.get_diary(this.currentPage,this.token, this.set_diary_list)
 		},
 		computed: {
@@ -101,6 +112,7 @@
 				return this.diary_list
 			}		
 		},
+		// 使用自定义组件做页面标签时必须在此处进行注册，否则无法识别
 		components: {
 		    editorelem
 		}
@@ -176,7 +188,8 @@
 			        <FormItem label="标题">
 			            <Input v-model="currentdiary.title"></Input>
 			        </FormItem>
-			        <editorelem :catchData="catchData" :data="currentdiary" ></editorelem>
+			        <!-- 使用富文本编辑器，做博文输入 -->
+			        <editorelem :key="currentdiary.editor" :catchData="catchData"  ></editorelem>
 <!-- 			        <quill-editor ref="myTextEditor"
 					    v-model="currentdiary.content" 
 					    :config = "editorOption">

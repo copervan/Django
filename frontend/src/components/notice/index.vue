@@ -132,7 +132,7 @@
 		},
 		computed: {
 			my_list : function(){
-				console.log(this.notice_list)
+				//console.log(this.notice_list)
 				return this.notice_list
 			},
 			all_list : function() {
