@@ -1,113 +1,132 @@
 import $ from 'jquery'
 import axios from 'axios'
+import {Message} from 'element-ui'
+
+axios.defaults.timeout = 5000
+
+//响应拦截器即异常处理
+axios.interceptors.response.use(response => {
+    return response
+}, err => {
+    if (err && err.response) {
+      switch (err.response.status) {
+        case 400:
+          err.message = '错误请求'
+          break;
+        case 401:
+          err.message = '未授权，请重新登录'
+          break;
+        case 403:
+          err.message = '拒绝访问'
+          break;
+        case 404:
+          err.message = '请求错误,未找到该资源'
+          break;
+        case 405:
+          err.message = '请求方法未允许'
+          break;
+        case 408:
+          err.message = '请求超时'
+          break;
+        case 500:
+          err.message = '服务器端出错'
+          break;
+        case 501:
+          err.message = '网络未实现'
+          break;
+        case 502:
+          err.message = '网络错误'
+          break;
+        case 503:
+          err.message = '服务不可用'
+          break;
+        case 504:
+          err.message = '网络超时'
+          break;
+        case 505:
+          err.message = 'http版本不支持该请求'
+          break;
+        default:
+          err.message = `连接错误${err.response.status}`
+          Message.error(err.message)
+      }
+    } else {
+      err.message = "连接到服务器失败"
+    }
+    message.err(err.message)
+      return Promise.resolve(err.response)
+})
+
+
 
 const Users = {
 	// 获取用户列表
 	get_device(page,token,callback) {
-		var myusers = $.ajax({
-			url:"/rocky/device/?page="+page,
-			type:"GET",
-			contentType: 'application/json'	,
-			beforeSend: function(xhr){
-				xhr.setRequestHeader("Authorization", token);
-			},
-			success: function(data){
-				// console.log(data)
-			},
-			error: function(err){
-				// console.log(err)
-				alert(err)
-			}
-		}).done(callback)
+		axios({
+		  method: "GET",
+		  url: "/rocky/device/?page="+page,
+		  // data: JSON.stringify(diary),
+		  headers: {"Authorization":token ,"Content-Type":"application/json"} 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
 	},
 	// 创建用户
 	creat_device(user,token,callback){
-		var myusers = $.ajax({
-			url:"/rocky/device/",
-			type:"POST",
-			contentType: 'application/json'	,
-			beforeSend: function(xhr){
-				xhr.setRequestHeader("Authorization", token);
-			},
-			data: JSON.stringify(user),
-			success: function(data){
-				// console.log(data)
-			},
-			error: function(err){
-				// console.log(err)
-				alert(err,"创建用户失败")
-			}
-		}).done(callback)
+		axios({
+		  method: "POST",
+		  url: "/rocky/device/",
+		  data: JSON.stringify(user),
+		  headers: {"Authorization":token ,"Content-Type":"application/json"} 
+		}).then(response=>{
+				// console.log(response)
+				Message.success("用户创建成功")
+				callback(response.data)} )
 	},
 	// 删除用户
 	delete_user(user,token,callback) {
-    	$.ajax({
-			url:"/rocky/device/"+user.id+"/",
-			type:"DELETE",
-			contentType: 'application/json'	,
-			beforeSend: function(xhr){
-				xhr.setRequestHeader("Authorization", token);
-			},
-			error: function(err){
-				// console.log(err)
-				alert(err,"删除失败")
-			}
-    	}).done(callback)
+		axios({
+		  method:"DELETE",
+		  url: "/rocky/device/"+user.id+"/",
+		  data: JSON.stringify(user),
+		  headers: {"Authorization":token ,"Content-Type":"application/json"} 
+		}).then(response=>{
+				Message.success("用户删除成功")
+				callback(response.data)} )
     },
     // 编辑用户
     edit_user(user,token,callback) {
-    	$.ajax({
-			url:"/rocky/device/"+user.id+"/",
-			type:"PUT",
-			contentType: 'application/json'	,
-			beforeSend: function(xhr){
-				xhr.setRequestHeader("Authorization", token);
-			},
-			data: JSON.stringify(user),
-			error: function(err){
-				// console.log(err)
-				alert(err,"修改失败")
-			}
-    	}).done(callback)
+    	axios({
+		  method:"PUT",
+		  url: "/rocky/device/"+user.id+"/",
+		  data: JSON.stringify(user),
+		  headers: {"Authorization":token ,"Content-Type":"application/json"} 
+		}).then(response=>{
+				Message.success("用户修改成功")
+				callback(response.data)} )
     }
 }
 
 const Diarys = {
 	get_diary(page,token,callback) {
-		var myusers = $.ajax({
-			url:"/rocky/diary/?page="+page,
-			type:"GET",
-			contentType: 'application/json'	,
-			beforeSend: function(xhr){
-				xhr.setRequestHeader("Authorization", token);
-			},
-			success: function(data){
-				// console.log(JSON.stringify(data) )
-				// callback =  data
-			},
-			error: function(err){
-				// console.log(err)
-				alert(err)
-			}
-		}).done(callback)
+		axios({
+		  method: "GET",
+		  url: "/rocky/diary/?page="+page,
+		  // data: JSON.stringify(diary),
+		  headers: {"Authorization":token ,"Content-Type":"application/json"} 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
 	},
 	create_diary(diary,token,callback) {
-		$.ajax({
-			url:"/rocky/diary/",
-			type:"POST",
-			contentType: 'application/json'	,
-			beforeSend: function(xhr){
-				xhr.setRequestHeader("Authorization", token);
-			},
-			data: JSON.stringify(diary),
-			success: function(data){
-				// console.log(data)
-			},
-			error: function(err){
-				// console.log(err)
-				alert(err)
-			}
-		}).done(callback)
+		axios({
+		  method: "POST",
+		  url: "/rocky/diary/",
+		  data: JSON.stringify(diary),
+		  headers: {"Authorization":token ,"Content-Type":"application/json"} 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
 	}
 }
 
@@ -116,7 +135,7 @@ const Notice = {
 		axios.get('/rocky/notice/today_notice/',
 			{ headers: {"Authorization":token, "Content-Type":"application/json" } }
 			).then(response=>{
-				console.log(response)
+				//console.log(response)
 				callback(response.data)} )
 	},
 	create_notice(notice,token,callback){
@@ -126,7 +145,7 @@ const Notice = {
 		  data: JSON.stringify(notice),
 		  headers: {"Authorization":token ,"Content-Type":"application/json"} 
 		}).then(response=>{
-				console.log(response)
+				// console.log(response)
 				callback(response.data)} )
 	},
 	edit_notice(notice,token,callback){
@@ -136,7 +155,7 @@ const Notice = {
 		  data: JSON.stringify(notice),
 		  headers: {"Authorization":token ,"Content-Type":"application/json"} 
 		}).then(response=>{
-				console.log(response)
+				// console.log(response)
 				callback(response.data)} )
 	},
 	all_notice(page,token,callback) {
@@ -146,7 +165,7 @@ const Notice = {
 		  //data: JSON.stringify(notice),
 		  headers: {"Authorization":token} 
 		}).then(response=>{
-				console.log(response)
+				// console.log(response)
 				callback(response.data)} )
 	}
 }

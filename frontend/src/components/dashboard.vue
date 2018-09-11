@@ -28,8 +28,10 @@
             <Header>
                 <Menu mode="horizontal" theme="dark" active-name="1" @on-select="bind_template">
                     <div class="layout-logo">
+                        <a href="/dashboard" >
                     	<img style="max-width:117px;max-height:50px;vertical-align:middle;"  
                             src="https://file.iviewui.com/dist/03635a3c88122ad605117128f3fda0ca.png"/>
+                        </a>
                     </div>
                     <div class="layout-nav">
                         <MenuItem name="1" >

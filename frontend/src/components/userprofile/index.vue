@@ -76,13 +76,13 @@
             handleEdit(index, row) {
             	console.log(row)
             	this.currentuser =  JSON.parse(JSON.stringify(row))
-            	console.log(this.currentuser)
+            	// console.log(this.currentuser)
             	this.edituser = true
 		    },
 			handleDelete(index, row) {
 				console.log(row)
 				this.currentuser = JSON.parse(JSON.stringify(row))
-				console.log(this.currentuser)
+				// console.log(this.currentuser)
 				this.delete_user()
 			},
 			handleCurrentChange() {
@@ -98,7 +98,7 @@
 		},
 		computed:{
 			data1: function() {
-				console.log(this.users1)
+				// console.log(this.users1)
 				return this.users1
 			}
 		}		

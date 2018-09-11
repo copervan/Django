@@ -1,6 +1,7 @@
 <template>
-    <div style="margin-top:10%; margin:10% auto;width:20%; ">
-<el-form :inline="false" :model="formInline" :rules="rules" ref="formInline" >
+    <div style="margin-top:10%; margin:10% auto;width:20%; " >
+<el-form :inline="false" :model="formInline" :rules="rules" ref="formInline"
+    @keyup.enter.native="handleSubmit('formInline')"  >
   <el-form-item prop="user">
     <el-input v-model="formInline.user" placeholder="Username"></el-input>
   </el-form-item>
@@ -8,7 +9,8 @@
     <el-input v-model="formInline.password" placeholder="Password" type="password"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button style="width: 100%" type="primary" @click="handleSubmit('formInline')">登录</el-button>
+    <el-button style="width: 100%" type="primary" 
+    @click="handleSubmit('formInline')">登录</el-button>
   </el-form-item>
 </el-form>
     </div>
@@ -68,7 +70,6 @@ export default {
                 },
                 error: function() {
                     _this.$message.error('ERROR: Invalid Usermane or Password !')
-                    // console.log('Login Faild!')
                 }
             })  
         },

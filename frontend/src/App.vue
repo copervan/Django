@@ -10,7 +10,7 @@ export default {
   name: 'App',
   data: function() {
     return {
-      token : null
+      token : sessionStorage.getItem('token') || ''
     }
   } 
 }
