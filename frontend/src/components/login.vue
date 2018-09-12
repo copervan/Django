@@ -57,18 +57,20 @@ export default {
             // console.log(postuser);
             var _this = this
             var myrouter = this.$router
+            // 获取Vuex store
             var mystore = this.$store
             $.ajax({
                 url:"/api-token-auth/",
                 type:'POST',
                 data : postuser,
-                success: function(data) {
-                    console.log('Login Success!')
-                    token = data.token
-                    mystore.commit('set_token',"Token "+ token)
-                    myrouter.push({path :'/dashboard' })
+                success: data => {
+                    console.log('Login Success!');
+                    token = data.token;
+                    // 通过Vuex 设置token
+                    mystore.commit('set_token',"Token "+ token);
+                    myrouter.push({path :'/dashboard' }) 
                 },
-                error: function() {
+                error: () => {
                     _this.$message.error('ERROR: Invalid Usermane or Password !')
                 }
             })  
@@ -76,11 +78,21 @@ export default {
         handleSubmit(formName) {
             this.$refs[formName].validate((valid) => {
                 if (valid) {
+                    this.$cookies.set('formInline',JSON.stringify(this.formInline),60*60*24*7)
+                    // console.log(this.$cookies.get('formInline'))
                     this.sendPost()                    
                 } else {
                     this.$message.error('ERROR: Invalid Usermane or Password !')
                 }
             })
+        }
+    },
+    created: function() {
+        let _this = this
+        if ( _this.$cookies.isKey('formInline') ) {
+            // console.log(this.$cookies.keys() )
+            // console.log(this.$cookies.get("formInline") )
+            this.formInline = JSON.parse(this.$cookies.get("formInline") )
         }
     }
 }

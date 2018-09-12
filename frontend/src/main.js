@@ -15,15 +15,16 @@ import 'element-ui/lib/theme-chalk/index.css';
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 
+import VueCookies from 'vue-cookies'
+
 Vue.use(MintUI)
-
 Vue.use(ElementUI)
-
 Vue.use(Vuex)
 Vue.use(fullcalendar)
 Vue.config.productionTip = true
 Vue.use(iView)
 Vue.use(Router)
+Vue.use(VueCookies)
 
 const store =  new Vuex.Store({
 	state:{
