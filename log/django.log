@@ -2879,3 +2879,57 @@ AttributeError: 'datetime.datetime' object has no attribute 'datetime'
 2018-09-12 15:55:24,384 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.0" 200 52
 2018-09-12 15:55:28,175 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.0" 200 1884
 2018-09-12 16:05:26,715 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.0" 200 52
+2018-09-15 14:37:45,873 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 200 52
+2018-09-15 14:38:08,585 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/diary/ HTTP/1.1" 201 197
+2018-09-15 14:38:30,993 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /rocky/book
+2018-09-15 14:38:30,994 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/book HTTP/1.1" 404 9844
+2018-09-15 14:38:52,697 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /rocky/books
+2018-09-15 14:38:52,697 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/books HTTP/1.1" 404 9847
+2018-09-15 14:38:56,153 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/books/ HTTP/1.1" 401 58
+2018-09-15 14:39:22,356 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/books/ HTTP/1.1" 200 52
+2018-09-15 14:39:30,000 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/books/ HTTP/1.1" 200 52
+2018-09-15 14:39:39,174 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/books/ HTTP/1.1" 400 114
+2018-09-15 14:41:08,912 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/books/ HTTP/1.1" 201 70
+2018-09-15 14:42:00,344 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/books/ HTTP/1.1" 200 122
+2018-09-15 14:44:37,666 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/books/contents/ HTTP/1.1" 401 58
+2018-09-15 14:44:52,361 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /rocky/books/contents/
+2018-09-15 14:44:52,362 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/books/contents/ HTTP/1.1" 404 23
+2018-09-15 14:46:03,886 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /rocky/booklist
+2018-09-15 14:46:03,887 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/booklist HTTP/1.1" 404 9952
+2018-09-15 14:46:10,918 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/booklist/ HTTP/1.1" 200 122
+2018-09-15 14:46:16,398 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/booklist/1/ HTTP/1.1" 200 70
+2018-09-15 14:46:50,354 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 204
+2018-09-15 14:47:42,089 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookchapter/ HTTP/1.1" 200 52
+2018-09-15 14:47:46,551 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/bookchapter/ HTTP/1.1" 400 77
+2018-09-15 14:48:16,221 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/bookcontent/ HTTP/1.1" 400 116
+2018-09-15 14:50:24,294 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/bookchapter/ HTTP/1.1" 400 115
+2018-09-15 14:53:06,104 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/bookchapter/ HTTP/1.1" 400 88
+2018-09-15 14:53:40,499 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/bookchapter/ HTTP/1.1" 400 66
+2018-09-15 14:54:40,809 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/bookchapter/ HTTP/1.1" 201 1286
+2018-09-15 14:54:49,273 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 228
+2018-09-15 14:55:54,268 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 228
+2018-09-15 14:55:55,660 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 228
+2018-09-15 14:55:56,512 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 228
+2018-09-15 14:56:43,207 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 228
+2018-09-15 14:57:08,567 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 228
+2018-09-15 14:58:18,274 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 1490
+2018-09-15 15:00:27,405 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 228
+2018-09-15 15:00:58,119 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 228
+2018-09-15 15:02:16,194 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 228
+2018-09-15 15:04:15,385 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 242
+2018-09-15 15:04:30,854 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/bookchapter/ HTTP/1.1" 201 1286
+2018-09-15 15:04:34,973 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 281
+2018-09-15 15:05:13,427 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookchapter/ HTTP/1.1" 200 2625
+2018-09-15 15:05:46,372 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookchapter/1/ HTTP/1.1" 200 1286
+2018-09-15 15:06:51,762 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookchapter/1/ HTTP/1.1" 200 1286
+2018-09-15 15:06:56,253 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookchapter/ HTTP/1.1" 200 2625
+2018-09-15 15:07:56,179 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/handlers/base.py[line:93] Not Found: /rocky/chaptercomment
+2018-09-15 15:07:56,180 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/chaptercomment HTTP/1.1" 404 9970
+2018-09-15 15:08:04,380 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/chaptercomment/ HTTP/1.1" 200 52
+2018-09-15 15:08:10,503 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 400 115
+2018-09-15 15:09:37,665 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 400 115
+2018-09-15 15:12:45,751 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 400 124
+2018-09-15 15:13:31,553 WARNING  /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 400 81
+2018-09-15 15:16:17,639 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/booklist/ HTTP/1.1" 200 122
+2018-09-15 15:16:23,474 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 281
+2018-09-15 15:16:44,388 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookchapter/ HTTP/1.1" 200 2625
