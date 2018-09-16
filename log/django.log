@@ -2933,3 +2933,16 @@ AttributeError: 'datetime.datetime' object has no attribute 'datetime'
 2018-09-15 15:16:17,639 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/booklist/ HTTP/1.1" 200 122
 2018-09-15 15:16:23,474 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 281
 2018-09-15 15:16:44,388 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookchapter/ HTTP/1.1" 200 2625
+2018-09-16 05:28:00,695 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/booklist/ HTTP/1.1" 200 122
+2018-09-16 05:28:15,572 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 281
+2018-09-16 05:28:25,555 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/1/ HTTP/1.1" 200 229
+2018-09-16 05:28:37,472 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 281
+2018-09-16 05:31:18,787 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/1/ HTTP/1.1" 200 229
+2018-09-16 05:31:28,919 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookchapter/ HTTP/1.1" 200 2625
+2018-09-16 05:59:56,793 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/bookcontent/1/ HTTP/1.1" 200 229
+2018-09-16 12:01:35,683 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 200 52
+2018-09-16 12:01:35,879 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 575
+2018-09-16 13:41:46,518 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/device/?page=1 HTTP/1.1" 200 575
+2018-09-16 13:41:50,325 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 2593
+2018-09-16 13:41:51,128 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/notice/?page=1 HTTP/1.1" 200 1282
+2018-09-16 13:41:51,129 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/notice/today_notice/ HTTP/1.1" 200 2

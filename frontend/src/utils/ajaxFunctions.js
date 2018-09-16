@@ -188,4 +188,63 @@ const Notice = {
 	}
 }
 
+const Books = {
+	// Get the Book List 
+	get_book_list(page,token,callback) {
+		axios({
+		  method: "GET",
+		  url: "/rocky/booklist/",
+		  // data: JSON.stringify(diary),
+		  headers: {"Authorization":token } 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
+	add_new_book(book,token,callback) {
+		axios({
+		  method: "POST",
+		  url: "/rocky/diary/",
+		  data: JSON.stringify(book),
+		  headers: {"Authorization":token } 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
+	// Get the Book content List
+	get_book_content(book_id,token,callback) {
+		axios({
+		  method: "GET",
+		  url: "/rocky/bookcontent/"+book_id+"/",
+		  // data: JSON.stringify(diary),
+		  headers: {"Authorization":token } 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
+	// Get the Book Chapter Detail 
+	get_chapter_detail(chapter_id,token,callback) {
+		axios({
+		  method: "GET",
+		  url: "/rocky/bookchapter/"+chapter_id+"/",
+		  // data: JSON.stringify(diary),
+		  headers: {"Authorization":token } 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
+	// Get chapter comment
+	get_chapter_comment(chapter_id,token,callback) {
+		axios({
+		  method: "GET",
+		  url: "/rocky/bookchapter/"+chapter_id+"/",
+		  // data: JSON.stringify(diary),
+		  headers: {"Authorization":token } 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
+	// 
+	
+}
+
 export {Diarys, Users, Notice}

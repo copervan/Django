@@ -6,6 +6,7 @@ import dashboard from '@/components/dashboard'
 import image from '@/components/image'
 import mobile from '@/components/mobile/'
 import editor from '@/components/editor'
+import books from '@/components/books/books'
 // Vue.use(Router);
 
 export default new Router({
@@ -31,6 +32,10 @@ export default new Router({
     },{
       path:'/editor',
       component: editor, 
+      props: true 
+    },{
+      path:'/books',
+      component: books, 
       props: true 
     }
 
