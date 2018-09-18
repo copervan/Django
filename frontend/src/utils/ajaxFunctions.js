@@ -189,7 +189,7 @@ const Notice = {
 }
 
 const Books = {
-	// Get the Book List 
+	// 获取Book列表
 	get_book_list(page,token,callback) {
 		axios({
 		  method: "GET",
@@ -200,17 +200,29 @@ const Books = {
 				// console.log(response)
 				callback(response.data)} )
 	},
-	add_new_book(book,token,callback) {
+	// 创建Book
+	new_book(book,token,callback) {
 		axios({
 		  method: "POST",
-		  url: "/rocky/diary/",
+		  url: "/rocky/booklist/",
 		  data: JSON.stringify(book),
 		  headers: {"Authorization":token } 
 		}).then(response=>{
 				// console.log(response)
 				callback(response.data)} )
 	},
-	// Get the Book content List
+	// 编辑Book
+	edit_book(book,token,callback) {
+		axios({
+		  method: "PUT",
+		  url: "/rocky/booklist/"+book.id+"/",
+		  data: JSON.stringify(book),
+		  headers: {"Authorization":token } 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
+	// 获取 书籍章节目录
 	get_book_content(book_id,token,callback) {
 		axios({
 		  method: "GET",
@@ -221,29 +233,51 @@ const Books = {
 				// console.log(response)
 				callback(response.data)} )
 	},
-	// Get the Book Chapter Detail 
+	// 获取章节详情 
 	get_chapter_detail(chapter_id,token,callback) {
 		axios({
 		  method: "GET",
-		  url: "/rocky/bookchapter/"+chapter_id+"/",
+		  url: "/rocky/chapter/"+chapter_id+"/chapter_detail/",
 		  // data: JSON.stringify(diary),
 		  headers: {"Authorization":token } 
 		}).then(response=>{
 				// console.log(response)
 				callback(response.data)} )
 	},
+	
 	// Get chapter comment
-	get_chapter_comment(chapter_id,token,callback) {
+	get_comment(page,token,callback) {
 		axios({
 		  method: "GET",
-		  url: "/rocky/bookchapter/"+chapter_id+"/",
+		  url: "/rocky/chaptercomment/?page="+page,
 		  // data: JSON.stringify(diary),
 		  headers: {"Authorization":token } 
 		}).then(response=>{
 				// console.log(response)
 				callback(response.data)} )
 	},
-	// 
+	// 添加注释、笔记
+	add_comment(comment,token,callback) {
+		axios({
+		  method: "POST",
+		  url: "rocky/chaptercomment/" ,
+		  data: JSON.stringify(comment) ,
+		  headers: {"Authorization":token } 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
+	// 按章节获取注释
+	get_chapter_comment(chapter_id,page,token,callback){
+		axios({
+		  method: "GET",
+		  url: "rocky/chaptercomment/chapter_comments/?chapter_id="+chapter_id+"&page="+page ,
+		  // data: JSON.stringify(comment) ,
+		  headers: {"Authorization":token } 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
 	
 }
 

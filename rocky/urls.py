@@ -10,7 +10,7 @@ router.register(r"diary",diaryViews.DiaryViewSet, base_name="diary")
 router.register(r"notice",noticeViews.NoticeViewSet, base_name="notice")
 router.register(r"booklist",bookviews.BookListViewSet,base_name="booklist")
 router.register(r"bookcontent",bookviews.BookContentViewSet,base_name="bookcontent")
-router.register(r"bookchapter",bookviews.BookChapterViewSet,base_name="bookchapter")
+router.register(r"chapters",bookviews.BookChapterViewSet,base_name="chapters")
 router.register(r"chaptercomment",bookviews.ChapterCommentViewSet,base_name="chaptercomment")
 urlpatterns = router.urls
 

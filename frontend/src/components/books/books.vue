@@ -59,7 +59,16 @@ export default {
 			this.bookList = data.results
 			this.count = data.count
 		}
+	},
+	created: function(){
+		if(!this.token || typeof this.token === 'undefined' ){
+                this.$router.replace({path:"/"})
+            }
+            else {
+                // console.log("the Token: "+ this.token)
+            }
 	}
+	
 
 }
 </script>

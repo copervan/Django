@@ -34,40 +34,40 @@ class ContentComment(models.Model):
                 "created_at":created_at,'updated_at':updated_at} )    
 
 # #######################################################################################
-#CommentDetails        
+#CommentDetails 章节注释     
 class BookCommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContentComment
         fields = ('id', 'chapter_id', 'comments', 'created_at' ,'updated_at')
-#chapterComment
+#chapterComment 章节内容和相关注释
 class ChaptorCommentSerializer(serializers.ModelSerializer):
     chapter_comments = BookCommentSerializer(many=True)
     class Meta:
         model = BookContent
         fields = ('id', 'chapter', 'content', 'chapter_comments' ,'created_at' ,'updated_at')
 
-#ChapterDetails
+#ChapterDetails 章节 及章节内容
 class BookContentSerializer(serializers.ModelSerializer):
     #chapter_comments = serializers.StringRelatedField(many=True)
     class Meta:
         model = BookContent
         fields = ('id', 'book_id','chapter', 'content' ,'created_at' ,'updated_at')
 
-#ChapterList
+#ChapterList 章节列表 配合BookListSerializer 使用
 class ChapterListSerializer(serializers.ModelSerializer):
     #chapter_comments = serializers.StringRelatedField(many=True)
     class Meta:
         model = BookContent
         fields = ('id','chapter')
         
-# BookList
+# BookList 获取书籍名称及所有章节
 class BookListSerializer(serializers.ModelSerializer):
     #book_content = serializers.StringRelatedField(many=True)
     class Meta:
         model = Book
         fields = ('id', 'name', 'author', 'book_style')
-
-#BookContentList        
+ 
+#BookContentList  获取全部书籍
 class BookDetailSerializer(serializers.ModelSerializer):
     book_content = ChapterListSerializer(many=True)
     class Meta:

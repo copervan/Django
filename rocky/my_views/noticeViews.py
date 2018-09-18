@@ -11,16 +11,6 @@ from ..my_models import notice
 import logging
 logger = logging.getLogger(__name__)
 
-#class NoticeFilter(django_filters.rest_framework.FilterSet):
-    #"""Notice 过滤器"""
-    #min_time = django_filters.DateTimeFilter(name='datetime__date', lookup_expr='gte')
-    #max_time = django_filters.DateTimeFilter(name='datetime__date', lookup_expr='lte')
-    
-    #class Meta:
-        #model = notice.Notice
-        #fields = {
-            #'status':["icontains"] 
-        #}
 
 class NoticeViewSet(viewsets.ModelViewSet):
     permission_classes  = (permissions.IsAuthenticated,)

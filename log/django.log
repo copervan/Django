@@ -2946,3 +2946,363 @@ AttributeError: 'datetime.datetime' object has no attribute 'datetime'
 2018-09-16 13:41:50,325 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/diary/?page=1 HTTP/1.1" 200 2593
 2018-09-16 13:41:51,128 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/notice/?page=1 HTTP/1.1" 200 1282
 2018-09-16 13:41:51,129 INFO     /home/rocky/.local/lib/python3.5/site-packages/django/core/servers/basehttp.py[line:124] "GET /rocky/notice/today_notice/ HTTP/1.1" 200 2
+2018-09-18 15:40:53,723 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /api-token-auth/ HTTP/1.1" 200 52
+2018-09-18 15:41:01,263 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/device/4/
+2018-09-18 15:41:01,265 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "PUT /rocky/device/4/ HTTP/1.1" 404 23
+2018-09-18 15:41:07,254 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "PUT /rocky/device/ HTTP/1.1" 405 40
+2018-09-18 15:41:12,188 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 1884
+2018-09-18 15:41:25,306 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 1884
+2018-09-18 15:41:29,406 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/device/ HTTP/1.1" 200 1884
+2018-09-18 15:42:14,695 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/booklist/ HTTP/1.1" 401 58
+2018-09-18 15:42:39,672 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/booklist/ HTTP/1.1" 200 52
+2018-09-18 15:42:48,963 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/booklist/ HTTP/1.1" 200 52
+2018-09-18 15:42:53,850 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/booklist/ HTTP/1.1" 400 114
+2018-09-18 15:44:50,730 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/booklist/ HTTP/1.1" 400 102
+2018-09-18 15:45:02,783 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/booklist/ HTTP/1.1" 201 76
+2018-09-18 15:45:07,130 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/booklist/ HTTP/1.1" 200 128
+2018-09-18 15:45:29,117 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 204
+2018-09-18 15:45:56,479 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/diary/ HTTP/1.1" 200 21397
+2018-09-18 15:46:39,721 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/today_notice/ HTTP/1.1" 200 2
+2018-09-18 15:47:12,370 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 401 58
+2018-09-18 15:47:31,629 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 204
+2018-09-18 15:48:25,077 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters
+2018-09-18 15:48:25,080 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters HTTP/1.1" 404 9928
+2018-09-18 15:48:31,670 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/ HTTP/1.1" 401 58
+2018-09-18 15:48:40,910 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/ HTTP/1.1" 200 52
+2018-09-18 15:49:10,661 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chapters/ HTTP/1.1" 400 115
+2018-09-18 15:50:45,571 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chapters/ HTTP/1.1" 400 88
+2018-09-18 15:51:16,166 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chapters/ HTTP/1.1" 400 74
+2018-09-18 15:52:15,125 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chapters/ HTTP/1.1" 400 84
+2018-09-18 15:52:25,415 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chapters/ HTTP/1.1" 400 35
+2018-09-18 15:52:27,927 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chapters/ HTTP/1.1" 400 35
+2018-09-18 15:52:35,643 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 204
+2018-09-18 15:52:37,758 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 204
+2018-09-18 15:52:59,750 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chapters/ HTTP/1.1" 201 1299
+2018-09-18 15:53:02,488 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 242
+2018-09-18 15:53:08,480 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/ HTTP/1.1" 200 1351
+2018-09-18 15:53:25,610 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "PUT /rocky/chapters/ HTTP/1.1" 405 40
+2018-09-18 15:54:05,701 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "PUT /rocky/chapters/1/ HTTP/1.1" 200 1299
+2018-09-18 15:54:11,447 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 242
+2018-09-18 15:54:39,899 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chaptercomment
+2018-09-18 15:54:39,908 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment HTTP/1.1" 404 9946
+2018-09-18 15:54:46,062 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/ HTTP/1.1" 401 58
+2018-09-18 15:54:56,788 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/ HTTP/1.1" 200 52
+2018-09-18 15:57:57,894 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail
+2018-09-18 15:57:57,895 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "PUT /rocky/chapters/chapter_detail HTTP/1.1" 404 10467
+2018-09-18 15:58:08,432 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail
+2018-09-18 15:58:08,435 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail HTTP/1.1" 404 10467
+2018-09-18 15:58:12,763 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail/
+2018-09-18 15:58:12,764 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail/ HTTP/1.1" 404 23
+2018-09-18 15:58:37,659 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail
+2018-09-18 15:58:37,664 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail HTTP/1.1" 404 10467
+2018-09-18 15:59:37,505 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail/1
+2018-09-18 15:59:37,509 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail/1 HTTP/1.1" 404 10473
+2018-09-18 15:59:44,575 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /rocky/chapters/1/chapter_detail/
+Traceback (most recent call last):
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: chapter_detail() got an unexpected keyword argument 'pk'
+2018-09-18 15:59:44,626 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1/chapter_detail/ HTTP/1.1" 500 17083
+2018-09-18 16:00:38,904 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail/
+2018-09-18 16:00:38,904 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail/ HTTP/1.1" 404 23
+2018-09-18 16:00:50,823 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail/1
+2018-09-18 16:00:50,826 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail/1 HTTP/1.1" 404 10473
+2018-09-18 16:37:22,357 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail/
+2018-09-18 16:37:22,359 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail/ HTTP/1.1" 404 23
+2018-09-18 16:38:45,269 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail/
+2018-09-18 16:38:45,272 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail/ HTTP/1.1" 404 23
+2018-09-18 16:38:49,256 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail
+2018-09-18 16:38:49,258 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail HTTP/1.1" 404 10467
+2018-09-18 16:39:31,381 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail/
+2018-09-18 16:39:31,381 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail/?chapter_id=1 HTTP/1.1" 404 23
+2018-09-18 16:40:15,403 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/today_notice/ HTTP/1.1" 200 2
+2018-09-18 16:41:29,829 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/ HTTP/1.1" 200 52
+2018-09-18 16:41:33,600 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail/
+2018-09-18 16:41:33,601 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail/?chapter_id=1 HTTP/1.1" 404 23
+2018-09-18 16:41:34,422 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail/
+2018-09-18 16:41:34,423 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail/?chapter_id=1 HTTP/1.1" 404 23
+2018-09-18 16:41:49,598 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail
+2018-09-18 16:41:49,604 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail?chapter_id=1 HTTP/1.1" 404 10480
+2018-09-18 16:42:10,759 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/1/chapter_detail
+2018-09-18 16:42:10,765 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1/chapter_detail?chapter_id=1 HTTP/1.1" 404 10486
+2018-09-18 16:42:18,069 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /rocky/chapters/1/chapter_detail/
+Traceback (most recent call last):
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: chapter_detail() got an unexpected keyword argument 'pk'
+2018-09-18 16:42:18,090 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1/chapter_detail/?chapter_id=1 HTTP/1.1" 500 17113
+2018-09-18 16:44:42,964 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /rocky/chapters/1/chapter_detail/
+Traceback (most recent call last):
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Github\Django\rocky\my_views\bookviews.py", line 35, in chapter_detail
+    logger.info(serializer.data)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\serializers.py", line 258, in data
+    raise AssertionError(msg)
+AssertionError: When a serializer is passed a `data` keyword argument you must call `.is_valid()` before attempting to access the serialized `.data` representation.
+You should either call `.is_valid()` first, or access `.initial_data` instead.
+2018-09-18 16:44:42,995 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1/chapter_detail/?chapter_id=1 HTTP/1.1" 500 17853
+2018-09-18 16:46:31,875 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1/chapter_detail/?chapter_id=1 HTTP/1.1" 400 79
+2018-09-18 16:51:49,511 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1/chapter_detail/?chapter_id=1 HTTP/1.1" 200 1311
+2018-09-18 16:52:03,068 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail
+2018-09-18 16:52:03,070 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail HTTP/1.1" 404 10467
+2018-09-18 16:52:09,557 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/chapter_detail/
+2018-09-18 16:52:09,566 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/chapter_detail/ HTTP/1.1" 404 23
+2018-09-18 16:52:14,867 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1/chapter_detail/ HTTP/1.1" 200 1311
+2018-09-18 16:52:49,984 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 400 81
+2018-09-18 16:53:37,895 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 201 147
+2018-09-18 16:53:42,417 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1/chapter_detail/ HTTP/1.1" 200 1458
+2018-09-18 16:53:57,041 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/1/chapter_detail
+2018-09-18 16:53:57,044 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1/chapter_detail HTTP/1.1" 404 10473
+2018-09-18 16:54:03,947 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1/chapter_detail/ HTTP/1.1" 200 1458
+2018-09-18 16:54:45,404 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/1
+2018-09-18 16:54:45,408 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1 HTTP/1.1" 404 10428
+2018-09-18 16:54:49,436 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1/ HTTP/1.1" 200 1299
+2018-09-18 17:06:18,834 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 201 147
+2018-09-18 17:06:27,339 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 242
+2018-09-18 17:06:30,394 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/1
+2018-09-18 17:06:30,394 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1 HTTP/1.1" 404 10428
+2018-09-18 17:06:36,618 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1/chapter_detail/ HTTP/1.1" 200 1606
+2018-09-18 17:09:26,230 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/bookcontent/ HTTP/1.1" 200 242
+2018-09-18 17:09:47,777 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/bookcontent/1/ HTTP/1.1" 200 190
+2018-09-18 17:14:53,746 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/ HTTP/1.1" 200 347
+2018-09-18 17:20:31,246 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chaptercomment/chapter_comments/
+2018-09-18 17:20:31,247 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1 HTTP/1.1" 404 23
+2018-09-18 17:21:37,452 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chaptercomment/chapter_comments/
+2018-09-18 17:21:37,456 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1 HTTP/1.1" 404 23
+2018-09-18 17:21:38,618 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chaptercomment/chapter_comments/
+2018-09-18 17:21:38,619 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1 HTTP/1.1" 404 23
+2018-09-18 17:22:33,283 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chaptercomment/chapter_comments/
+2018-09-18 17:22:33,284 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/ HTTP/1.1" 404 23
+2018-09-18 17:22:34,419 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chaptercomment/chapter_comments/
+2018-09-18 17:22:34,420 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/ HTTP/1.1" 404 23
+2018-09-18 17:22:43,091 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/today_notice/ HTTP/1.1" 200 2
+2018-09-18 17:23:31,424 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/notice/today_notice/ HTTP/1.1" 200 2
+2018-09-18 17:23:44,077 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chaptercomment/chapter_comments/
+2018-09-18 17:23:44,080 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/ HTTP/1.1" 404 23
+2018-09-18 17:24:06,532 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chaptercomment/chapter_comments
+2018-09-18 17:24:06,535 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments HTTP/1.1" 404 11017
+2018-09-18 17:28:58,557 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chapters/1/chapter_detail/
+2018-09-18 17:28:58,559 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1/chapter_detail/ HTTP/1.1" 404 10918
+2018-09-18 17:29:07,400 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chapters/1/chapter_detail/ HTTP/1.1" 200 1606
+2018-09-18 17:29:13,752 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py[line:93] Not Found: /rocky/chaptercomment/chapter_comments
+2018-09-18 17:29:13,756 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments HTTP/1.1" 404 10975
+2018-09-18 17:29:30,960 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1 HTTP/1.1" 200 297
+2018-09-18 17:37:07,971 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1 HTTP/1.1" 200 347
+2018-09-18 17:40:10,624 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /rocky/chaptercomment/chapter_comments/
+Traceback (most recent call last):
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Github\Django\rocky\my_views\bookviews.py", line 46, in chapter_comments
+    queryset = mybook.ContentComment.objects.all().filter(chapter_id=id)
+  File "E:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "E:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "E:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "E:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "E:\Program Files\Python36\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "E:\Program Files\Python36\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "E:\Program Files\Python36\lib\site-packages\django\db\models\fields\related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "E:\Program Files\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '1/page=1'
+2018-09-18 17:40:10,698 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1/page=1 HTTP/1.1" 500 18698
+2018-09-18 17:40:31,187 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1&page=1 HTTP/1.1" 200 347
+2018-09-18 17:51:02,050 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1&page=1 HTTP/1.1" 200 347
+2018-09-18 17:55:28,018 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /rocky/chaptercomment/chapter_comments/
+Traceback (most recent call last):
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Github\Django\rocky\my_views\bookviews.py", line 53, in chapter_comments
+    serializer = self.get_serializer(page[10*(request_page-1):10*request_page], many=True)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+2018-09-18 17:55:28,042 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1&page=1 HTTP/1.1" 500 17331
+2018-09-18 17:56:08,034 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1&page=1 HTTP/1.1" 200 297
+2018-09-18 17:56:15,602 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /rocky/chaptercomment/chapter_comments/
+Traceback (most recent call last):
+  File "E:\Program Files\Python36\lib\site-packages\django\utils\datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'page'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Github\Django\rocky\my_views\bookviews.py", line 46, in chapter_comments
+    request_page = request.query_params["page"]
+  File "E:\Program Files\Python36\lib\site-packages\django\utils\datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'page'
+2018-09-18 17:56:15,643 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1 HTTP/1.1" 500 17571
+2018-09-18 17:56:57,015 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /rocky/chaptercomment/chapter_comments/
+Traceback (most recent call last):
+  File "E:\Program Files\Python36\lib\site-packages\django\utils\datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'mypage'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Github\Django\rocky\my_views\bookviews.py", line 46, in chapter_comments
+    request_page = request.query_params["mypage"]
+  File "E:\Program Files\Python36\lib\site-packages\django\utils\datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'mypage'
+2018-09-18 17:56:57,035 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1 HTTP/1.1" 500 17578
+2018-09-18 17:59:20,379 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1 HTTP/1.1" 200 347
+2018-09-18 18:05:15,706 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 201 147
+2018-09-18 18:05:16,905 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 201 147
+2018-09-18 18:05:17,546 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 201 147
+2018-09-18 18:05:17,872 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 201 147
+2018-09-18 18:05:18,147 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 201 147
+2018-09-18 18:05:18,372 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 201 147
+2018-09-18 18:05:18,663 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 201 147
+2018-09-18 18:05:18,872 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 201 148
+2018-09-18 18:05:19,213 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chaptercomment/ HTTP/1.1" 201 148
+2018-09-18 18:05:31,960 WARNING  E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "POST /rocky/chaptercomment/chapter_comments/?chapter_id=1 HTTP/1.1" 405 41
+2018-09-18 18:05:35,398 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1 HTTP/1.1" 200 1611
+2018-09-18 18:05:57,321 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1&page=1 HTTP/1.1" 200 1482
+2018-09-18 18:06:53,664 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py[line:118] Internal Server Error: /rocky/chaptercomment/chapter_comments/
+Traceback (most recent call last):
+  File "E:\Program Files\Python36\lib\site-packages\django\utils\datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'mypage'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\Program Files\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Program Files\Python36\lib\site-packages\rest_framework\views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\Github\Django\rocky\my_views\bookviews.py", line 47, in chapter_comments
+    request_page = request.query_params["mypage"]
+  File "E:\Program Files\Python36\lib\site-packages\django\utils\datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'mypage'
+2018-09-18 18:06:53,686 ERROR    E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1&page=1 HTTP/1.1" 500 17607
+2018-09-18 18:07:38,372 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1&page=1 HTTP/1.1" 200 1611
+2018-09-18 18:07:46,039 INFO     E:\Program Files\Python36\lib\site-packages\django\core\servers\basehttp.py[line:124] "GET /rocky/chaptercomment/chapter_comments/?chapter_id=1&page=2 HTTP/1.1" 200 272
