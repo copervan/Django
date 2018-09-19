@@ -71,7 +71,7 @@ axios.interceptors.response.use(response => {
       err.message = "连接到服务器失败"
       Message.error(err.message)
     }
-    message.err(err.message)
+    Message.err(err.message)
     return Promise.resolve(err.response)
 })
 

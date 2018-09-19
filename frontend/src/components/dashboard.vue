@@ -65,6 +65,7 @@
         </Layout>
     </div>
 </template>
+
 <script>
 	import login from './login'
 	import HelloWorld from './HelloWorld'

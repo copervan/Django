@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<el-container>
+		<el-container style="height: 100%" direction="vertical">
 			<el-header>
 <el-menu
   :default-active="activeIndex"
@@ -27,11 +27,11 @@
   <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
 </el-menu>
 			</el-header>
-			<el-main>
+			<el-main style="height: 800px">
 				<component v-bind:is="currentTabComponent"></component>
 			</el-main>	
 			<el-footer>
-				This is the footer
+				2011-2018 &copy; Rocky
 			</el-footer>	
 		</el-container>
 	</div>
@@ -39,6 +39,7 @@
 
 <script type="text/javascript">
 import editor from '@/components/editor'
+import booklist from './booklist'
 export default {
 	name : "books",
 	data() {
@@ -47,7 +48,7 @@ export default {
 			bookList : [],
 			count : 0,
 			activeIndex: '1',
-        	currentTabComponent : editor
+        	currentTabComponent : booklist
 		}
 	},
 	methods: {
@@ -72,3 +73,23 @@ export default {
 
 }
 </script>
+
+<style type="text/css">
+html{
+min-height: 100%;
+}
+body{
+height: 100%;
+min-height: 1000px;
+}
+footer{
+height:60px;
+position:fixed;
+bottom:0;
+left:0px;
+width: 100%
+}
+main{
+margin-bottom: 30px;
+} 
+</style>
