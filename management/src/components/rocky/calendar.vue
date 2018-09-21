@@ -1,5 +1,5 @@
 <template>
-	<full-calendar/>
+	<full-calendar :events="[]"  />
 </template>
 
 <script type="text/javascript">

@@ -7,6 +7,7 @@ import json
 class Book(models.Model):
     name = models.CharField("书籍名称",max_length=255)
     author = models.CharField("作者",max_length=255)
+    introduction =  models.TextField("内容简介",max_length=1500,default = "")
     book_style = models.CharField("书籍标签",max_length=255)
     created_at = models.DateTimeField("创建时间", default = timezone.now )
     updated_at = models.DateTimeField("更新时间", default = timezone.now )
@@ -65,12 +66,12 @@ class BookListSerializer(serializers.ModelSerializer):
     #book_content = serializers.StringRelatedField(many=True)
     class Meta:
         model = Book
-        fields = ('id', 'name', 'author', 'book_style')
+        fields = ('id', 'name', 'author','introduction', 'book_style')
  
 #BookContentList  获取全部书籍
 class BookDetailSerializer(serializers.ModelSerializer):
     book_content = ChapterListSerializer(many=True)
     class Meta:
         model = Book
-        fields = ('id', 'name', 'author', 'book_content','created_at' ,'updated_at')
+        fields = ('id', 'name', 'author','introduction', 'book_content','created_at' ,'updated_at')
 

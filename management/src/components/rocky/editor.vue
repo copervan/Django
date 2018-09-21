@@ -1,6 +1,6 @@
 <template>
 	<div id="wangeditor">
-        <div ref="editorElem" style="text-align:left"></div>
+        <div ref="editorElem" style="min-height:50px;max-height:200px;" ></div>
     </div> 
 </template>
 
@@ -14,12 +14,14 @@ export default {
     }
   },
   // 子组件通过调用父组件catchData方法，将编辑器内容传递给父组件。
-  props:['catchData'],
+  props:["editorindex",'content','catchData'],
   mounted() {
     let editor = new E(this.$refs.editorElem)
     editor.customConfig.onchange = (html) => {
       this.catchData(html)
     }
+    editor.customConfig.zIndex = (this.editorindex == 0 || this.editorindex == undefined) ? 1000 : this.editorindex
+    console.log(editor.customConfig.zIndex)
     editor.customConfig.menus = [ //菜单配置
     'head', 
     'list', // 列表 
@@ -267,8 +269,20 @@ export default {
     ]
 
     editor.create()
+    editor.txt.html(this.content)
+  },
+  methods: {
+	  set_style() {
+
+	  }
   }
 }
 </script>
+<style>
+.editorStyle1{
+	text-align:left
+}
+</style>
+
 
 

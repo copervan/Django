@@ -32,6 +32,7 @@ class BookChapterViewSet(viewsets.ModelViewSet):
         queryset = mybook.BookContent.objects.all().filter(id=pk)
         self.serializer_class = mybook.ChaptorCommentSerializer
         serializer = self.get_serializer(queryset, many=True)
+        logger.debug("章节序列化结果"+str(serializer.data) )
         return Response(serializer.data)
 
 # 评论管理    
@@ -43,14 +44,16 @@ class ChapterCommentViewSet(viewsets.ModelViewSet) :
     @action(methods=['GET'],detail=False)
     def chapter_comments(self, request):
         id = request.query_params["chapter_id"]
-        self.queryset = mybook.ContentComment.objects.all().filter(chapter_id=id)
+        self.queryset = mybook.ContentComment.objects.all().filter(chapter_id=id).order_by('-id')
         #serializer = self.get_serializer(self.queryset, many=True)
         page = self.paginate_queryset(self.queryset)
         if page is not None:
             logger.info(page)
             serializer = self.get_serializer(page, many=True)
+            logger.debug("章节序列化结果"+str(serializer.data) )
             return self.get_paginated_response(serializer.data)
         else :
             serializer = self.get_serializer(queryset, many=True)
+            logger.debug("章节序列化结果"+str(serializer.data) )
             return Response(serializer.data)        
   

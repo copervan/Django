@@ -174,18 +174,19 @@ LOGGING = {
             'formatter': 'standard',
         },
         'file': {
-            'level': 'INFO',
+            'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': './log/django.log',
             'maxBytes': 1024 * 1024 * 5,  # 5 MB
             'backupCount': 100,
             'formatter': 'detail',
+            'encoding': 'utf8',
         },
     },
     'loggers': {
         'django': {
             'handlers': ['console', 'file'],
-            'level': 'INFO',
+            'level': 'DEBUG',
             'propagate': True,
         },
         # 自定义模块日志
@@ -199,11 +200,16 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': True,
         },
-        'myapp': {
+        'Django': {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
             'propagate': True,
         },
+        'rocky': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },        
 
     },
 }

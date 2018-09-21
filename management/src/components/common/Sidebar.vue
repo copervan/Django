@@ -40,27 +40,27 @@
                 items: [
                     {
                         icon: 'el-icon-lx-home',
-                        index: 'dashboard',
+                        index: '/dashboard',
                         title: '系统首页'
                     },
                     {
                         icon: 'el-icon-lx-crown',
-                        index: 'rocky',
+                        index: '/rockyhome',
                         title: 'Rocky主页'
                     },
                     {
                         icon: 'el-icon-lx-crown',
-                        index: 'books/mybooks',
+                        index: '/books/booklist',
                         title: '我的书籍'
                     },
                     {
                         icon: 'el-icon-lx-cascades',
-                        index: 'table',
+                        index: '/table',
                         title: '基础表格'
                     },
                     {
                         icon: 'el-icon-lx-copy',
-                        index: 'tabs',
+                        index: '/tabs',
                         title: 'tab选项卡'
                     },
                     {
@@ -69,55 +69,55 @@
                         title: '表单相关',
                         subs: [
                             {
-                                index: 'form',
+                                index: '/form',
                                 title: '基本表单'
                             },
                             {
-                                index: '3-2',
+                                index: '/3-2',
                                 title: '三级菜单',
                                 subs: [
                                     {
-                                        index: 'editor',
+                                        index: '/editor',
                                         title: '富文本编辑器'
                                     },
                                     {
-                                        index: 'markdown',
+                                        index: '/markdown',
                                         title: 'markdown编辑器'
                                     },
                                 ]
                             },
                             {
-                                index: 'upload',
+                                index: '/upload',
                                 title: '文件上传'
                             }
                         ]
                     },
                     {
                         icon: 'el-icon-lx-emoji',
-                        index: 'icon',
+                        index: '/icon',
                         title: '自定义图标'
                     },
                     {
                         icon: 'el-icon-lx-favor',
-                        index: 'charts',
+                        index: '/charts',
                         title: 'schart图表'
                     },
                     {
                         icon: 'el-icon-rank',
-                        index: 'drag',
+                        index: '/drag',
                         title: '拖拽列表'
                     },
                     {
                         icon: 'el-icon-lx-warn',
-                        index: '6',
+                        index: '/6',
                         title: '错误处理',
                         subs: [
                             {
-                                index: 'permission',
+                                index: '/permission',
                                 title: '权限测试'
                             },
                             {
-                                index: '404',
+                                index: '/404',
                                 title: '404页面'
                             }
                         ]
@@ -127,6 +127,7 @@
         },
         computed:{
             onRoutes(){
+                // console.log(this.$route.path.replace('/',''))
                 return this.$route.path.replace('/','');
             }
         },

@@ -87,12 +87,12 @@ export default new Router({
                 meta: { title: '403' }
             },
             {
-                path: '/rocky',
+                path: '/rockyhome',
                 component: resolve => require(['../components/rocky/dashboard.vue'], resolve),
                 meta: { title: 'Rocky Home' }
             },
             {
-                path: '/books/:id',
+                path: '/books',
                 component: resolve => require(['../components/books/index.vue'], resolve),
                 meta: { title: '我的书籍' },
                 name : 'mybooks',
@@ -103,9 +103,14 @@ export default new Router({
                         meta: { title: '书籍列表' },
                     },
                     {
-                        path: '',
+                        path: 'bookcontent/:book_id',
                         component: resolve => require(['../components/books/bookcontent.vue'], resolve),
-                        meta: { title: '章节目录' },
+                        meta: { title: '书籍目录' },
+                    },
+                    {
+                        path: 'chapter/:chapter_id',
+                        component: resolve => require(['../components/books/ChaptertDetail.vue'], resolve),
+                        meta: { title: '章节内容' },
                     }
                 ]
             }

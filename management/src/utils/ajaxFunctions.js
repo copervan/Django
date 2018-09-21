@@ -222,6 +222,17 @@ const Books = {
 				// console.log(response)
 				callback(response.data)} )
 	},
+	// 删除Book
+	delete_book(book,token,callback) {
+		axios({
+		  method: "DELETE",
+		  url: "/rocky/booklist/"+book.id+"/",
+		  data: JSON.stringify(book),
+		  headers: {"Authorization":token } 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
 	// 获取 书籍章节目录
 	get_book_content(book_id,token,callback) {
 		axios({
@@ -230,14 +241,34 @@ const Books = {
 		  // data: JSON.stringify(diary),
 		  headers: {"Authorization":token } 
 		}).then(response=>{
-				// console.log(response)
+				console.log(response)
+				callback(response.data)} )
+	},
+	add_book_chapter(book,token,callback) {
+		axios({
+		  method: "POST",
+		  url: "/rocky/chapters/",
+		  data: JSON.stringify(book),
+		  headers: {"Authorization":token } 
+		}).then(response=>{
+				console.log(response)
+				callback(response.data)} )
+	},
+	edit_book_chapter(book,token,callback) {
+		axios({
+		  method: "PUT",
+		  url: "/rocky/chapters/"+book.id+"/",
+		  data: JSON.stringify(book),
+		  headers: {"Authorization":token } 
+		}).then(response=>{
+				console.log(response)
 				callback(response.data)} )
 	},
 	// 获取章节详情 
 	get_chapter_detail(chapter_id,token,callback) {
 		axios({
 		  method: "GET",
-		  url: "/rocky/chapter/"+chapter_id+"/chapter_detail/",
+		  url: "/rocky/chapters/"+chapter_id+"/",
 		  // data: JSON.stringify(diary),
 		  headers: {"Authorization":token } 
 		}).then(response=>{
