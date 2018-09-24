@@ -11,31 +11,37 @@
         </el-card>
       </el-col>
       <el-col :span="10">
-        <div class="block" id="comments">
+        <div class="block" style="position:fixed; overflow: hidden;" id="comments">
           <div id="input_comments" >
-            <div style="min-height:50px;max-height:200px;">
-          	  <editorelem :catchData="catchCommentData" :editorindex="20000"></editorelem>
-            </div>
-            <el-input type="textarea" :rows="3" placeholder="请输入笔记内容" v-model="newcommet"> </el-input>
+          	  <editorelem 
+                :catchData="catchCommentData" :editorindex="1000">
+              </editorelem>
+            <!-- <el-input type="textarea" :rows="3" placeholder="请输入笔记内容" v-model="newcommet"> </el-input> -->
           </div>
           <el-button type="success" plain style="float:right" icon="el-icon-circle-plus-outline" @click="new_comment">提交</el-button>
           <el-pagination background v-if="comment_count != 0" @current-change="axios_get_comments" :current-page.sync="comments_page" :page-size="10" layout="prev, pager, next" :total="comment_count">
           </el-pagination>
-        </div>
-        <div id="chaptercomments">
+          <div id="comment_container" style="position: relative;overflow: hidden; height: 500px" >
+        <div id="chaptercomments" style="height: 100%;overflow-y: scroll; overflow-x: hidden;">
           <el-card v-for="comment in comments" :key="comment.id">
-            <div slot="header">
-              <h5>{{fromat_date(comment.created_at)}}</h5>
+            <div slot="header"  class="clearfix">
+              <span>{{fromat_date(comment.created_at)}}</span>
+              <el-button style="float: right;" size="mini"  type="info" 
+                icon="el-icon-delete"  round 
+		    	      @click="delete_comment(comment)" ></el-button>
             </div>
             <div id="chaptercontent" v-html="comment.comments"></div>
           </el-card>
+          <footer style="height: 30px"></footer>
+        </div>
+        </div>
         </div>
       </el-col>
     </el-row>
     <el-dialog title="添加章节" :visible.sync="dialogFormVisible">
-      <el-form label-position="left" label-width="80px" :model="currentChapter">
+      <el-form label-position="left" label-width="80px" :model="modify_chapter">
         <el-form-item label="章节名称:">
-          <el-input v-model="currentChapter.chapter" disable></el-input>
+          <el-input v-model="modify_chapter.chapter" disable></el-input>
         </el-form-item>
         <!-- <el-form-item label="章节名称:">
           <el-input v-model="currentChapter.content"></el-input>
@@ -125,6 +131,11 @@ export default {
       console.log(this.modify_chapter)
       this.dialogFormVisible = false
       Books.edit_book_chapter(this.modify_chapter, this.token, data => {
+        this.refresh_data()
+      })
+    },
+    delete_comment(comment){
+      Books.remove_comment(comment,this.token, data => {
         this.refresh_data()
       })
     }

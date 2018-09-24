@@ -17,15 +17,20 @@
 			</el-card>
 		</div>
 		<p>章节列表：</p>
-        <li v-for="chapter in bookContents.book_content ">
-        	<router-link :to="'/books/chapter/'+chapter.id">{{chapter.id}} : {{chapter.chapter}}</router-link> 
-        </li>
+		<div style="margin-left: 50px">
+				<ol>
+        <span v-for="chapter in bookContents.book_content" class="chapter_list" >
+        	<router-link  :to="'/books/chapter/'+chapter.id">	<li> {{chapter.chapter}}</li></router-link> 
+        </span>
+				</ol>
+        <footer style="height: 50px"></footer>
+        </div>
         <router-view></router-view>
 
     <el-dialog title="添加章节" :visible.sync="dialogFormVisible">
 	  <el-form label-position="left" label-width="80px" :model="newChapter">
 	    <el-form-item label="书名:" >
-	    	<el-input v-model="bookContents.name" disable></el-input>
+	    	<el-input v-model="bookContents.name" ></el-input>
 	    </el-form-item>
 	    <el-form-item label="章节名称:">
 	    	<el-input v-model="newChapter.chapter" ></el-input>
@@ -43,45 +48,65 @@
 </template>
 
 <script type="text/javascript">
-import {Books} from '@/utils/ajaxFunctions'
-import editorelem from '@/components/rocky/editor'
+import { Books } from "@/utils/ajaxFunctions";
+import editorelem from "@/components/rocky/editor";
 export default {
-	name:"bookcontents",
-	data() {
-		return {
-			book_id : this.$route.params.book_id,
-			bookContents : {},
-			token: this.$store.state.token,
-			dialogFormVisible: false,
-			newChapter: {"book_id":this.book_id,"chapter":"","content":"",editor:(new Date()).getTime()}
-		}		
-	},
-	methods: {
-		set_list(data) {
-			this.bookContents = data
-			console.log(JSON.stringify(this.bookContents) )
-		},
-		refresh_data() {
-			Books.get_book_content(this.book_id,this.token,this.set_list)
-		},
-		new_chapter() {
-			this.newChapter = {"book_id":this.bookContents.id,"chapter":"","content":"",editor:(new Date()).getTime()}
-			this.dialogFormVisible  = true
-		},
-		handle_submmit() {
-			Books.add_book_chapter(this.newChapter,this.token,this.set_list)
-			this.dialogFormVisible  = false
-			this.refresh_data()
-		},
-		catchData(value){
-	          this.newChapter.content = value      //在这里接受子组件传过来的参数，赋值给data里的参数
-	    }
-	},
-	created: function(){
-		Books.get_book_content(this.book_id,this.token,this.set_list)
-	},
-	components: {
-		editorelem
-	}
-}
+  name: "bookcontents",
+  data() {
+    return {
+      book_id: this.$route.params.book_id,
+      bookContents: {},
+      token: this.$store.state.token,
+      dialogFormVisible: false,
+      newChapter: {
+        book_id: this.book_id,
+        chapter: "",
+        content: "",
+        editor: new Date().getTime()
+      }
+    };
+  },
+  methods: {
+    set_list(data) {
+      this.bookContents = data;
+      console.log(JSON.stringify(this.bookContents));
+    },
+    refresh_data() {
+      Books.get_book_content(this.book_id, this.token, this.set_list);
+    },
+    new_chapter() {
+      this.newChapter = {
+        book_id: this.bookContents.id,
+        chapter: "",
+        content: "",
+        editor: new Date().getTime()
+      };
+      this.dialogFormVisible = true;
+    },
+    handle_submmit() {
+      Books.add_book_chapter(this.newChapter, this.token, data => {
+        this.refresh_data();
+      });
+      this.dialogFormVisible = false;
+    },
+    catchData(value) {
+      this.newChapter.content = value; //在这里接受子组件传过来的参数，赋值给data里的参数
+    }
+  },
+  created: function() {
+    Books.get_book_content(this.book_id, this.token, this.set_list);
+  },
+  components: {
+    editorelem
+  }
+};
 </script>
+
+<style>
+.chapter_list {
+  width: 200px;
+	margin-top: 15px;
+	float: left;
+	list-style-type: square type decimal;
+}
+</style>

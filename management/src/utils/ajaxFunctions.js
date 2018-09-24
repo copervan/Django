@@ -309,6 +309,16 @@ const Books = {
 				// console.log(response)
 				callback(response.data)} )
 	},
+	remove_comment(comment,token,callback){
+		axios({
+		  method: "delete",
+		  url: "rocky/chaptercomment/"+ comment.id+"/",
+		  data: JSON.stringify(comment) ,
+		  headers: {"Authorization":token } 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	}
 	
 }
 

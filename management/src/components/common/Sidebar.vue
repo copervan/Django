@@ -49,7 +49,7 @@
                         title: 'Rocky主页'
                     },
                     {
-                        icon: 'el-icon-lx-crown',
+                        icon: 'el-icon-lx-read',
                         index: '/books/booklist',
                         title: '我的书籍'
                     },

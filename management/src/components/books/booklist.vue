@@ -8,12 +8,12 @@
 		<br>
 		<el-card v-for="book in books" :key="book.id + new Date()" shadow="hover" >
 		  <div slot="header" class="clearfix" @dblclick="view_detail(book)" >
-		    <h3 > {{book.name}} </h3>
-		    <el-row style="float: right;"  >	
-		    <el-button type="primary" icon="el-icon-edit" circle 
-		    	@click="form_remove_book(book)" ></el-button>
-		    <el-button type="danger" icon="el-icon-delete" circle  
+		    <el-row :gutter="20"  >	
+		    	<h3 style="float: left;" > {{book.name}} </h3>
+		    <el-button  style="float: right; margin-left:10px  " type="primary" icon="el-icon-edit" circle 
 		    	@click="form_edit_book(book)" ></el-button>
+		    <el-button style="float: right; margin-left:10px "  type="danger" icon="el-icon-delete" circle  
+		    	@click="form_remove_book(book)" ></el-button>
 		    </el-row>	
 		  </div>
 		  <p><el-tag size="medium" type="success">作者：</el-tag> {{book.author}}</p>

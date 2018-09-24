@@ -73,5 +73,5 @@ class BookDetailSerializer(serializers.ModelSerializer):
     book_content = ChapterListSerializer(many=True)
     class Meta:
         model = Book
-        fields = ('id', 'name', 'author','introduction', 'book_content','created_at' ,'updated_at')
+        fields = ('id', 'name', 'author','introduction','book_style', 'book_content','created_at' ,'updated_at')
 

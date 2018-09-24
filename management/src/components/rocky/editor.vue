@@ -1,6 +1,8 @@
 <template>
 	<div id="wangeditor">
-        <div ref="editorElem" style="min-height:50px;max-height:200px;" ></div>
+		<div ref="editorMenu" ></div> 
+		<div ref="editor"  class = "editorStyle1" style="height:100px;max-height:1000px;"></div>	
+        <!-- <div ref="editorElem" style="height:100px; max-height:300px;"  ></div> -->
     </div> 
 </template>
 
@@ -16,7 +18,7 @@ export default {
   // 子组件通过调用父组件catchData方法，将编辑器内容传递给父组件。
   props:["editorindex",'content','catchData'],
   mounted() {
-    let editor = new E(this.$refs.editorElem)
+    let editor = new E(this.$refs.editorMenu,this.$refs.editor)
     editor.customConfig.onchange = (html) => {
       this.catchData(html)
     }
@@ -280,7 +282,8 @@ export default {
 </script>
 <style>
 .editorStyle1{
-	text-align:left
+	text-align:left;
+	border: 1px #DBDBDB solid;
 }
 </style>
 
