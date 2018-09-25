@@ -1,6 +1,8 @@
 <template>
 	<div id="wangeditor">
+		<!-- 编辑器菜单  -->
 		<div ref="editorMenu" ></div> 
+		<!-- 编辑器文本框 用于调整输入框的样式 -->
 		<div ref="editor"  class = "editorStyle1" style="height:100px;max-height:1000px;"></div>	
         <!-- <div ref="editorElem" style="height:100px; max-height:300px;"  ></div> -->
     </div> 

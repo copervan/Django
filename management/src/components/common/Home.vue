@@ -20,6 +20,7 @@
     import vSidebar from './Sidebar.vue';
     import vTags from './Tags.vue';
     import bus from './bus';
+    import {mapState} from 'vuex';
     export default {
         data(){
             return {
@@ -31,6 +32,13 @@
             vHead, vSidebar, vTags
         },
         created(){
+            if(!this.token || typeof this.token === 'undefined' ){
+                this.$router.push('/');
+            }
+            else {
+                // console.log("the Token: "+ this.token)
+            }
+
             bus.$on('collapse', msg => {
                 this.collapse = msg;
             })
@@ -43,6 +51,12 @@
                 }
                 this.tagsList = arr;
             })
-        }
+        },
+        computed: {
+
+        },
+        ...mapState(
+                ['token']
+            )
     }
 </script>
