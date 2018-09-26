@@ -13,31 +13,29 @@
       <el-col :span="10">
         <div class="block" style="position:fixed; overflow: hidden;" id="comments">
           <div id="input_comments" >
-          	  <editorelem 
-                :catchData="catchCommentData" :editorindex="1000">
+          	  <editorelem style="background-color:#FFF5EE"
+                :key="editorelem_key"  :catchData="catchCommentData" :editorindex="1000">
               </editorelem>
             <!-- <el-input type="textarea" :rows="3" placeholder="请输入笔记内容" v-model="newcommet"> </el-input> -->
           </div>
           <el-button type="success" plain style="float:right" icon="el-icon-circle-plus-outline" @click="new_comment">提交</el-button>
           <el-pagination background v-if="comment_count != 0" @current-change="axios_get_comments" :current-page.sync="comments_page" :page-size="10" layout="prev, pager, next" :total="comment_count">
           </el-pagination>
-          <div id="comment_container" style="position: relative;overflow: hidden; height: 500px" >
+          <Divider orientation="left" dashed ><span>随笔：</span> </Divider> 
+          <div id="comment_container" style="position: relative;overflow: hidden; height: 600px" >
         <div id="chaptercomments" style="height: 100%;overflow-y: scroll; overflow-x: hidden;">
-          <el-card v-for="comment in comments" :key="comment.id">
-            <div slot="header"  class="clearfix">
-              <span>{{fromat_date(comment.created_at)}}</span>
-              <el-button style="float: right;" size="mini"  type="info" 
-                icon="el-icon-delete"  round 
-		    	      @click="delete_comment(comment)" ></el-button>
-            </div>
+          <Card v-for="comment in comments" :key="comment.id">
+            <p slot="title" >{{fromat_date(comment.created_at)}}</p>
+            <Button slot="extra" size="small"   type="text"  shape="circle" 
+              @click="delete_comment(comment)" ><Icon type="ios-close"/></Button>
             <div id="chaptercontent" v-html="comment.comments"></div>
-          </el-card>
-          <footer style="height: 30px"></footer>
+          </Card>
         </div>
         </div>
         </div>
       </el-col>
     </el-row>
+    <!-- 章节编辑输入框 -->
     <el-dialog title="添加章节" :visible.sync="dialogFormVisible">
       <el-form label-position="left" label-width="80px" :model="modify_chapter">
         <el-form-item label="章节名称:">
@@ -55,12 +53,14 @@
         <el-button type="primary" @click.native="handle_submmit">提 交</el-button>
       </div>
     </el-dialog>
+    <footer >2017-2018 &copy; Rocky   </footer>
   </div>
+  
 </template>
 <script type="text/javascript">
-import { Books } from '@/utils/ajaxFunctions'
-import { tools } from '@/utils/tools'
-import editorelem from '@/components/rocky/editor'
+import { Books } from "@/utils/ajaxFunctions";
+import { tools } from "@/utils/tools";
+import editorelem from "@/components/rocky/editor";
 export default {
   name: "chapter",
   data() {
@@ -71,85 +71,105 @@ export default {
       comments_page: 1,
       comments: {},
       comment_count: 0,
-      current_comment: { "chapter_id": this.$route.params.chapter_id, "comments": "" },
+      current_comment: {
+        chapter_id: this.$route.params.chapter_id,
+        comments: ""
+      },
       dialogFormVisible: false,
       newcommet: "",
-      modify_chapter: { "editor": (new Date()).getTime() }
-    }
+      modify_chapter: { editor: new Date().getTime() },
+      editorelem_key: new Date().getTime()
+    };
   },
   methods: {
     set_chapter_data(data) {
-      this.currentChapter = data
+      this.currentChapter = data;
     },
     set_comment_data(data) {
-      this.comments = data.results
-      this.comment_count = data.count
+      this.comments = data.results;
+      this.comment_count = data.count;
     },
     axios_get_chapter() {
-      Books.get_chapter_detail(this.chapterId, this.token, this.set_chapter_data)
+      Books.get_chapter_detail(
+        this.chapterId,
+        this.token,
+        this.set_chapter_data
+      );
     },
     axios_get_comments() {
-      Books.get_chapter_comment(this.chapterId, this.comments_page, this.token, this.set_comment_data)
+      Books.get_chapter_comment(
+        this.chapterId,
+        this.comments_page,
+        this.token,
+        this.set_comment_data
+      );
     },
     refresh_data() {
-      this.axios_get_chapter()
-      this.axios_get_comments()
+      this.axios_get_chapter();
+      this.axios_get_comments();
     },
     fromat_date(time) {
-      return tools.formatDate(time)
+      return tools.formatDate(time);
     },
     new_comment() {
-      this.current_comment = { "chapter_id": this.$route.params.chapter_id, "comments": this.newcommet }
+      this.current_comment = {
+        chapter_id: this.$route.params.chapter_id,
+        comments: this.newcommet
+      };
       if (this.newcommet == "") {
         this.$message({
-          message: '评论内容不能为空！！！',
-          type: 'warning'
+          message: "评论内容不能为空！！！",
+          type: "warning"
         });
       } else {
         Books.add_comment(this.current_comment, this.token, data => {
-          console.log(data)
-          this.refresh_data()
-        })
-        this.newcommet = "";
+          console.log(data);
+          this.refresh_data();
+          this.newcommet = "";
+          this.editorelem_key = new Date().getTime();
+        });
       }
     },
     catchData(val) {
-      this.modify_chapter.content = val
+      this.modify_chapter.content = val;
     },
-    catchCommentData(val){
-    	this.newcommet = val
+    catchCommentData(val) {
+      this.newcommet = val;
     },
     edit_chaptert(chapter) {
-      this.dialogFormVisible = true
-      this.modify_chapter = { "editor": (new Date()).getTime() }
-      Object.assign(this.modify_chapter, chapter)
+      this.dialogFormVisible = true;
+      this.modify_chapter = { editor: new Date().getTime() };
+      Object.assign(this.modify_chapter, chapter);
 
-      this.modify_chapter.updated_at = new Date()
-      console.log(this.modify_chapter)
+      this.modify_chapter.updated_at = new Date();
+      console.log(this.modify_chapter);
     },
     handle_submmit() {
-      console.log(this.modify_chapter)
-      this.dialogFormVisible = false
+      console.log(this.modify_chapter);
+      this.dialogFormVisible = false;
       Books.edit_book_chapter(this.modify_chapter, this.token, data => {
-        this.refresh_data()
-      })
+        this.refresh_data();
+      });
     },
-    delete_comment(comment){
-      Books.remove_comment(comment,this.token, data => {
-        this.refresh_data()
-      })
+    delete_comment(comment) {
+      Books.remove_comment(comment, this.token, data => {
+        this.refresh_data();
+      });
     }
-
   },
   created: function() {
-    Books.get_chapter_detail(this.chapterId, this.token, this.set_chapter_data)
-    Books.get_chapter_comment(this.chapterId, this.comments_page, this.token, this.set_comment_data)
+    Books.get_chapter_detail(this.chapterId, this.token, this.set_chapter_data);
+    Books.get_chapter_comment(
+      this.chapterId,
+      this.comments_page,
+      this.token,
+      this.set_comment_data
+    );
   },
   components: {
     editorelem
   }
-}
-
+};
 </script>
 <style>
 .text {
@@ -167,7 +187,7 @@ export default {
 }
 
 .clearfix:after {
-  clear: both
+  clear: both;
 }
 
 .box-card {
@@ -176,7 +196,10 @@ export default {
 }
 
 #chaptercomments {
-  padding: 10px
+  padding: 10px;
 }
-
+footer {
+  text-align: center;
+  padding: 30px;
+}
 </style>

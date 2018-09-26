@@ -15,17 +15,18 @@
 			  <p><el-tag size="medium">书籍类别：</el-tag> {{bookContents.book_style}}</p>
 			  <p><el-tag size="medium">内容简介：</el-tag> {{bookContents.introduction}}</p>
 			</el-card>
-		</div>
+		</div> <br>
 		<p>章节列表：</p>
 		<div style="margin-left: 50px">
-				<ol>
-        <span v-for="chapter in bookContents.book_content" class="chapter_list" >
-        	<router-link  :to="'/books/chapter/'+chapter.id">	<li> {{chapter.chapter}}</li></router-link> 
-        </span>
-				</ol>
-        <footer style="height: 50px"></footer>
-        </div>
-        <router-view></router-view>
+      <ol>
+      <div class="chapter_list"  v-for="(chapter,index) in bookContents.book_content" >
+        <router-link :to="'/books/chapter/'+chapter.id">	<li> {{chapter.chapter}}</li></router-link> 
+        <!-- <router-link :to="routerTo(chapter,index)">	<li> {{chapter.chapter}}</li></router-link> -->
+      </div>
+      </ol>
+      <footer style="height: 50px"></footer>
+    </div>
+    <router-view></router-view>
 
     <el-dialog title="添加章节" :visible.sync="dialogFormVisible">
 	  <el-form label-position="left" label-width="80px" :model="newChapter">
@@ -91,7 +92,7 @@ export default {
     },
     catchData(value) {
       this.newChapter.content = value; //在这里接受子组件传过来的参数，赋值给data里的参数
-    }
+    },
   },
   created: function() {
     Books.get_book_content(this.book_id, this.token, this.set_list);

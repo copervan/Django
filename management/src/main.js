@@ -11,9 +11,12 @@ import '../static/css/icon.css';
 import "babel-polyfill";
 import Vuex from 'vuex' ;
 import Iview from 'iview' ;
+import 'iview/dist/styles/iview.css';
 
 Vue.use(Vuex)
-Vue.use(Iview)
+Vue.use(Iview, {
+    transfer: true,
+    size: 'large'} ); 
 Vue.use(ElementUI, { size: 'small' });
 Vue.prototype.$axios = axios;
 

@@ -106,11 +106,13 @@ export default new Router({
                         path: 'bookcontent/:book_id',
                         component: resolve => require(['../components/books/bookcontent.vue'], resolve),
                         meta: { title: '书籍目录' },
+                        
                     },
                     {
                         path: 'chapter/:chapter_id',
                         component: resolve => require(['../components/books/ChaptertDetail.vue'], resolve),
                         meta: { title: '章节内容' },
+                        name: "bookcontent",
                     }
                 ]
             }
