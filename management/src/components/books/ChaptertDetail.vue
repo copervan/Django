@@ -17,21 +17,22 @@
                 :key="editorelem_key"  :catchData="catchCommentData" :editorindex="1000">
               </editorelem>
             <!-- <el-input type="textarea" :rows="3" placeholder="请输入笔记内容" v-model="newcommet"> </el-input> -->
+            <el-button type="success" plain icon="el-icon-circle-plus-outline" @click="new_comment">提交</el-button>
           </div>
-          <el-button type="success" plain style="float:right" icon="el-icon-circle-plus-outline" @click="new_comment">提交</el-button>
-          <el-pagination background v-if="comment_count != 0" @current-change="axios_get_comments" :current-page.sync="comments_page" :page-size="10" layout="prev, pager, next" :total="comment_count">
-          </el-pagination>
           <div class="demo_line_01"><b><span>随笔：</span></b> </div> 
           <div id="comment_container" style="position: relative;overflow: hidden; height: 600px" >
-        <div id="chaptercomments" style="height: 100%;overflow-y: scroll; overflow-x: hidden;">
+        <div id="chaptercomments" style="height: 500px;overflow-y: auto; overflow-x: hidden;">
           <el-card v-for="comment in comments" :key="comment.id" :body-style="{ padding: '10px' }" >
-            <div  class="clearfix"  style="{ padding: '10px'; border-bottom : 1px solid #ebeef5; }"  >
-              <span>{{fromat_date(comment.created_at)}}</span>
+            <div id="chaptercontent" class="comment" v-html="comment.comments"></div>
+            <HR style="border:1 dashed " width="100%" color=#ddd  SIZE=1 />
+            <div  class="comment-head "  >
+              <span >{{fromat_date(comment.created_at)}}</span>
               <el-button style="float: right; padding: 3px 0" type="text" @click="delete_comment(comment)" ><i class="el-icon-delete"></i></el-button>
             </div>
-            <div id="chaptercontent" v-html="comment.comments"></div>
           </el-card>
-
+          <el-pagination background v-if="comment_count != 0" @current-change="axios_get_comments" :current-page.sync="comments_page" 
+            :page-size="10" layout="prev, pager, next" :total="comment_count">
+          </el-pagination>
         </div>
         </div>
         </div>
@@ -204,13 +205,24 @@ footer {
   text-align: center;
   padding: 30px;
 }
-
-.demo_line_01{
+/* 分隔线  */
+.demo_line_01 {
+  position: relative;
   padding: 0 10px 0;
   margin: 20px 0;
   line-height: 1px;
-  border-left: 20px solid #ddd;
+  border-left: 20px solid rgb(197, 196, 196);
   border-right: 400px solid #ddd;
   text-align: center;
+}
+
+.comment {
+  padding: 5px;
+  /* background-color: ivory; */
+}
+.comment-head {
+  margin-top: 15px;
+  /* border-top: 1px solid #ebeef5; */
+  text-align: left;
 }
 </style>

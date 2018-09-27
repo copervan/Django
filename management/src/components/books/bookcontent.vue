@@ -105,7 +105,7 @@ export default {
 
 <style>
 .chapter_list {
-  width: 200px;
+  width: 250px;
 	margin-top: 15px;
 	float: left;
 	list-style-type: square type decimal;

@@ -1,9 +1,9 @@
 <template>
-	<div id="wangeditor">
+	<div class="theeditor">
 		<!-- 编辑器菜单  -->
 		<div ref="editorMenu" ></div> 
 		<!-- 编辑器文本框 用于调整输入框的样式 -->
-		<div ref="editor"  class = "editorStyle1" style="height:100px;max-height:1000px;"></div>	
+		<div ref="editor"  class = "editorStyle1"  ></div>	
         <!-- <div ref="editorElem" style="height:100px; max-height:300px;"  ></div> -->
     </div> 
 </template>
@@ -286,6 +286,17 @@ export default {
 .editorStyle1{
 	text-align:left;
 	border: 1px #DBDBDB solid;
+	min-height: 100px !important;;
+	overflow-y: scroll;
+	max-height: 400px !important; ;
+}
+.theeditor {
+	height: 100%;
+}
+
+.w-e-text {
+    padding: 0 10px;
+    overflow-y: auto !important ;
 }
 </style>
 

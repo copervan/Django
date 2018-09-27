@@ -112,7 +112,6 @@ export default new Router({
                         path: 'chapter/:chapter_id',
                         component: resolve => require(['../components/books/ChaptertDetail.vue'], resolve),
                         meta: { title: '章节内容' },
-                        name: "bookcontent",
                     }
                 ]
             }
