@@ -5,18 +5,19 @@ import App from './App'
 import router from './router'
 import axios from 'axios';
 import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';    // 默认主题
+   // 默认主题
 // import '../static/css/theme-green/index.css';       // 浅绿色主题
-import '../static/css/icon.css';
+
 import "babel-polyfill";
 import Vuex from 'vuex' ;
 import Iview from 'iview' ;
-import 'iview/dist/styles/iview.css';
+// import 'iview/dist/styles/iview.css';
+
+import 'element-ui/lib/theme-chalk/index.css'; 
+import '../static/css/icon.css';
 
 Vue.use(Vuex)
-Vue.use(Iview, {
-    transfer: true,
-    size: 'large'} ); 
+Vue.use(Iview); 
 Vue.use(ElementUI, { size: 'small' });
 Vue.prototype.$axios = axios;
 

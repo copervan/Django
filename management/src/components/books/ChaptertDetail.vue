@@ -21,15 +21,17 @@
           <el-button type="success" plain style="float:right" icon="el-icon-circle-plus-outline" @click="new_comment">提交</el-button>
           <el-pagination background v-if="comment_count != 0" @current-change="axios_get_comments" :current-page.sync="comments_page" :page-size="10" layout="prev, pager, next" :total="comment_count">
           </el-pagination>
-          <Divider orientation="left" dashed ><span>随笔：</span> </Divider> 
+          <div class="demo_line_01"><b><span>随笔：</span></b> </div> 
           <div id="comment_container" style="position: relative;overflow: hidden; height: 600px" >
         <div id="chaptercomments" style="height: 100%;overflow-y: scroll; overflow-x: hidden;">
-          <Card v-for="comment in comments" :key="comment.id">
-            <p slot="title" >{{fromat_date(comment.created_at)}}</p>
-            <Button slot="extra" size="small"   type="text"  shape="circle" 
-              @click="delete_comment(comment)" ><Icon type="ios-close"/></Button>
+          <el-card v-for="comment in comments" :key="comment.id" :body-style="{ padding: '10px' }" >
+            <div  class="clearfix"  style="{ padding: '10px'; border-bottom : 1px solid #ebeef5; }"  >
+              <span>{{fromat_date(comment.created_at)}}</span>
+              <el-button style="float: right; padding: 3px 0" type="text" @click="delete_comment(comment)" ><i class="el-icon-delete"></i></el-button>
+            </div>
             <div id="chaptercontent" v-html="comment.comments"></div>
-          </Card>
+          </el-card>
+
         </div>
         </div>
         </div>
@@ -201,5 +203,14 @@ export default {
 footer {
   text-align: center;
   padding: 30px;
+}
+
+.demo_line_01{
+  padding: 0 10px 0;
+  margin: 20px 0;
+  line-height: 1px;
+  border-left: 20px solid #ddd;
+  border-right: 400px solid #ddd;
+  text-align: center;
 }
 </style>
