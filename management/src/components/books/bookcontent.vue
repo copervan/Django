@@ -70,7 +70,7 @@ export default {
   methods: {
     set_list(data) {
       this.bookContents = data;
-      console.log(JSON.stringify(this.bookContents));
+      // console.log(JSON.stringify(this.bookContents));
     },
     refresh_data() {
       Books.get_book_content(this.book_id, this.token, this.set_list);

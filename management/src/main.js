@@ -10,14 +10,14 @@ import ElementUI from 'element-ui';
 
 import "babel-polyfill";
 import Vuex from 'vuex';
-import Iview from 'iview';
+// import Iview from 'iview';
 // import 'iview/dist/styles/iview.css';
 
 import 'element-ui/lib/theme-chalk/index.css';
 import '../static/css/icon.css';
 
 Vue.use(Vuex)
-Vue.use(Iview);
+// Vue.use(Iview);
 Vue.use(ElementUI, { size: 'small' });
 Vue.prototype.$axios = axios;
 

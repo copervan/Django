@@ -27,7 +27,7 @@ export default {
       this.editorindex == 0 || this.editorindex == undefined
         ? 1000
         : this.editorindex;
-    console.log(editor.customConfig.zIndex);
+    // console.log(editor.customConfig.zIndex);
     editor.customConfig.menus = [
       //菜单配置
       "head",

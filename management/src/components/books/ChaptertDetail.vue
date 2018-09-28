@@ -126,7 +126,7 @@ export default {
         });
       } else {
         Books.add_comment(this.current_comment, this.token, data => {
-          console.log(data);
+          // console.log(data);
           this.refresh_data();
           this.newcommet = "";
           this.editorelem_key = new Date().getTime();
@@ -134,9 +134,11 @@ export default {
         });
       }
     },
+    //提取富文本编辑器中的内容 给chapeter
     catchData(val) {
       this.modify_chapter.content = val;
     },
+    // 提取富文本编辑器中的内容给 comment
     catchCommentData(val) {
       this.newcommet = val;
     },
@@ -149,7 +151,7 @@ export default {
       console.log(this.modify_chapter);
     },
     handle_submmit() {
-      console.log(this.modify_chapter);
+      // console.log(this.modify_chapter);
       this.dialogFormVisible = false;
       Books.edit_book_chapter(this.modify_chapter, this.token, data => {
         this.refresh_data();

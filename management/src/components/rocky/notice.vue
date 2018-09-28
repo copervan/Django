@@ -1,6 +1,6 @@
 
 <script type="text/javascript">
-import { Notice } from "../../utils/ajaxFunctions";
+import { Notice } from "@/utils/ajaxFunctions";
 
 export default {
   name: "notice",

@@ -22,8 +22,6 @@
 </template>
 
 <script>
-// import login from './login'
-// import HelloWorld from './HelloWorld'
 import home from "./userprofile";
 import notice from "./notice";
 import calendar from "./calendar";
