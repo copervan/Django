@@ -87,6 +87,7 @@ export default {
     handle_submmit() {
       Books.add_book_chapter(this.newChapter, this.token, data => {
         this.refresh_data();
+        this.$message({message:"创建成功",center: true,type: 'success'})
       });
       this.dialogFormVisible = false;
     },

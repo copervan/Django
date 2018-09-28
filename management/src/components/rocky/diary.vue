@@ -47,9 +47,11 @@
 				var _this = this
 				if(_this.currentdiary.content != '' && _this.currentdiary.title != ''){
 					// console.log(_this.currentdiary)
-					Diarys.create_diary(_this.currentdiary, _this.token, function(){
-							alert("Diary successfully created!")
+					Diarys.create_diary(_this.currentdiary, _this.token, data => {
+							// alert("Diary successfully created!")
+							this.$message({message:"Diary successfully created!",center: true,type: 'success'})
 							Diarys.get_diary(_this.currentPage, _this.token, _this.set_diary_list)
+							_this.diary_add = false
 					})
 				}
 				else {
@@ -98,7 +100,7 @@
 			// 该方法将传递给editor，子组件调用该方法传递子组件的参数至父组件。
 			catchData(value){
 	          this.currentdiary.content = value      //在这里接受子组件传过来的参数，赋值给data里的参数
-	        }
+	    }
 		},
 		created: function() {
 			// console.log('this is the create' )
@@ -198,7 +200,7 @@
 			</template>
 			<div slot="footer" class="dialog-footer">
 			  <el-button @click="diary_add = false">取 消</el-button>
-			  <el-button type="primary" @click="diary_add = false">提交</el-button>
+			  <el-button type="primary" @click="add_diary()">提交</el-button>
 			</div>
 	    </el-dialog>
 
