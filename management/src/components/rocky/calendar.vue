@@ -3,10 +3,10 @@
 </template>
 
 <script type="text/javascript">
-	export default {
-		name: "calendar",
-		components: {
-			'full-calendar': require('vue-fullcalendar')
-		}
-	}
+export default {
+  name: "calendar",
+  components: {
+    "full-calendar": require("vue-fullcalendar")
+  }
+};
 </script>

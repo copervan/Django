@@ -7,11 +7,11 @@
 
 <script type="text/javascript">
 // import {Books} from '@/utils/ajaxFunctions'
-import books from "./booklist"
+import books from "./booklist";
 export default {
-	name:"bookindex",
-	components: {
-		books
-	}
-}
+  name: "bookindex",
+  components: {
+    books
+  }
+};
 </script>

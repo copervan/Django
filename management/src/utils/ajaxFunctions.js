@@ -71,7 +71,7 @@ axios.interceptors.response.use(response => {
       err.message = "连接到服务器失败"
       Message.error(err.message)
     }
-    Message.err(err.message)
+    // Message.error(err.message)
     return Promise.resolve(err.response)
 })
 
@@ -241,7 +241,7 @@ const Books = {
 		  // data: JSON.stringify(diary),
 		  headers: {"Authorization":token } 
 		}).then(response=>{
-				console.log(response)
+				// console.log(response)
 				callback(response.data)} )
 	},
 	add_book_chapter(book,token,callback) {
@@ -251,7 +251,7 @@ const Books = {
 		  data: JSON.stringify(book),
 		  headers: {"Authorization":token } 
 		}).then(response=>{
-				console.log(response)
+				// console.log(response)
 				callback(response.data)} )
 	},
 	edit_book_chapter(book,token,callback) {
@@ -261,7 +261,7 @@ const Books = {
 		  data: JSON.stringify(book),
 		  headers: {"Authorization":token } 
 		}).then(response=>{
-				console.log(response)
+				// console.log(response)
 				callback(response.data)} )
 	},
 	// 获取章节详情 

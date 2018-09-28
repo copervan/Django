@@ -1,108 +1,115 @@
 
 <script type="text/javascript">
-	import {Users} from '@/utils/ajaxFunctions'
-	import {mapState} from 'vuex'
-	import login from './login'
-	export default {
-		name: 'home',
-		data() {
-			return  {
-				users1 : [],
-				user_count: 0,
-				currentPage: 1,
-				columns1: [
-					{
-						title: "id",
-						key : "id"
-					},
-					{
-						title: "user_name",
-						key : "user_name"
-					},
-					{
-						title: "device_no",
-						key : "device_no"
-					}],
-				formLeft: {
-                    input1: '',
-                    input2: '',
-                    input3: ''
-                },
-                modal6: false,
-                edituser: false,
-                loading: true,
-                currentuser: {},
-                token: this.$store.state.token
-			}
-		},
-		methods: {
-			setusers(data) {
-				// console.log(data)
-				this.users1 = data.results
-				this.user_count = data.count
-			},
-			asyncOK () {
-				var _this = this
-				this.currentuser.project_id = 1
-				this.currentuser.channel_id = 1
-				// console.log(JSON.stringify(this.currentuser),this.token)
-				Users.creat_device(_this.currentuser,_this.token, function(data){
-					// alert(data)
-					Users.get_device(_this.currentPage, _this.token, _this.setusers)
-					setTimeout(() => {
-                    	_this.modal6 = false;
-                	}, 500);
-				})          
-            },
-            creat_user() {
-            	this.currentuser = {id:'', device_no: '', project_id: 1, user_name:'' , channel_id: 1}
-            	this.modal6 = true
-            },
-            submmit_edit() {
-            	var _this = this
-            	// console.log(_this.token)
-            	Users.edit_user(_this.currentuser,_this.token,function(){
-            		Users.get_device(_this.currentPage, _this.token, _this.setusers)
-            		_this.edituser = false;
-            	})
-            },
-            delete_user() {
-            	var _this = this
-            	// console.log(_this.token)
-            	Users.delete_user(_this.currentuser,_this.token,function(){
-            		Users.get_device(_this.currentPage,_this.token, _this.setusers)
-            	})
-            },
-            handleEdit(index, row) {
-            	console.log(row)
-            	this.currentuser =  JSON.parse(JSON.stringify(row))
-            	// console.log(this.currentuser)
-            	this.edituser = true
-		    },
-			handleDelete(index, row) {
-				console.log(row)
-				this.currentuser = JSON.parse(JSON.stringify(row))
-				// console.log(this.currentuser)
-				this.delete_user()
-			},
-			handleCurrentChange() {
-				var _this = this
-				Users.get_device(_this.currentPage, _this.token, _this.setusers)
-			},
-			refresh_data(){
-				Users.get_device(this.currentPage,this.token, this.setusers)
-			}
-		},
-		created: function(){
-			Users.get_device(this.currentPage,this.token, this.setusers)
-		},
-		computed:{
-			data1: function() {
-				// console.log(this.users1)
-				return this.users1
-			}
-		}		
-	}
+import { Users } from "@/utils/ajaxFunctions";
+import { mapState } from "vuex";
+import login from "./login";
+export default {
+  name: "home",
+  data() {
+    return {
+      users1: [],
+      user_count: 0,
+      currentPage: 1,
+      columns1: [
+        {
+          title: "id",
+          key: "id"
+        },
+        {
+          title: "user_name",
+          key: "user_name"
+        },
+        {
+          title: "device_no",
+          key: "device_no"
+        }
+      ],
+      formLeft: {
+        input1: "",
+        input2: "",
+        input3: ""
+      },
+      modal6: false,
+      edituser: false,
+      loading: true,
+      currentuser: {},
+      token: this.$store.state.token
+    };
+  },
+  methods: {
+    setusers(data) {
+      // console.log(data)
+      this.users1 = data.results;
+      this.user_count = data.count;
+    },
+    asyncOK() {
+      var _this = this;
+      this.currentuser.project_id = 1;
+      this.currentuser.channel_id = 1;
+      // console.log(JSON.stringify(this.currentuser),this.token)
+      Users.creat_device(_this.currentuser, _this.token, function(data) {
+        // alert(data)
+        Users.get_device(_this.currentPage, _this.token, _this.setusers);
+        setTimeout(() => {
+          _this.modal6 = false;
+        }, 500);
+      });
+    },
+    creat_user() {
+      this.currentuser = {
+        id: "",
+        device_no: "",
+        project_id: 1,
+        user_name: "",
+        channel_id: 1
+      };
+      this.modal6 = true;
+    },
+    submmit_edit() {
+      var _this = this;
+      // console.log(_this.token)
+      Users.edit_user(_this.currentuser, _this.token, function() {
+        Users.get_device(_this.currentPage, _this.token, _this.setusers);
+        _this.edituser = false;
+      });
+    },
+    delete_user() {
+      var _this = this;
+      // console.log(_this.token)
+      Users.delete_user(_this.currentuser, _this.token, function() {
+        Users.get_device(_this.currentPage, _this.token, _this.setusers);
+      });
+    },
+    handleEdit(index, row) {
+      // console.log(row)
+      this.currentuser = JSON.parse(JSON.stringify(row));
+      // console.log(this.currentuser)
+      this.edituser = true;
+    },
+    handleDelete(index, row) {
+      // console.log(row)
+      this.currentuser = JSON.parse(JSON.stringify(row));
+      // console.log(this.currentuser)
+      this.delete_user();
+    },
+    handleCurrentChange() {
+      var _this = this;
+      Users.get_device(_this.currentPage, _this.token, _this.setusers);
+    },
+    refresh_data() {
+      Users.get_device(this.currentPage, this.token, this.setusers);
+    }
+  },
+  created: function() {
+    Users.get_device(this.currentPage, this.token, this.setusers);
+  },
+  computed: {
+    data1: function() {
+      // console.log(this.users1)
+      return this.users1;
+    }
+  }
+};
 </script>
 
 
@@ -181,40 +188,34 @@
 
 
 		</div>
-		<Modal 
-			v-model="modal6"
-	        title="Title"
-	        :loading="loading"
-	        @on-ok="asyncOK">
-	        <p>After you click ok, the dialog box will close in 2 seconds.</p>
-		    <template>
-				<Form :model="formLeft" label-position="left" :label-width="100">
-			        <FormItem label="device_no">
-			            <Input v-model="currentuser.device_no"></Input>
-			        </FormItem>
-			        <FormItem label="user_name">
-			            <Input v-model="currentuser.user_name"></Input>
-			        </FormItem>
-			    </Form>
-			</template>
-	    </Modal>
+		<el-dialog title="Title" :visible.sync="modal6">
+		  <el-form label-position="left" :model="formLeft">
+		    <el-form-item label="device_no:" >
+		    	<el-input v-model="currentuser.device_no"></el-input>
+		    </el-form-item>
+		    <el-form-item label="user_name:" >
+					<el-input v-model="currentuser.user_name"></el-input>
+		    </el-form-item>
+		  </el-form>
+		  <div slot="footer" class="dialog-footer">
+		    <el-button @click="modal6 = false">取 消</el-button>
+		    <el-button type="primary" @click="asyncOK">确 定</el-button>
+		  </div>
+		</el-dialog>
 
-	    <Modal
-	        v-model="edituser"
-	        title="Title"
-	        :loading="loading"
-	        @on-ok="submmit_edit">
-	        <p>After you click ok, the dialog box will close in 2 seconds.</p>
-		    <template>
-				<Form :model="formLeft" label-position="left" :label-width="100">
-			        <FormItem label="device_no">
-			            <Input v-model="currentuser.device_no"></Input>
-			        </FormItem>
-			        <FormItem label="user_name">
-			            <Input v-model="currentuser.user_name"></Input>
-			        </FormItem>
-			    </Form>
-			</template>
-	    </Modal>
+		<el-dialog title="edituser" :visible.sync="edituser">
+		  <el-form label-position="left" :model="formLeft">
+		    <el-form-item label="device_no:" >
+		    	<el-input v-model="currentuser.device_no"></el-input>
+		    </el-form-item>
+		    <el-form-item label="user_name:" >
+					<el-input v-model="currentuser.user_name"></el-input>
+		    </el-form-item>
+		  </el-form>
+		  <div slot="footer" class="dialog-footer">
+		    <el-button @click="edituser = false">取 消</el-button>
+		    <el-button type="primary" @click="submmit_edit">确 定</el-button>
+		  </div>
+		</el-dialog>
 	</div>
 </template>

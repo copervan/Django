@@ -1,145 +1,163 @@
 
 <script type="text/javascript">
-	import {Notice} from '../../utils/ajaxFunctions'
+import { Notice } from "../../utils/ajaxFunctions";
 
-	export default {
-		name: 'notice',
-		data() {
-			return {
-				notice_list : [],
-				dialogFormVisible : false,
-				the_form: {"datetime": "" ,"notice_item":"","status":0},
-				currentPage: 1,
-				token: this.$store.state.token,
-				current_date : Date(),
-				// dialog_status 用于复用 el-dialog
-				dialog_status: "addNotice",
-				all_notice : [],
-				notice_count : 0
-			}
-		},
-		methods:{
-			// 初始化notice_list
-			set_notice_list(data) {
-				this.notice_list = data
-			},
-			set_all_notice(data){
-				this.all_notice = data.results
-				this.notice_count = data.count
-			},
-			//日期格式化
-			formatDate(time){
-			    var date = new Date(time);
+export default {
+  name: "notice",
+  data() {
+    return {
+      notice_list: [],
+      dialogFormVisible: false,
+      the_form: { datetime: "", notice_item: "", status: 0 },
+      currentPage: 1,
+      token: this.$store.state.token,
+      current_date: Date(),
+      // dialog_status 用于复用 el-dialog
+      dialog_status: "addNotice",
+      all_notice: [],
+      notice_count: 0
+    };
+  },
+  methods: {
+    // 初始化notice_list
+    set_notice_list(data) {
+      this.notice_list = data;
+    },
+    set_all_notice(data) {
+      this.all_notice = data.results;
+      this.notice_count = data.count;
+    },
+    //日期格式化
+    formatDate(time) {
+      var date = new Date(time);
 
-			    var year = date.getFullYear(),
-			        month = date.getMonth()+1,//月份是从0开始的
-			        day = date.getDate(),
-			        hour = date.getHours(),
-			        min = date.getMinutes(),
-			        sec = date.getSeconds();
-			    var newTime = year + '-' +
-			                (month < 10? '0' + month : month) + '-' +
-			                (day < 10? '0' + day : day) + ' ' +
-			                (hour < 10? '0' + hour : hour) + ':' +
-			                (min < 10? '0' + min : min) ;
-			                //+ ':' + (sec < 10? '0' + sec : sec);
+      var year = date.getFullYear(),
+        month = date.getMonth() + 1, //月份是从0开始的
+        day = date.getDate(),
+        hour = date.getHours(),
+        min = date.getMinutes(),
+        sec = date.getSeconds();
+      var newTime =
+        year +
+        "-" +
+        (month < 10 ? "0" + month : month) +
+        "-" +
+        (day < 10 ? "0" + day : day) +
+        " " +
+        (hour < 10 ? "0" + hour : hour) +
+        ":" +
+        (min < 10 ? "0" + min : min);
+      //+ ':' + (sec < 10? '0' + sec : sec);
 
-			    return newTime;         
-			},
-			// 状态转换
-			notice_code(code){
-				if (code === 0){
-					return "未开始"
-				}
-				else if (code === 1) {
-					return "已完成"
-				}
-				else if (code === 2) {
-					return "进行中"
-				}
-				else if( code === 3) {
-					return "拒  绝"
-				}
-				else {
-					return "未知状态："+ code
-				}
-			},
-			// 控制el-tag 标签的类型
-			notice_type(code){
-				if (code === 0){
-					return "warning"
-				}
-				else if (code === 1) {
-					return "success"
-				}
-				else if (code === 2) {
-					return ""
-				}
-				else if( code === 3) {
-					return "danger"
-				}
-				else {
-					return ""
-				}
-			},
-			// 刷新页面数据
-			refresh_data(){
-				Notice.get_notice(this.currentPage,this.token, this.set_notice_list)
-				Notice.all_notice(this.currentPage,this.token, this.set_all_notice)
-			},
-			// 处理model的提交操作, 配合dialog_status一起使用
-			handle_submmit() {
-				if (this.dialog_status == "addNotice"){
-					// 添加Notice
-					Notice.create_notice(this.the_form,this.token, function(data){
-						this.$message({message:"创建成功",center: true,type: 'success'})
-						this.refresh_data()
-					}.bind(this))
-				}
-				else if (this.dialog_status == "editNotice"){
-					// 编辑Notice
-					console.log(JSON.stringify(this.the_form) )
-					Notice.edit_notice(this.the_form,this.token,function(data){
-						this.$message({message:"更新成功",center: true,type: 'success'})
-						this.refresh_data()
-					}.bind(this))
-				}
-				this.dialogFormVisible = false
-			},
-			// 添加按钮响应事件
-			add_notice(){
-				this.dialog_status = "addNotice"
-				this.the_form = {"datetime": "" ,"notice_item":"","status": 0, "schedule": "1.20"}
-				this.dialogFormVisible = true
-			},
-			// 编辑按钮响应事件
-			edit_notice(notice){
-				this.the_form = JSON.parse(JSON.stringify(notice) )
-				this.dialog_status = "editNotice"
-				this.dialogFormVisible = true
-			},
-			handlePageChange() {
-				Notice.all_notice(this.currentPage,this.token, this.set_all_notice)
-			}
-		},
-		created(){
-			Notice.get_notice(this.currentPage,this.token, this.set_notice_list)
-			Notice.all_notice(this.currentPage,this.token, this.set_all_notice)
-			setInterval(()=>{//钩子函数，在实例创建的时候运行定时器，我们只需要动态刷新当前的日期对象即可
-				this.current_date = new Date();
-				//console.log(this.current_date)
-			},10000)
-		},
-		computed: {
-			my_list : function(){
-				//console.log(this.notice_list)
-				return this.notice_list
-			},
-			all_list : function() {
-				return this.all_notice
-			}
-		}
-	}
+      return newTime;
+    },
+    // 状态转换
+    notice_code(code) {
+      if (code === 0) {
+        return "未开始";
+      } else if (code === 1) {
+        return "已完成";
+      } else if (code === 2) {
+        return "进行中";
+      } else if (code === 3) {
+        return "拒  绝";
+      } else {
+        return "未知状态：" + code;
+      }
+    },
+    // 控制el-tag 标签的类型
+    notice_type(code) {
+      if (code === 0) {
+        return "warning";
+      } else if (code === 1) {
+        return "success";
+      } else if (code === 2) {
+        return "";
+      } else if (code === 3) {
+        return "danger";
+      } else {
+        return "";
+      }
+    },
+    // 刷新页面数据
+    refresh_data() {
+      Notice.get_notice(this.currentPage, this.token, this.set_notice_list);
+      Notice.all_notice(this.currentPage, this.token, this.set_all_notice);
+    },
+    // 处理model的提交操作, 配合dialog_status一起使用
+    handle_submmit() {
+      if (this.dialog_status == "addNotice") {
+        // 添加Notice
+        Notice.create_notice(
+          this.the_form,
+          this.token,
+          function(data) {
+            this.$message({
+              message: "创建成功",
+              center: true,
+              type: "success"
+            });
+            this.refresh_data();
+          }.bind(this)
+        );
+      } else if (this.dialog_status == "editNotice") {
+        // 编辑Notice
+        console.log(JSON.stringify(this.the_form));
+        Notice.edit_notice(
+          this.the_form,
+          this.token,
+          function(data) {
+            this.$message({
+              message: "更新成功",
+              center: true,
+              type: "success"
+            });
+            this.refresh_data();
+          }.bind(this)
+        );
+      }
+      this.dialogFormVisible = false;
+    },
+    // 添加按钮响应事件
+    add_notice() {
+      this.dialog_status = "addNotice";
+      this.the_form = {
+        datetime: "",
+        notice_item: "",
+        status: 0,
+        schedule: "1.20"
+      };
+      this.dialogFormVisible = true;
+    },
+    // 编辑按钮响应事件
+    edit_notice(notice) {
+      this.the_form = JSON.parse(JSON.stringify(notice));
+      this.dialog_status = "editNotice";
+      this.dialogFormVisible = true;
+    },
+    handlePageChange() {
+      Notice.all_notice(this.currentPage, this.token, this.set_all_notice);
+    }
+  },
+  created() {
+    Notice.get_notice(this.currentPage, this.token, this.set_notice_list);
+    Notice.all_notice(this.currentPage, this.token, this.set_all_notice);
+    setInterval(() => {
+      //钩子函数，在实例创建的时候运行定时器，我们只需要动态刷新当前的日期对象即可
+      this.current_date = new Date();
+      //console.log(this.current_date)
+    }, 10000);
+  },
+  computed: {
+    my_list: function() {
+      //console.log(this.notice_list)
+      return this.notice_list;
+    },
+    all_list: function() {
+      return this.all_notice;
+    }
+  }
+};
 </script>
 
 <template>
@@ -269,35 +287,35 @@
 </template>
 
 <style>
-  .el-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 200px;
-    margin: 0;
-  }
-  
-  .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
-  
-  .el-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
-  }
-  .text {
-    font-size: 14px;
-  }
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 200px;
+  margin: 0;
+}
 
-  .item {
-    margin-bottom: 18px;
-  }
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
 
-  .clearfix:before,
-  .clearfix:after {
-    display: table;
-    content: "";
-  }
-  .clearfix:after {
-    clear: both
-  }
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}
+.text {
+  font-size: 14px;
+}
+
+.item {
+  margin-bottom: 18px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
 </style>

@@ -45,87 +45,114 @@
 </template>
 
 <script type="text/javascript">
-import {Books} from '@/utils/ajaxFunctions'
+import { Books } from "@/utils/ajaxFunctions";
 export default {
-	name:"books",
-	data() {
-		return {
-			books :[],
-			dialogFormVisible: false,
-			currentBook : {"name":"","author":"","book_style":""},
-			count : 0 ,
-			currentPage: 1,
-			token: this.$store.state.token,
-			dialogStatus: "editBook"
-		}		 
-	},
-	methods: {
-		set_list(data) {
-			this.books = data.results
-			this.count = data.count
-		},
-		refresh_data() {
-			Books.get_book_list(this.currentPage,this.token,this.set_list)
-		},
-		form_edit_book(book) {
-			console.log("Edit the Book")
-			this.currentBook = book
-			this.dialogStatus =  "editBook"
-			this.dialogFormVisible = true
-		},
-		form_remove_book(book) {
-			console.log("Edit the Book")
-			this.currentBook = book
-			this.$confirm('确定要删除本书吗？', '提示', {
-	          confirmButtonText: '确定',
-	          cancelButtonText: '取消',
-	          type: 'warning'
-	        }).then(() => {
-	        	this.axios_remove_book()
-	          	this.$message({
-	            type: 'success',
-	            message: '删除成功!'
-	          });
-	        }).catch(() => {
-	          this.$message({
-	            type: 'info',
-	            message: '已取消删除'
-	          });          
-	        });
-			console.log("Remove the Book")
-		},
-		form_new_book() {
-			console.log("New Book")
-			this.dialogStatus =  "addBook"
-			this.currentBook = {"name":"","author":"","book_style":"","introduction":""}
-			this.dialogFormVisible = true
-		},
-		handle_submmit() {
-			console.log("Submmit Edit")
-			if (this.dialogStatus ==  "addBook" ) {
-				this.axios_add_book()
-			}
-			else if (this.dialogStatus ==  "editBook") {
-				this.axios_edit_book()
-			}
-			this.refresh_data()
-			this.dialogFormVisible = false
-		},
-		axios_add_book(){
-			Books.new_book(this.currentBook,this.token,this.set_list)
-		},
-		axios_edit_book(){
-			Books.edit_book(this.currentBook,this.token,this.set_list)
-		},
-		axios_remove_book() {
-			Books.delete_book(this.currentBook,this.token,this.set_list)
-		},
-		view_detail(book) {
-			this.$router.push("/books/bookcontent/"+book.id)
-		}
-	},
-	created: function(){
-		Books.get_book_list(this.currentPage,this.token,this.set_list)
-	}
-}
+  name: "books",
+  data() {
+    return {
+      books: [],
+      dialogFormVisible: false,
+      currentBook: { name: "", author: "", book_style: "" },
+      count: 0,
+      currentPage: 1,
+      token: this.$store.state.token,
+      dialogStatus: "editBook"
+    };
+  },
+  methods: {
+    set_list(data) {
+      this.books = data.results;
+      this.count = data.count;
+    },
+    refresh_data() {
+      Books.get_book_list(this.currentPage, this.token, this.set_list);
+    },
+    form_edit_book(book) {
+      console.log("Edit the Book");
+      this.currentBook = book;
+      this.dialogStatus = "editBook";
+      this.dialogFormVisible = true;
+    },
+    form_remove_book(book) {
+      console.log("Edit the Book");
+      this.currentBook = book;
+      this.$confirm("确定要删除本书吗？", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(() => {
+          this.axios_remove_book();
+          this.$message({
+            type: "success",
+            message: "删除成功!"
+          });
+        })
+        .catch(() => {
+          this.$message({
+            type: "info",
+            message: "已取消删除"
+          });
+        });
+      console.log("Remove the Book");
+    },
+    form_new_book() {
+      console.log("New Book");
+      this.dialogStatus = "addBook";
+      this.currentBook = {
+        name: "",
+        author: "",
+        book_style: "",
+        introduction: ""
+      };
+      this.dialogFormVisible = true;
+    },
+    handle_submmit() {
+      console.log("Submmit Edit");
+      if (this.dialogStatus == "addBook") {
+        this.axios_add_book();
+      } else if (this.dialogStatus == "editBook") {
+        this.axios_edit_book();
+      }
+      this.refresh_data();
+      this.dialogFormVisible = false;
+    },
+    axios_add_book() {
+      Books.new_book(this.currentBook, this.token, data => {
+        this.$message({
+          message: "New Book Successfully Created!",
+          center: true,
+          type: "success"
+        });
+        this.refresh_data();
+      });
+    },
+    axios_edit_book() {
+      Books.edit_book(this.currentBook, this.token, data => {
+        this.$message({
+          message: "Book Successfully Updated !",
+          center: true,
+          type: "success"
+        });
+        this.refresh_data();
+      });
+    },
+    axios_remove_book() {
+      Books.delete_book(this.currentBook, this.token, data => {
+        this.$message({
+          message: "Book Successfully Removed !",
+          center: true,
+          type: "success"
+        });
+        this.refresh_data();
+      });
+    },
+    view_detail(book) {
+      this.$router.push("/books/bookcontent/" + book.id);
+    }
+  },
+  created: function() {
+    Books.get_book_list(this.currentPage, this.token, this.set_list);
+  }
+};
 </script>

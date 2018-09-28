@@ -55,7 +55,11 @@
 					})
 				}
 				else {
-					alert("标题和内容均不能为空")
+					// alert("标题和内容均不能为空")
+					this.$alert('标题和内容均不能为空', '', {
+						confirmButtonText: '确定',
+						callback: action => {}
+        	});
 				}
 				this.diary_add = false
 			},

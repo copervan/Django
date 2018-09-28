@@ -87,13 +87,13 @@ export default {
     handle_submmit() {
       Books.add_book_chapter(this.newChapter, this.token, data => {
         this.refresh_data();
-        this.$message({message:"创建成功",center: true,type: 'success'})
+        this.$message({ message: "创建成功", center: true, type: "success" });
       });
       this.dialogFormVisible = false;
     },
     catchData(value) {
       this.newChapter.content = value; //在这里接受子组件传过来的参数，赋值给data里的参数
-    },
+    }
   },
   created: function() {
     Books.get_book_content(this.book_id, this.token, this.set_list);
@@ -107,8 +107,8 @@ export default {
 <style>
 .chapter_list {
   width: 250px;
-	margin-top: 15px;
-	float: left;
-	list-style-type: square type decimal;
+  margin-top: 15px;
+  float: left;
+  list-style-type: square type decimal;
 }
 </style>

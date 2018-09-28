@@ -130,7 +130,7 @@ export default {
           this.refresh_data();
           this.newcommet = "";
           this.editorelem_key = new Date().getTime();
-          this.$message({message:"创建成功",center: true,type: 'success'})
+          this.$message({ message: "创建成功", center: true, type: "success" });
         });
       }
     },
@@ -153,13 +153,13 @@ export default {
       this.dialogFormVisible = false;
       Books.edit_book_chapter(this.modify_chapter, this.token, data => {
         this.refresh_data();
-        this.$message({message:"编辑成功",center: true,type: 'success'})
+        this.$message({ message: "编辑成功", center: true, type: "success" });
       });
     },
     delete_comment(comment) {
       Books.remove_comment(comment, this.token, data => {
         this.refresh_data();
-        this.$message({message:"删除成功",center: true,type: 'success'})
+        this.$message({ message: "删除成功", center: true, type: "success" });
       });
     }
   },
