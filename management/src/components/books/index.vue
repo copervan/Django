@@ -1,5 +1,5 @@
 <template>
-	<div id = "booklist">
+	<div id = "booklist" class = 'bookcontent'>
 		<!-- <h2>User {{ $route.params.id }}</h2> -->
 		<router-view></router-view>
 	</div>
@@ -15,3 +15,9 @@ export default {
   }
 };
 </script>
+<style>
+.bookcontent {
+  min-height: 100%;
+  max-width: 100%;
+}
+</style>

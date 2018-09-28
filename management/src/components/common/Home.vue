@@ -10,6 +10,7 @@
                         <router-view></router-view>
                     </keep-alive>
                 </transition>
+              <footer>2017-2018 &copy; Rocky</footer>
             </div>
         </div>
     </div>
@@ -57,3 +58,12 @@ export default {
   ...mapState(["token"])
 };
 </script>
+
+<style>
+footer {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+

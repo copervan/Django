@@ -1,5 +1,5 @@
 <template>
-	<div id = "bookcontent">
+	<div>
 		<el-button type="success" plain
           size="mini" icon="el-icon-circle-plus-outline"
           @click="new_chapter">添加章节</el-button>
@@ -24,7 +24,6 @@
         <!-- <router-link :to="routerTo(chapter,index)">	<li> {{chapter.chapter}}</li></router-link> -->
       </div>
       </ol>
-      <footer style="height: 50px"></footer>
     </div>
     <router-view></router-view>
 
@@ -110,5 +109,8 @@ export default {
   margin-top: 15px;
   float: left;
   list-style-type: square type decimal;
+}
+.bookcontent {
+  min-height: 800px;
 }
 </style>

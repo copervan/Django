@@ -1,6 +1,6 @@
 <template>
   <div id="chapterdtail">
-    <el-row :gutter="20">
+    <el-row :gutter="20" class="chapterdtail">
       <el-col :span="14">
         <el-card class="box-card" :key="currentChapter.updated_at">
           <div slot="header" class="clearfix" @dblclick="edit_chaptert(currentChapter)">
@@ -11,7 +11,7 @@
         </el-card>
       </el-col>
       <el-col :span="10">
-        <div class="block" style="position:fixed; overflow: hidden;" id="comments">
+        <div class="block" style="position:fixed; overflow: hidden;width:550px" id="comments">
           <div id="input_comments" >
           	  <editorelem style="background-color:#FFF5EE"
                 :key="editorelem_key"  :catchData="catchCommentData" :editorindex="1000">
@@ -20,14 +20,15 @@
             <el-button type="success" plain icon="el-icon-circle-plus-outline" @click="new_comment">提交</el-button>
           </div>
           <div class="demo_line_01"><b><span>随笔：</span></b> </div> 
-          <div id="comment_container" style="position: relative;overflow: hidden; height: 600px" >
-        <div id="chaptercomments" style="height: 500px;overflow-y: auto; overflow-x: hidden;">
+        <div>
+        <div id="chaptercomments" style="max-height: 600px;overflow-y: auto; overflow-x: hidden;">
           <el-card v-for="comment in comments" :key="comment.id" :body-style="{ padding: '10px' }" >
             <div id="chaptercontent" class="comment" v-html="comment.comments"></div>
             <HR style="border:1 dashed " width="100%" color=#ddd  SIZE=1 />
             <div  class="comment-head "  >
               <span >{{fromat_date(comment.created_at)}}</span>
-              <el-button style="float: right; padding: 3px 0" type="text" @click="delete_comment(comment)" ><i class="el-icon-delete"></i></el-button>
+              <el-button style="float: right; padding: 3px 0" type="text" @click="delete_comment(comment)" >
+                <i class="el-icon-delete"></i></el-button>
             </div>
           </el-card>
           <el-pagination background v-if="comment_count != 0" @current-change="axios_get_comments" :current-page.sync="comments_page" 
@@ -56,7 +57,6 @@
         <el-button type="primary" @click.native="handle_submmit">提 交</el-button>
       </div>
     </el-dialog>
-    <footer >2017-2018 &copy; Rocky   </footer>
   </div>
   
 </template>
@@ -229,5 +229,8 @@ footer {
   margin-top: 15px;
   /* border-top: 1px solid #ebeef5; */
   text-align: left;
+}
+.chapterdtail {
+  width: 100%;
 }
 </style>
