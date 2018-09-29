@@ -22,11 +22,11 @@
           <div class="demo_line_01"><b><span>随笔：</span></b> </div> 
         <div>
         <div id="chaptercomments" style="max-height: 600px;overflow-y: auto; overflow-x: hidden;">
-          <el-card v-for="comment in comments" :key="comment.id" :body-style="{ padding: '10px' }" >
+          <el-card v-for="comment in comments" :key="comment.id" :body-style="{ 'padding': '15px 15px  5px 15px ' }" >
             <div id="chaptercontent" class="comment" v-html="comment.comments"></div>
             <HR style="border:1 dashed " width="100%" color=#ddd  SIZE=1 />
             <div  class="comment-head "  >
-              <span >{{fromat_date(comment.created_at)}}</span>
+              <span ><el-tag >{{fromat_date(comment.created_at)}}</el-tag></span>
               <el-button style="float: right; padding: 3px 0" type="text" @click="delete_comment(comment)" >
                 <i class="el-icon-delete"></i></el-button>
             </div>
@@ -217,7 +217,7 @@ footer {
   margin: 20px 0;
   line-height: 1px;
   border-left: 20px solid rgb(197, 196, 196);
-  border-right: 400px solid #ddd;
+  border-right: 450px solid #ddd;
   text-align: center;
 }
 
@@ -226,7 +226,7 @@ footer {
   /* background-color: ivory; */
 }
 .comment-head {
-  margin-top: 15px;
+  margin-top: 10px;
   /* border-top: 1px solid #ebeef5; */
   text-align: left;
 }
