@@ -162,8 +162,7 @@ export default {
 
 <template>
 	<div padding="20px">
-		<br/>
-		<h1>当前时间: {{formatDate(current_date)}}</h1><br/>
+		<h3>当前时间: {{formatDate(current_date)}}</h3><br/>
 		<el-button type="success" plain
           size="mini" icon="el-icon-circle-plus-outline"
 		 @click="add_notice">新增Notice</el-button>
@@ -179,7 +178,7 @@ export default {
 			      	<el-card class="box-card">
 					  <div slot="header" class="clearfix">
 					    <h2><span>计划内容：{{item.notice_item}}</span></h2>
-					    <el-button style="float: right; padding: 3px 0" type="success" @click="edit_notice(item)">操作按钮</el-button>
+					    <el-button style="float: right; padding: 3px 0" type="success" @click="edit_notice(item)">编 辑</el-button>
 					  </div>
 					  <div class="text item" >
 					    <p>计划开始时间：{{formatDate(item.datetime)}}</p>
@@ -260,7 +259,7 @@ export default {
 		    	<el-date-picker
 			      v-model="the_form.datetime"
 			      type="datetime"
-			      placeholder="选择日期时间">
+			      placeholder="选择开始时间">
 			    </el-date-picker>
 		    </el-form-item>
 		    <el-form-item label="计划内容:" :disabled="dialog_status == 'editNotice' ? false : true ">
