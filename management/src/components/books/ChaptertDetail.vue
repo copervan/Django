@@ -232,5 +232,6 @@ footer {
 }
 .chapterdtail {
   width: 100%;
+  font-size: 150%;
 }
 </style>

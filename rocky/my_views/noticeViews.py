@@ -23,7 +23,7 @@ class NoticeViewSet(viewsets.ModelViewSet):
         tomorrow = now().date() + timedelta(days=1)
         logger.info(today,tomorrow)
         # 
-        my_notice = notice.Notice.objects.all().filter(datetime__lt=today).exclude(status__in=[1,3]) 
+        my_notice = notice.Notice.objects.all().filter(datetime__lt=tomorrow).exclude(status__in=[1,3]) 
 
         serializer = self.get_serializer(my_notice, many=True)
         return Response(serializer.data)    
