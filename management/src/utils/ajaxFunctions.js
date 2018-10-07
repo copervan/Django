@@ -322,4 +322,55 @@ const Books = {
 	
 }
 
+const Poetry = {
+	get_poetry(page,token,callback){
+		axios.get('/rocky/poetry/?page='+page,
+			{ headers: {"Authorization":token} }
+			).then(response=>{
+				//console.log(response)
+				callback(response.data)} )
+	},
+	create_poetry(poetry,token,callback){
+		axios({
+		  method: 'post',
+		  url: '/rocky/poetry/',
+		  data: JSON.stringify(poetry),
+		  headers: {"Authorization":token} 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
+	update_poetry(poetry,token,callback){
+		axios({
+		  method: 'put',
+		  url: '/rocky/poetry/',
+		  data: JSON.stringify(poetry),
+		  headers: {"Authorization":token} 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
+	delete_poetry(poetry,token,callback){
+		axios({
+		  method: 'delete',
+		  url: '/rocky/poetry/'+poetry.id+"/",
+		  // data: JSON.stringify(poetry),
+		  headers: {"Authorization":token} 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
+	get_poetry(page,poetry_id,token,callback){
+		axios({
+		  method: 'get',
+		  url: '/rocky/poetry/'+poetry.id+"/",
+		  // data: JSON.stringify(poetry),
+		  headers: {"Authorization":token} 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
+
+}
+
 export {Diarys, Users, Notice, Books}

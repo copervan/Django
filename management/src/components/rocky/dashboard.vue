@@ -32,12 +32,12 @@ export default {
   name: "dashboard",
   data() {
     return {
-      type_0: "主页",
-      type_1: "日志",
-      type_2: "备忘录",
-      type_3: "日历",
-      currentTab: "type_0",
-      activeName: "first"
+      // type_0: "主页",
+      // type_1: "日志",
+      // type_2: "备忘录",
+      // type_3: "日历",
+      // currentTab: "type_1",
+      activeName: "second"
     };
   },
   created: function() {
@@ -48,19 +48,19 @@ export default {
     }
   },
   computed: {
-    currentTabComponent: function() {
-      if (this.currentTab === "type_0") {
-        return home;
-      } else if (this.currentTab === "type_1") {
-        return diary;
-      } else if (this.currentTab === "type_2") {
-        return notice;
-      } else if (this.currentTab === "type_3") {
-        return calendar;
-      } else {
-        return login;
-      }
-    },
+    // currentTabComponent: function() {
+    //   if (this.currentTab === "type_0") {
+    //     return home;
+    //   } else if (this.currentTab === "type_1") {
+    //     return diary;
+    //   } else if (this.currentTab === "type_2") {
+    //     return notice;
+    //   } else if (this.currentTab === "type_3") {
+    //     return calendar;
+    //   } else {
+    //     return login;
+    //   }
+    // },
     ...mapState(["token"])
   },
   methods: {

@@ -121,8 +121,7 @@ export default {
 		<el-button type="success" plain
           size="mini" icon="el-icon-circle-plus-outline"
           @click="creat_user">创建用户</el-button> 
-        <el-button style="float: right;" type="success" size="mini" @click="refresh_data" >刷新</el-button>
-
+        <el-button style="float: right;" type="primary" plain size="mini" @click="refresh_data" >刷新</el-button>
 <!-- 			<Button type="primary" @click="creat_user">创建用户</Button> -->
 			<!-- <Table highlight-row ref="currentRowTable" @on-current-change="select_current_user"  -->
 				<!-- @on-row-dblclick="row_dblclick" :columns="columns1" :data="data1"></Table> -->

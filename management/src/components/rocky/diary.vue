@@ -148,7 +148,7 @@ export default {
 		<el-button type="success" plain
           size="mini" icon="el-icon-circle-plus-outline"
           @click="new_diary">Create The Diary</el-button>
-		<el-button style="float: right;" type="success" size="mini" @click="refresh_data" >刷新</el-button>
+		<el-button style="float: right;" type="primary" plain  size="mini" @click="refresh_data" >刷新</el-button>
 <template>
 <div>
 	<br/>

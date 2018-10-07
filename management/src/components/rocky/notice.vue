@@ -166,11 +166,11 @@ export default {
 		<el-button type="success" plain
           size="mini" icon="el-icon-circle-plus-outline"
 		 @click="add_notice">新增Notice</el-button>
-		<el-button style="float: right;" type="success" size="mini" @click="refresh_data" >刷新</el-button>
+		<el-button style="float: right;" type="primary" plain  size="mini" @click="refresh_data" >刷新</el-button>
 		<!-- todolist 轮播图-->
 		<div id="notice_carousel"> 
 			<div v-if="my_list.length == 0">
-				<p>暂无任务</p>	
+        <el-card >	<p>暂无任务</p>	</el-card> <br>
 			</div>
 			<template v-else>
 			  <el-carousel :interval="4000" type="card" height="300px">
