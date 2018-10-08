@@ -19,9 +19,8 @@
 		<p>章节列表：</p>
 		<div style="margin-left: 50px">
       <ol>
-      <div class="chapter_list"  v-for="(chapter,index) in bookContents.book_content" >
+      <div class="chapter_list"  v-for="(chapter) in bookContents.book_content" :key="chapter.id">
         <router-link :to="'/books/chapter/'+chapter.id">	<li> {{chapter.chapter}}</li></router-link> 
-        <!-- <router-link :to="routerTo(chapter,index)">	<li> {{chapter.chapter}}</li></router-link> -->
       </div>
       </ol>
     </div>

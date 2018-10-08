@@ -330,6 +330,16 @@ const Poetry = {
 				//console.log(response)
 				callback(response.data)} )
 	},
+	get_poetry_byid(poetry_id,token,callback){
+		axios({
+		  method: 'get',
+		  url: '/rocky/poetry/'+poetry_id + "/",
+		  // data: JSON.stringify(poetry),
+		  headers: {"Authorization":token} 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
 	create_poetry(poetry,token,callback){
 		axios({
 		  method: 'post',
@@ -343,7 +353,7 @@ const Poetry = {
 	update_poetry(poetry,token,callback){
 		axios({
 		  method: 'put',
-		  url: '/rocky/poetry/',
+		  url: '/rocky/poetry/'+poetry.id + "/",
 		  data: JSON.stringify(poetry),
 		  headers: {"Authorization":token} 
 		}).then(response=>{
@@ -360,17 +370,48 @@ const Poetry = {
 				// console.log(response)
 				callback(response.data)} )
 	},
-	get_poetry(page,poetry_id,token,callback){
+}
+
+const PoetryCommt = {
+	get_poetry_comm(page,poetry_id,token,callback) {
 		axios({
-		  method: 'get',
-		  url: '/rocky/poetry/'+poetry.id+"/",
+			method: "GET",
+			url: '/rocky/poetrycomment/poetry_comments/?page='+page + "&poetry_id="+poetry_id,
+			// data: JSON.stringify(diary),
+			headers: {"Authorization":token } 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
+	create_poetry_comm(poetry_comm,token,callback){
+		axios({
+		  method: 'post',
+		  url: '/rocky/poetrycomment/',
+		  data: JSON.stringify(poetry_comm),
+		  headers: {"Authorization":token} 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
+	update_poetry_comm(poetry_comm,token,callback){
+		axios({
+		  method: 'put',
+		  url: '/rocky/poetrycomment/'+poetry_comm.id + "/",
+		  data: JSON.stringify(poetry_comm),
+		  headers: {"Authorization":token} 
+		}).then(response=>{
+				// console.log(response)
+				callback(response.data)} )
+	},
+	delete_poetry_comm(poetry_comm,token,callback){
+		axios({
+		  method: 'delete',
+		  url: '/rocky/poetrycomment/'+poetry_comm.id+"/",
 		  // data: JSON.stringify(poetry),
 		  headers: {"Authorization":token} 
 		}).then(response=>{
 				// console.log(response)
 				callback(response.data)} )
 	},
-
 }
-
-export {Diarys, Users, Notice, Books}
+export {Diarys, Users, Notice, Books, Poetry, PoetryCommt}

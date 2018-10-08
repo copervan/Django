@@ -54,6 +54,11 @@ export default {
           title: "我的书籍"
         },
         {
+          icon: "el-icon-lx-emoji",
+          index: "/poetrys",
+          title: "诗词集"
+        },
+        {
           icon: "el-icon-lx-cascades",
           index: "/table",
           title: "基础表格"

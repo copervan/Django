@@ -114,6 +114,16 @@ export default new Router({
                         meta: { title: '章节内容' },
                     }
                 ]
+            },
+            {
+                path: '/poetrys',
+                component: resolve => require(['../components/poetry/index.vue'], resolve),
+                meta: { title: 'Poetry List' }
+            },
+            {
+                path: '/poetrycommnet/:poetry_id',
+                component: resolve => require(['../components/poetry/poetrycommt.vue'], resolve),
+                meta: { title: 'Poetry Detail' }
             }
         ]
     },

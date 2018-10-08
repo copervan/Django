@@ -1,13 +1,13 @@
 <template>
   <div id="chapterdtail">
-    <el-row :gutter="20" class="chapterdtail">
+    <el-row :gutter="20" >
       <el-col :span="14">
         <el-card class="box-card" :key="currentChapter.updated_at">
           <div slot="header" class="clearfix" @dblclick="edit_chaptert(currentChapter)">
             <h3>{{currentChapter.chapter}}</h3>
             <router-link :to="'/books/bookcontent/'+currentChapter.book_id" style="float: right; padding: 3px 0">章节目录</router-link>
           </div>
-          <div id="chaptercontent" v-html="currentChapter.content"></div>
+          <div id="chaptercontent" class="chapterdtail" v-html="currentChapter.content"></div>
         </el-card>
       </el-col>
       <el-col :span="10">
@@ -217,7 +217,7 @@ footer {
   margin: 20px 0;
   line-height: 1px;
   border-left: 20px solid rgb(197, 196, 196);
-  border-right: 450px solid #ddd;
+  border-right: 400px solid #ddd;
   text-align: center;
 }
 
