@@ -1,6 +1,7 @@
 from django.db import models
 from rest_framework import serializers 
 from django.utils import timezone 
+from django.contrib.auth.models import User
 
 class Poetry(models.Model):
     title = models.CharField("备忘内容",max_length=255)
@@ -15,6 +16,7 @@ class PoetryComment(models.Model):
     comments = models.CharField("注释内容",max_length=255)
     created_at = models.DateTimeField("创建时间", default = timezone.now )
     updated_at = models.DateTimeField("更新时间", default = timezone.now )
+    owner = models.ForeignKey('auth.User',default = 1,related_name='poetry_commener',on_delete = models.CASCADE )
 
 class PoetrySerializers(serializers.ModelSerializer):
     class Meta:

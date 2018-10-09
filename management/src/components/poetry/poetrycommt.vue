@@ -81,6 +81,11 @@ export default {
         this.refresh_data();
       });
     },
+    delete_comment(commt) {
+      PoetryCommt.delete_poetry_comm(commt, this.token, data => {
+        this.refresh_data();
+      });
+    },
     refresh_data() {
       PoetryCommt.get_poetry_comm(
         this.currentPage,

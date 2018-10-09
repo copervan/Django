@@ -58,7 +58,7 @@ ROOT_URLCONF = 'Django.urls'
 
 APPEND_SLASH=False
 
-
+REST_FRAMEWORK_TOKEN_EXPIRE_MINUTES = 600
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

@@ -38,7 +38,7 @@ class BookChapterViewSet(viewsets.ModelViewSet):
 # 评论管理    
 class ChapterCommentViewSet(viewsets.ModelViewSet) :
     permission_classes = (permissions.IsAuthenticated,)   
-    queryset = mybook.ContentComment.objects.all().order_by('-id')
+    #queryset = mybook.ContentComment.objects.all().order_by('-id')
     serializer_class = mybook.BookCommentSerializer    
     
     @action(methods=['GET'],detail=False)
@@ -55,5 +55,13 @@ class ChapterCommentViewSet(viewsets.ModelViewSet) :
         else :
             serializer = self.get_serializer(queryset, many=True)
             logger.debug("章节序列化结果"+str(serializer.data) )
-            return Response(serializer.data)        
-  
+            return Response(serializer.data)    
+        
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)  
+        
+    def get_queryset(self) :
+        user = self.request.user
+        logger.info("Current User: " + str(user) )
+        return mybook.ContentComment.objects.all().filter(owner=user).order_by('-id')         
+         

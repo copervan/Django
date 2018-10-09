@@ -27,8 +27,9 @@ class ContentComment(models.Model):
     chapter_id = models.ForeignKey('BookContent',related_name='chapter_comments',on_delete = models.CASCADE)
     #user_id = models.ForeignKey('User',related_name='comment_user',on_delete = models.CASCADE )
     comments = models.CharField("注释内容",max_length=255)
+    owner = models.ForeignKey('auth.User',default = 1,related_name='chapter_commener',on_delete = models.CASCADE )
     created_at = models.DateTimeField("创建时间", default = timezone.now )
-    updated_at = models.DateTimeField("更新时间", default     = timezone.now )
+    updated_at = models.DateTimeField("更新时间", default = timezone.now )
     
     def __unicode__(self):
         return json.dumps({'id':self.id,"comments":comments,

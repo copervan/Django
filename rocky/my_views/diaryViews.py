@@ -11,5 +11,13 @@ logger = logging.getLogger(__name__)
 
 class DiaryViewSet(viewsets.ModelViewSet):
     permission_classes  = (permissions.IsAuthenticated,)
-    queryset = diary.Diary.objects.all().order_by('-id')
+    #queryset = diary.Diary.objects.all().order_by('-id')
     serializer_class = diaryserialize.DiarySerializers
+    
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)     
+        
+    def get_queryset(self) :
+        user = self.request.user
+        logger.info("Current User: " + str(user) )
+        return diary.Diary.objects.all().filter(owner=user).order_by('-id')     

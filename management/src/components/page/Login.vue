@@ -44,7 +44,7 @@ export default {
         if (valid) {
           console.log("发起登录");
           this.$axios
-            .post("/api-token-auth/", this.ruleForm)
+            .post("/rocky/api-token-auth/", this.ruleForm)
             .then(response => {
               // console.log(response);
               let token = response.data.token;

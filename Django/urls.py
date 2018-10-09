@@ -21,23 +21,40 @@ from django.db.models.signals import post_save
 from django.conf.urls import url, include
 from django.contrib.auth.models import User, Group
 from rest_framework import permissions, serializers, viewsets, routers
-#from oauth2_provider.contrib.rest_framework import TokenHasReadWriteScope, TokenHasScope
 from rest_framework.authtoken.models import Token
 from django.conf import settings
 from rest_framework.authtoken import views
 from django.views.generic import TemplateView
+from rest_framework.decorators import action
 
+
+# 自动创建用户token
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance=None, created=False, **kwargs):
     if created:
         Token.objects.create(user=instance)
-        
-        
+       
 # Serializers define the API representation.
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ('url', 'username', 'email', 'is_staff')
+        fields = ('id', 'url', 'username', 'email')
+        
+class CreateUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('email', 'username', 'password')
+        extra_kwargs = {'password': {'write_only': True}}
+
+    def create(self, validated_data):
+        user = User(
+            email=validated_data['email'],
+            username=validated_data['username']
+        )
+        user.set_password(validated_data['password'])
+        user.save()
+        return user
+        
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
@@ -48,6 +65,14 @@ class UserViewSet(viewsets.ModelViewSet):
     #permission_classes = [permissions.IsAuthenticated,TokenHasReadWriteScope]
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    
+    @action(methods=['GET'],detail=False)
+    def reqister(self) :
+        username = self.request.username
+        password = self.request.password
+        
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)      
 
 class GroupViewSet(viewsets.ModelViewSet):
     #permission_classes = [permissions.IsAuthenticated, TokenHasScope]
@@ -58,19 +83,19 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 # Routers provide a way of automatically determining the URL conf.
 router = routers.DefaultRouter()
-router.register(r'users', UserViewSet)
-router.register(r'groups',GroupViewSet)
+router.register(r'rocky/users', UserViewSet)
+router.register(r'rocky/groups',GroupViewSet)
 
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #url(r'^', include(router.urls)),
+    url(r'^', include(router.urls)),
     url(r'^$', TemplateView.as_view(template_name="index.html")),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    #url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     #url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-    url(r'^api-token-auth/', views.obtain_auth_token),
+    url(r'^rocky/api-token-auth/', views.obtain_auth_token),
     path('rocky/', include('rocky.urls'))
 ]
 
