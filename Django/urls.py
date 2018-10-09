@@ -26,7 +26,11 @@ from django.conf import settings
 from rest_framework.authtoken import views
 from django.views.generic import TemplateView
 from rest_framework.decorators import action
+from rest_framework.response import Response
+from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
 
+import logging
+logger = logging.getLogger(__name__)
 
 # 自动创建用户token
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
@@ -51,6 +55,7 @@ class CreateUserSerializer(serializers.ModelSerializer):
             email=validated_data['email'],
             username=validated_data['username']
         )
+        logger.debug(validated_data['password'])
         user.set_password(validated_data['password'])
         user.save()
         return user
@@ -62,17 +67,25 @@ class GroupSerializer(serializers.ModelSerializer):
 
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
-    #permission_classes = [permissions.IsAuthenticated,TokenHasReadWriteScope]
+    permission_classes = [permissions.IsAuthenticated]
     queryset = User.objects.all()
     serializer_class = UserSerializer
     
-    @action(methods=['GET'],detail=False)
-    def reqister(self) :
-        username = self.request.username
-        password = self.request.password
-        
-    def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)      
+    def create(self, request, format=None):
+        data = request.data
+        logger.debug(data)
+        username = data.get('username')
+        #user = self.get_object()
+        #logger.debug(user)
+        if User.objects.filter(username__exact=username):
+            return Response("用户名已存在",HTTP_400_BAD_REQUEST)
+        serializer = CreateUserSerializer(data=data)
+        if serializer.is_valid(raise_exception=True):
+            #queryset.set_password(serializer.data['password'])
+            serializer.save()
+            return Response(serializer.data,status=HTTP_200_OK)
+        return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
+     
 
 class GroupViewSet(viewsets.ModelViewSet):
     #permission_classes = [permissions.IsAuthenticated, TokenHasScope]
@@ -83,7 +96,7 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 # Routers provide a way of automatically determining the URL conf.
 router = routers.DefaultRouter()
-router.register(r'rocky/users', UserViewSet)
+router.register(r'rocky/users', UserViewSet ,base_name="usermanagement")
 router.register(r'rocky/groups',GroupViewSet)
 
 
