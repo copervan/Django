@@ -17,7 +17,7 @@ class NoticeViewSet(viewsets.ModelViewSet):
     #queryset = notice.Notice.objects.all().order_by('-datetime')
     serializer_class = notice.NoticeSerializers
     
-    @action(detail=False)
+    @action(methods=["GET"],detail=False)
     def today_notice(self, request):
         user = self.request.user
         today = now().date() + timedelta(days=0)

@@ -16,12 +16,20 @@ export default {
           key: "id"
         },
         {
-          title: "user_name",
-          key: "user_name"
+          title: "username",
+          key: "username"
         },
         {
-          title: "device_no",
-          key: "device_no"
+          title: "email",
+          key: "email"
+        },
+        {
+          title: "first_name",
+          key: "first_name"
+        },
+        {
+          title: "last_name",
+          key: "last_name"
         }
       ],
       formLeft: {
@@ -33,7 +41,37 @@ export default {
       edituser: false,
       loading: true,
       currentuser: {},
-      token: this.$store.state.token
+      token: this.$store.state.token, 
+
+      newuser: {
+        username: "",
+        password: "",
+        email : "",
+        first_name: "",
+        last_name: "" ,
+      },
+      rules: {
+        username: [
+          { required: true, message: "请输入用户名", trigger: "blur" },
+          { min: 5, max: 16, message: "长度在 5 到 16 个字符", trigger: "blur" }
+        ],
+        password: [
+          { required: true, message: "请输入密码", trigger: "blur" },
+          { min: 5, max: 16, message: "长度在 5 到 16 个字符", trigger: "blur" }
+        ],
+        email : [
+          { type:"email", required: true, message: "请输入邮箱", trigger: "blur" },
+        ],
+        first_name: [
+          { required: true, message: "请输入first_name", trigger: "blur" },
+          { max: 16, message: "长度在16 个字符以内", trigger: "blur" }
+        ],
+        last_name: [
+          { required: false, message: "请输入last_name", trigger: "blur" },
+          { max: 16, message: "长度在 16 个字符以内", trigger: "blur" }
+        ],
+      },
+      
     };
   },
   methods: {
@@ -42,35 +80,34 @@ export default {
       this.users1 = data.results;
       this.user_count = data.count;
     },
-    asyncOK() {
-      var _this = this;
-      this.currentuser.project_id = 1;
-      this.currentuser.channel_id = 1;
-      // console.log(JSON.stringify(this.currentuser),this.token)
-      Users.creat_device(_this.currentuser, _this.token, function(data) {
-        // alert(data)
-        Users.get_device(_this.currentPage, _this.token, _this.setusers);
-        setTimeout(() => {
-          _this.modal6 = false;
-        }, 500);
+    asyncOK(newuser) {
+      this.$refs[newuser].validate(valid => {
+        if (valid) {
+          Users.create_user(this.newuser, this.token, data => {
+            this.refresh_data() ;
+            this.modal6 = false ;
+          }) ;
+        }
+        else {
+          this.$message.error("ERROR: Invalid Usermane or Password !");
+        }
       });
     },
     creat_user() {
-      this.currentuser = {
-        id: "",
-        device_no: "",
-        project_id: 1,
-        user_name: "",
-        channel_id: 1
-      };
+      this.newuser =  {
+        username: "",
+        password: "",
+        email : "",
+        first_name: "",
+        last_name: "" ,
+      },
       this.modal6 = true;
     },
     submmit_edit() {
-      var _this = this;
       // console.log(_this.token)
-      Users.edit_user(_this.currentuser, _this.token, function() {
-        Users.get_device(_this.currentPage, _this.token, _this.setusers);
-        _this.edituser = false;
+      Users.edit_user(this.currentuser, this.token, data => {
+        this.refresh_data()
+        this.edituser = false;
       });
     },
     delete_user() {
@@ -130,7 +167,7 @@ export default {
 			<div>
 				<br/>
 			<el-table
-			:data="data1"
+			:data="data1" border
 			style="width: 100%">
 			<el-table-column
 			  label="ID"
@@ -141,24 +178,39 @@ export default {
 			  </template>
 			</el-table-column>
 			<el-table-column
-			  label="User_Name"
+			  label="Username"
 			  width="180">
 			  <template slot-scope="scope">
-			    <i class="el-icon-time"></i>
-			    <span style="margin-left: 10px">{{ scope.row.user_name }}</span>
+			    <i class="el-icon-lx-peoplefill"></i>
+			    <span style="margin-left: 10px">{{ scope.row.username }}</span>
 			  </template>
 			</el-table-column>
 			<el-table-column
-			  label="Device_No"
+			  label="Email"
 			  width="180">
 			  <template slot-scope="scope">
-			    <el-popover trigger="hover" placement="top">
-			      <p>project_id: {{ scope.row.project_id }}</p>
-			      <p>channel_id: {{ scope.row.channel_id }}</p>
 			      <div slot="reference" class="name-wrapper">
-			        <el-tag size="medium">{{ scope.row.device_no }}</el-tag>
+			        <i class="el-icon-lx-mail"></i>
+              <span style="margin-left: 10px">{{ scope.row.email }} </span>
+			      </div>	
+			  </template>
+			</el-table-column>
+      <el-table-column
+			  label="First Name"
+			  width="180">
+			  <template slot-scope="scope">
+			      <div slot="reference" class="name-wrapper">
+			        {{ scope.row.first_name }}
 			      </div>
-			    </el-popover>
+			  </template>
+			</el-table-column>
+      <el-table-column
+			  label="Last Name"
+			  width="180">
+			  <template slot-scope="scope">
+			      <div slot="reference" class="name-wrapper">
+              {{ scope.row.last_name }}
+			      </div>
 			  </template>
 			</el-table-column>
 			<el-table-column label="操作">
@@ -166,10 +218,10 @@ export default {
 			    <el-button
 			      size="mini" icon="el-icon-edit"
 			      @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-			    <el-button
+			    <!-- <el-button
 			      size="mini"
 			      type="danger" icon="el-icon-delete"
-			      @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+			      @click="handleDelete(scope.$index, scope.row)">删除</el-button> -->
 			  </template>
 			</el-table-column>
 			</el-table>
@@ -185,30 +237,45 @@ export default {
 			</div>
 		</template>
 
-
+    <!-- 创建用户表单 -->
 		</div>
-		<el-dialog title="Title" :visible.sync="modal6">
-		  <el-form label-position="left" :model="formLeft">
-		    <el-form-item label="device_no:" >
-		    	<el-input v-model="currentuser.device_no"></el-input>
+		<el-dialog title="Create User" :visible.sync="modal6">
+		  <el-form label-position="left" :model="newuser" :rules="rules" ref="newuser"  >
+        <el-form-item label="user_name:" prop="username">
+		    	<el-input v-model="newuser.username"></el-input>
 		    </el-form-item>
-		    <el-form-item label="user_name:" >
-					<el-input v-model="currentuser.user_name"></el-input>
+        <el-form-item label="email:" prop="email">
+		    	<el-input v-model="newuser.email"></el-input>
+		    </el-form-item>
+		    <el-form-item label="password:"  prop="password">
+		    	<el-input type="password" v-model="newuser.password"></el-input>
+		    </el-form-item>
+		    <el-form-item label="first_name:" prop="last_name" >
+					<el-input v-model="newuser.first_name" ></el-input>
+		    </el-form-item>
+        <el-form-item label="last_name:" prop="last_name">
+					<el-input v-model="newuser.last_name"></el-input>
 		    </el-form-item>
 		  </el-form>
 		  <div slot="footer" class="dialog-footer">
 		    <el-button @click="modal6 = false">取 消</el-button>
-		    <el-button type="primary" @click="asyncOK">确 定</el-button>
+		    <el-button type="primary" @click="asyncOK('newuser')">确 定</el-button>
 		  </div>
 		</el-dialog>
 
 		<el-dialog title="edituser" :visible.sync="edituser">
-		  <el-form label-position="left" :model="formLeft">
-		    <el-form-item label="device_no:" >
-		    	<el-input v-model="currentuser.device_no"></el-input>
+		  <el-form label-position="left" :model="formLeft" :rules="rules" >
+        <el-form-item label="user_name:" prop="username"  >
+		    	<el-input disabled v-model="currentuser.username"></el-input>
 		    </el-form-item>
-		    <el-form-item label="user_name:" >
-					<el-input v-model="currentuser.user_name"></el-input>
+        <el-form-item label="email:" prop="email"  >
+		    	<el-input disabled  v-model="currentuser.email"></el-input>
+		    </el-form-item>
+        <el-form-item label="first_name:" prop="last_name" >
+					<el-input v-model="currentuser.first_name" ></el-input>
+		    </el-form-item>
+        <el-form-item label="last_name:" prop="last_name">
+					<el-input v-model="currentuser.last_name"></el-input>
 		    </el-form-item>
 		  </el-form>
 		  <div slot="footer" class="dialog-footer">

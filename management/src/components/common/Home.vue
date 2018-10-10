@@ -10,7 +10,9 @@
                         <router-view></router-view>
                     </keep-alive>
                 </transition>
-              <footer>2017-2018 &copy; Rocky</footer>
+              <div>
+                <footer>2017-2018 &copy; Rocky</footer>
+              </div>
             </div>
         </div>
     </div>
@@ -64,6 +66,7 @@ footer {
   position: relative;
   text-align: center;
   padding: 10px;
+  bottom: 0;
 }
 </style>
 

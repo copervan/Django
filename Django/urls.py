@@ -25,8 +25,12 @@ from rest_framework.authtoken.models import Token
 from django.conf import settings
 from rest_framework.authtoken import views
 from django.views.generic import TemplateView
-from rest_framework.decorators import action
+from rest_framework.decorators import action ,permission_classes
+from rest_framework.response import Response
+from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
 
+import logging
+logger = logging.getLogger(__name__)
 
 # 自动创建用户token
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
@@ -35,15 +39,21 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
         Token.objects.create(user=instance)
        
 # Serializers define the API representation.
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'url', 'username', 'email')
+        fields = ('id', 'username', 'email', 'first_name', 'last_name')
         
 class CreateUserSerializer(serializers.ModelSerializer):
+    username = serializers.CharField(max_length=10, min_length=5)
+    email = serializers.EmailField()
+    first_name = serializers.CharField(max_length=32)
+    #last_name = serializers.CharField(max_length=32)    
+    #password = serializers.CharField(max_length=16) 
+    
     class Meta:
         model = User
-        fields = ('email', 'username', 'password')
+        fields = ('email', 'username', 'password','first_name','last_name')
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
@@ -51,9 +61,13 @@ class CreateUserSerializer(serializers.ModelSerializer):
             email=validated_data['email'],
             username=validated_data['username']
         )
+        logger.debug(validated_data['password'])
         user.set_password(validated_data['password'])
         user.save()
         return user
+    
+class PasswordSerializer(serializers.Serializer):
+    password = serializers.CharField(max_length=16)
         
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
@@ -62,30 +76,46 @@ class GroupSerializer(serializers.ModelSerializer):
 
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
-    #permission_classes = [permissions.IsAuthenticated,TokenHasReadWriteScope]
+    permission_classes = [permissions.IsAdminUser,permissions.IsAuthenticated]
     queryset = User.objects.all()
     serializer_class = UserSerializer
     
-    @action(methods=['GET'],detail=False)
-    def reqister(self) :
-        username = self.request.username
-        password = self.request.password
-        
-    def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)      
-
+    def create(self, request, format=None):
+        data = request.data
+        logger.debug(data)
+        username = data.get('username')
+        #user = self.get_object()
+        #logger.debug(user)
+        if User.objects.filter(username__exact=username):
+            return Response("用户名已存在",HTTP_400_BAD_REQUEST)
+        serializer = CreateUserSerializer(data=data)
+        if serializer.is_valid(raise_exception=True):
+            #queryset.set_password(serializer.data['password'])
+            serializer.save()
+            return Response(serializer.data,status=HTTP_200_OK)
+        return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
+    
+    @action(methods=["POST"],detail=True)
+    def reset_password(self,request,pk=None) :
+        user = self.get_object()
+        serializer = PasswordSerializer(data=request.data)
+        if serializer.is_valid():
+            user.set_password(serializer.data['password'])
+            user.save()
+            return Response({'ok': 'password set'})
+        else:
+            return Response(serializer.errors,status=HTTP_400_BAD_REQUEST)
+            
 class GroupViewSet(viewsets.ModelViewSet):
     #permission_classes = [permissions.IsAuthenticated, TokenHasScope]
     required_scopes = ['groups']
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
 
-
 # Routers provide a way of automatically determining the URL conf.
 router = routers.DefaultRouter()
-router.register(r'rocky/users', UserViewSet)
+router.register(r'rocky/users', UserViewSet ,base_name="usermanagement")
 router.register(r'rocky/groups',GroupViewSet)
-
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

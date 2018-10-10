@@ -1,7 +1,7 @@
 <template>
     <div class="layout">
         <el-tabs v-model="activeName"  type="card" >
-            <el-tab-pane name="first">
+            <el-tab-pane name="first" v-if="username == 'admin' || username == 'copervan' ">
                 <span slot="label"><i class="el-icon-lx-addressbook"></i>用户管理</span>
                 <home></home>
             </el-tab-pane>
@@ -9,13 +9,13 @@
                 <span slot="label"><i class="el-icon-lx-notice"></i>备忘录</span>
                 <notice></notice>
             </el-tab-pane>
-            <el-tab-pane label="" name="third">
-                <span slot="label"><i class="el-icon-lx-calendar"></i>日历</span>
-                <calendar ></calendar>
-            </el-tab-pane>
             <el-tab-pane name="fourth">
                 <span slot="label"><i class="el-icon-lx-edit"></i>日志</span>
                 <diary></diary>
+            </el-tab-pane>
+            <el-tab-pane label="" name="third">
+                <span slot="label"><i class="el-icon-lx-calendar"></i>日历</span>
+                <calendar ></calendar>
             </el-tab-pane>
         </el-tabs>
     </div>
@@ -32,12 +32,8 @@ export default {
   name: "dashboard",
   data() {
     return {
-      // type_0: "主页",
-      // type_1: "日志",
-      // type_2: "备忘录",
-      // type_3: "日历",
-      // currentTab: "type_1",
-      activeName: "second"
+      activeName: "second",
+      username: localStorage.getItem('ms_username'),
     };
   },
   created: function() {
@@ -48,19 +44,6 @@ export default {
     }
   },
   computed: {
-    // currentTabComponent: function() {
-    //   if (this.currentTab === "type_0") {
-    //     return home;
-    //   } else if (this.currentTab === "type_1") {
-    //     return diary;
-    //   } else if (this.currentTab === "type_2") {
-    //     return notice;
-    //   } else if (this.currentTab === "type_3") {
-    //     return calendar;
-    //   } else {
-    //     return login;
-    //   }
-    // },
     ...mapState(["token"])
   },
   methods: {
@@ -80,3 +63,11 @@ export default {
   }
 };
 </script>
+
+<style>
+.layout {
+  min-height: 600px ;
+  /* border: solid 2px */
+}
+</style>
+
