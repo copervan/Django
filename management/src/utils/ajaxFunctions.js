@@ -11,13 +11,16 @@ axios.defaults.headers.delete['Content-Type'] = 'application/json'
 
 //响应拦截器即异常处理
 axios.interceptors.response.use(response => {
+	// console.log(response)
 	return response
 }, err => {
 	if (err && err.response) {
+		// console.log(err)
+		// console.log(err.response)
 		switch (err.response.status) {
 			case 400:
 				err.message = '错误请求'
-				Message.error(err.message)
+				Message.error(err.response.data)
 				break;
 			case 401:
 				err.message = '未授权，请重新登录'
@@ -71,11 +74,9 @@ axios.interceptors.response.use(response => {
 		err.message = "连接到服务器失败"
 		Message.error(err.message)
 	}
-	// Message.error(err.message)
-	return Promise.resolve(err.response)
+	//  Message.error(err.message)
+	return Promise.reject(err.response)
 })
-
-
 
 const Users = {
 	// 获取用户列表
@@ -458,4 +459,5 @@ const PoetryCommt = {
 		})
 	},
 }
+export default axios
 export { Diarys, Users, Notice, Books, Poetry, PoetryCommt }

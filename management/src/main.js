@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import axios from 'axios';
+import axios from "@/utils/ajaxFunctions";
 import ElementUI from 'element-ui';
 import "babel-polyfill";
 import Vuex from 'vuex';
