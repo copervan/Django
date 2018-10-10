@@ -25,7 +25,11 @@ from rest_framework.authtoken.models import Token
 from django.conf import settings
 from rest_framework.authtoken import views
 from django.views.generic import TemplateView
+<<<<<<< HEAD
 from rest_framework.decorators import action ,permission_classes
+=======
+from rest_framework.decorators import action
+>>>>>>> c0329a6df64399bfdc9709be95d7f3854a582e55
 from rest_framework.response import Response
 from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
 
@@ -76,7 +80,11 @@ class GroupSerializer(serializers.ModelSerializer):
 
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
+<<<<<<< HEAD
     permission_classes = [permissions.IsAdminUser,permissions.IsAuthenticated]
+=======
+    permission_classes = [permissions.IsAuthenticated]
+>>>>>>> c0329a6df64399bfdc9709be95d7f3854a582e55
     queryset = User.objects.all()
     serializer_class = UserSerializer
     
@@ -94,6 +102,7 @@ class UserViewSet(viewsets.ModelViewSet):
             serializer.save()
             return Response(serializer.data,status=HTTP_200_OK)
         return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
+<<<<<<< HEAD
     
     @action(methods=["POST"],detail=True)
     def reset_password(self,request,pk=None) :
@@ -106,6 +115,10 @@ class UserViewSet(viewsets.ModelViewSet):
         else:
             return Response(serializer.errors,status=HTTP_400_BAD_REQUEST)
             
+=======
+     
+
+>>>>>>> c0329a6df64399bfdc9709be95d7f3854a582e55
 class GroupViewSet(viewsets.ModelViewSet):
     #permission_classes = [permissions.IsAuthenticated, TokenHasScope]
     required_scopes = ['groups']
