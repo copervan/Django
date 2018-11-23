@@ -1,60 +1,43 @@
 <template>
-    <div id="app_index">
-        <keep-alive>
-            <component v-bind:is="currentTabComponent"></component>
-        </keep-alive>
-        <van-tabbar v-model="active" :change="change_item(active)">
-            <van-tabbar-item icon="shop">首页</van-tabbar-item>
-            <van-tabbar-item icon="chat">日志</van-tabbar-item>
-            <van-tabbar-item icon="records">备忘录</van-tabbar-item>
-            <van-tabbar-item icon="gold-coin">我的</van-tabbar-item>
-        </van-tabbar>
-    </div>
+  <div id="app_index">
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+    <van-tabbar v-model="activecode">
+      <van-tabbar-item icon="shop" :to="{name:'home',params:{'active':0}}">首页</van-tabbar-item>
+      <van-tabbar-item icon="chat" :to="{name:'diary',params:{'active':1}}">日志</van-tabbar-item>
+      <van-tabbar-item icon="records" :to="{name:'notice',params:{'active':2}}">备忘录</van-tabbar-item>
+      <van-tabbar-item icon="gold-coin" :to="{name:'profile',params:{'active':3}}">我的</van-tabbar-item>
+    </van-tabbar>
+  </div>
 </template>
 
 <script>
-import hello from "@/components/HelloWorld.vue";
-import Home from "@/components/page/Home.vue";
-import Diary from "@/components/page/Diary.vue";
-import Notice from "@/components/page/Notice.vue";
-import Profile from "@/components/page/Profile.vue";
-
 export default {
   name: "home_index",
   data() {
     return {
-      active: 0,
-      token: 123,
-      currentPage: Home
+      activecode: 0,
+      token: 123
     };
-  },
-  methods: {
-    change_item(active) {
-    //   console.log(active);
-      if (active == 0) {
-        this.currentPage = Home;
-      } else if (active == 1) {
-        this.currentPage = Diary;
-      } else if (active == 2) {
-        this.currentPage = Notice;
-      } else if (active == 3) {
-        this.currentPage = Profile;
-      } else {
-        this.currentPage = Home;
-      }
-    }
   },
   created: function() {
     if (!this.token || typeof this.token === "undefined") {
-      this.$router.replace({ path: "/" });
+      this.$router.replace({ path: "/login" });
     } else {
-      // console.log("the Token: "+ this.token)
-    }
-  },
-  computed: {
-    currentTabComponent: function() {
-    //   console.log("currentTabComponent index:" + this.active);
-      return this.currentPage;
+      console.log("Print the url:" + this.$route.name);
+      if (this.$route.name == "home") {
+        this.activecode = 0;
+      } else if (this.$route.name == "diary") {
+        this.activecode = 1;
+      } else if (this.$route.name == "notice") {
+        this.activecode = 2;
+      } else if (this.$route.name == "profile") {
+        this.activecode = 3;
+      } else {
+        this.activecode = 0;
+      }
+      console.log(this.activecode);
     }
   }
 };

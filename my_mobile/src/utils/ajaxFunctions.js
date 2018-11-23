@@ -165,6 +165,17 @@ const Diarys = {
 			// console.log(response)
 			callback(response.data)
 		})
+	},
+	get_diary_by_id(id,token,callback) {
+		axios({
+			method: "GET",
+			url: "/rocky/diary/" + id + "/",
+			// data: JSON.stringify(diary),
+			headers: { "Authorization": token }
+		}).then(response => {
+			// console.log(response)
+			callback(response.data)
+		})
 	}
 }
 
@@ -217,7 +228,7 @@ const Books = {
 	get_book_list(page, token, callback) {
 		axios({
 			method: "GET",
-			url: "/rocky/booklist/",
+			url: "/rocky/booklist/?page="+page,
 			// data: JSON.stringify(diary),
 			headers: { "Authorization": token }
 		}).then(response => {
@@ -255,6 +266,17 @@ const Books = {
 			method: "DELETE",
 			url: "/rocky/booklist/" + book.id + "/",
 			data: JSON.stringify(book),
+			headers: { "Authorization": token }
+		}).then(response => {
+			// console.log(response)
+			callback(response.data)
+		})
+	},
+	get_book_list_detail(page, token, callback) {
+		axios({
+			method: "GET",
+			url: "/rocky/bookcontent/?page=" + page,
+			// data: JSON.stringify(diary),
 			headers: { "Authorization": token }
 		}).then(response => {
 			// console.log(response)
@@ -459,5 +481,30 @@ const PoetryCommt = {
 		})
 	},
 }
+
+const Functions = {
+	formatDate(time) {
+		var date = new Date(time);
+  
+		var year = date.getFullYear(),
+		  month = date.getMonth() + 1, //月份是从0开始的
+		  day = date.getDate(),
+		  hour = date.getHours(),
+		  min = date.getMinutes(),
+		  sec = date.getSeconds();
+		var newTime =
+		  year +
+		  "-" +
+		  (month < 10 ? "0" + month : month) +
+		  "-" +
+		  (day < 10 ? "0" + day : day) +
+		  " " +
+		  (hour < 10 ? "0" + hour : hour) +
+		  ":" +
+		  (min < 10 ? "0" + min : min)
+  
+		return newTime;
+	  },
+}
 export default axios
-export { Diarys, Users, Notice, Books, Poetry, PoetryCommt }
+export { Diarys, Users, Notice, Books, Poetry, PoetryCommt ,Functions}

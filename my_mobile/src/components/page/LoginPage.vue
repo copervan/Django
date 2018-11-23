@@ -1,12 +1,10 @@
 <template>
-    <div class="login-wrap">
-        <van-cell-group>
-            <van-field v-model="ruleForm.username" required clearable label="用户名" placeholder="请输入用户名" />
-            <van-field v-model="ruleForm.password" type="password" label="密码" placeholder="请输入密码" required />
-            <br>
-            <van-button type="default" size="small" :click="submitForm(ruleForm)">Do Login</van-button>
-        </van-cell-group>
-    </div>
+  <div class="login-wrap">
+    <van-field v-model="ruleForm.username" required clearable label="用户名" placeholder="请输入用户名" left-icon="contact" />
+    <van-field v-model="ruleForm.password" type="password" placeholder="请输入密码" label="密码" required left-icon="contact" />
+    <br>
+    <van-button type="default" size="small" :click="submitForm(ruleForm)">Do Login</van-button>
+  </div>
 </template>
 
 <script>

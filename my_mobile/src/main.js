@@ -5,10 +5,13 @@ import App from './App'
 import router from './router'
 
 import { Tabbar, TabbarItem, Field, Button, Toast } from 'vant';
-import { Cell, CellGroup,PullRefresh  } from 'vant';
-import { Swipe, SwipeItem } from 'vant';
-Vue.use(Cell).use(CellGroup).use(PullRefresh );
-Vue.use(Swipe).use(SwipeItem);
+import { Cell, CellGroup,PullRefresh ,Panel,Icon,List } from 'vant';
+import { Swipe, SwipeItem,NavBar,Card ,Dialog} from 'vant';
+import { Collapse, CollapseItem,Tag ,Picker} from 'vant';
+
+Vue.use(Collapse).use(CollapseItem).use(Tag).use(Picker).use(Dialog);
+Vue.use(Cell).use(CellGroup).use(PullRefresh ).use(NavBar).use(Card);
+Vue.use(Swipe).use(SwipeItem).use(Panel).use(Icon).use(List);
 Vue.use(Tabbar).use(TabbarItem).use(Field).use(Button).use(Toast);
 import 'vant/lib/index.css';
 
