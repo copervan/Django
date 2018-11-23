@@ -24,6 +24,13 @@
         "libraryName": "vant",
         "style": true
       }
+    ],
+    [
+      "component",
+      {
+        "libraryName": "element-ui",
+        "styleLibraryName": "theme-chalk"
+      }
     ]
   ]
 }

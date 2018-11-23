@@ -3,6 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import {Form,FormItem,Input as EL_input,Button as EL_Button,Icon as EL_Icon} from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import '../static/css/icon.css'
+Vue.use(Form).use(FormItem).use(EL_input).use(EL_Button).use(EL_Icon,{ size: 'small' });
 
 import { Tabbar, TabbarItem, Field, Button, Toast } from 'vant';
 import { Cell, CellGroup,PullRefresh ,Panel,Icon,List } from 'vant';

@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import IndexPage from '@/components/index'
 import Login from '@/components/page/LoginPage'
 import diaryView from '@/components/page/Diary/diaryView.vue'
-import { resolve } from 'url';
 
 Vue.use(Router)
 

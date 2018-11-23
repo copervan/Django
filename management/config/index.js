@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         // rocky: add the proxy table 
-        '/api-token-auth': {
+        '/rocky/api-token-auth': {
             target: 'http://127.0.0.1:8000/api-token-auth',//设置你调用的接口域名和端口号 别忘了加http
             changeOrigin: true,
             pathRewrite: {

@@ -1,6 +1,6 @@
 <template>
     <div id="mybook">
-        <van-nav-bar title="书籍列表" fixed>
+        <van-nav-bar title="书籍列表" fixed left-arrow @click-left="onClickLeft">
         </van-nav-bar>
         <div id="book-content">
             <van-list v-model="loading" :finished="finished" @load="onLoad">
@@ -55,6 +55,9 @@ export default {
     onLoad() {
       this.currentPage += 1;
       Books.get_book_list_detail(this.currentPage, this.token, this.set_list);
+    },
+    onClickLeft() {
+      this.$router.back(-1);
     }
   }
 };
