@@ -54,14 +54,34 @@ export default new Router({
       component: diaryView,
     },
     {
-      path: '/booklist',
-      name: 'booklist',
-      component: resolve => require(['@/components/page/Books/bookList'], resolve),
+      path: '/poetrys',
+      name: 'poetry',
+      component: resolve => require(['@/components/page/Poetry/index.vue'], resolve),
     },
     {
-      path: '/chapter/:chapter_id',
-      name: 'chapterdetail',
-      component: resolve => require(['@/components/page/Books/chapterDetail'], resolve),
-    }
+      path: '/book/',
+      name: 'book',
+      component: resolve => require(['@/components/page/Books/index.vue'], resolve),
+      children: [
+        {
+          path: 'chapter/:chapter_id',
+          name: 'chapterdetail',
+          component: resolve => require(['@/components/page/Books/chapterDetail'], resolve),
+          meta: {
+            keepAlive: false
+          }
+        },
+        {
+          path: '/booklist',
+          name: 'booklist',
+          component: resolve => require(['@/components/page/Books/bookList.vue'], resolve),
+          meta: {
+            keepAlive: true
+          }
+        }
+      ]
+
+    },
+
   ]
 })

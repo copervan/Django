@@ -1,25 +1,21 @@
 <template>
-    <div id="mybook">
-        <van-nav-bar title="书籍列表" fixed left-arrow @click-left="onClickLeft">
-        </van-nav-bar>
-        <div id="book-content">
-            <van-list v-model="loading" :finished="finished" @load="onLoad">
-                <van-collapse v-model="activeName" accordion>
-                    <van-collapse-item v-for="(book,index) in BookList" :key="index" :title="book.name" :name="index">
-                        <div slot="title">
-                            <span>{{book.name}}</span>
-                        </div>
-                        <div slot="value"> {{book.author}} </div>
-                        <div class="book-introduction" v-html="book.introduction"> </div>
-                        <van-cell-group>
-                            <van-cell v-for="chapter in book.book_content" :key="chapter.id" :title="chapter.chapter" is-link :to="{name: 'chapterdetail',params: { 'chapter_id': chapter.id }}">
-                            </van-cell>
-                        </van-cell-group>
-                    </van-collapse-item>
-                </van-collapse>
-            </van-list>
-        </div>
-    </div>
+  <div id="book-content">
+    <van-list v-model="loading" :finished="finished" @load="onLoad">
+      <van-collapse v-model="activeName" accordion>
+        <van-collapse-item v-for="(book,index) in BookList" :key="index" :title="book.name" :name="index">
+          <div slot="title">
+            <span>{{book.name}}</span>
+          </div>
+          <div slot="value"> {{book.author}} </div>
+          <div class="book-introduction" v-html="book.introduction"></div>
+          <van-cell-group>
+            <van-cell v-for="chapter in book.book_content" :key="chapter.id" :title="chapter.chapter" is-link :to="{name: 'chapterdetail',params: { 'chapter_id': chapter.id }}">
+            </van-cell>
+          </van-cell-group>
+        </van-collapse-item>
+      </van-collapse>
+    </van-list>
+  </div>
 </template>
 
 <script>
@@ -34,7 +30,7 @@ export default {
       token: this.$store.state.token,
       loading: false,
       finished: false,
-      activeName: 0
+      activeName: -1
     };
   },
   methods: {
@@ -64,14 +60,23 @@ export default {
 </script>
 
 <style>
-#book-content {
-  margin-top: 50px;
-  text-align: left;
-}
 .book-introduction {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* white-space: nowrap; */
+  -webkit-line-clamp: 3;
+  word-break: break-all;
+  width: 100%;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+}
+.book-introduction ::after{
+content: "..."; position: absolute; bottom: 0; right: 0; padding-left: 40px;
+background: -webkit-linear-gradient(left, transparent, #fff 55%);
+background: -o-linear-gradient(right, transparent, #fff 55%);
+background: -moz-linear-gradient(right, transparent, #fff 55%);
+background: linear-gradient(to right, transparent, #fff 55%);
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="diary">
     <van-nav-bar title="日志" fixed @click-right="onRefresh" >
-      <van-icon name="more-o" slot="right" />
+      <i slot="right" style="font-size: 18px;color: #ff5900" class="el-icon-lx-refresh"></i>
     </van-nav-bar>
     <!-- <van-pull-refresh v-model="isLoading" @refresh="onRefresh"> -->
     <van-list v-model="loading" :finished="finished" @load="onLoad" class="my-dairy-list">

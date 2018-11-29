@@ -1,10 +1,6 @@
 <template>
-    <div id="chapter">
-        <van-nav-bar :title="currentChapter.chapter" fixed left-arrow @click-left="onClickLeft">
-        </van-nav-bar>
-        <div id="chapter-content" v-html="currentChapter.content">
-        </div>
-    </div>
+  <div id="chapter-content" v-html="currentChapter.content">
+  </div>
 </template>
 
 <script>
@@ -23,7 +19,7 @@ export default {
       this.currentChapter = data;
     },
     onClickLeft() {
-      this.$router.back(-1);
+      this.$router.go("booklist");
     }
   },
   created: function() {
@@ -34,14 +30,6 @@ export default {
 
 <style>
 #chapter-content {
-  margin-top: 50px;
-  text-align: left;
-  padding: 10px
-}
-.book-introduction {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  overflow: hidden;
+  padding: 10px;
 }
 </style>

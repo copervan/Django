@@ -1,24 +1,26 @@
 <template>
   <div id="notice">
     <van-nav-bar title="备忘录" fixed @click-right="onRefresh">
-      <van-icon name="more-o" slot="right" />
+      <i slot="right" style="font-size: 18px;color: #ff5900" class="el-icon-lx-refresh"></i>
     </van-nav-bar>
     <div id="notice-content" />
     <div id="notice_list">
       <van-list v-model="loading" :finished="finished" @load="onLoad">
         <van-collapse v-model="activeNames" accordion>
           <van-collapse-item v-for="(notice,index) in all_notice " :key="notice.id*(new Date().getTime())" :name="index">
-            <div slot="title">
+            <div slot="title" style="-webkit-box-flex:2">
               <van-icon name="question" /><span>{{notice.notice_item}}</span>
             </div>
             <div slot="value" @click="update_notice(notice)">
               <van-tag :type="notice_type(notice.status)">{{notice_code(notice.status)}}</van-tag>
             </div>
             <div>
-              <van-cell class="custom-icon"  title="StartTime:" :value="formatDate(notice.datetime)" > </van-cell>
-              <van-cell class="custom-icon" title="EndTime:" :value="formatDate(notice.end_time)" > </van-cell>
-              <!-- <li>StartTime: <span> {{formatDate(notice.datetime)}} </span></li>
-              <li>EndTime: <span>{{formatDate(notice.end_time)}} </span></li> -->
+              <!-- <van-cell class="custom-icon" title="StartTime:" :value="formatDate(notice.datetime)"> </van-cell>
+              <van-cell class="custom-icon" title="EndTime:" :value="formatDate(notice.end_time)"> </van-cell> -->
+              <ol>
+                <li>StartTime: <span> {{formatDate(notice.datetime)}} </span></li>
+                <li>EndTime: <span>{{formatDate(notice.end_time)}} </span></li>
+              </ol>
             </div>
           </van-collapse-item>
         </van-collapse>
@@ -48,7 +50,7 @@ export default {
       isLoading: false,
       activeNames: 0,
       current_notice: { status: 3 },
-      columns: ["未开始", "已完成", "进行中", "拒  绝"]
+      columns: ["未开始", "已完成", "进行中", "已拒绝"]
     };
   },
   methods: {
@@ -77,7 +79,7 @@ export default {
       } else if (code === 2) {
         return "进行中";
       } else if (code === 3) {
-        return "拒  绝";
+        return "被拒绝";
       } else {
         return "未知状态：" + code;
       }
@@ -138,11 +140,6 @@ export default {
 #notice-content {
   margin-top: 50px;
   margin-bottom: 50px;
-}
-#notice_list {
-  text-align: left;
-  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
-    Microsoft YaHei, \5fae软雅黑, Arial, sans-serif;
 }
 </style>
 
